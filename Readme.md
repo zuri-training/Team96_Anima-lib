@@ -67,8 +67,8 @@
 
 ### You'll have to install your own virtual environment and install the dependencies. Follow these steps.
 
-#### Step 1: go to your terminal and type --> pip instal virtualenv
-#### Step 2: Create your own virtual environment --> virtualenv <whatever name you choose>
-#### Step 3: Activate your virtual environment --> cd <The name of your environment> and after that type in (scripts/activate)
+#### Step 1: go to your terminal and type --> pip install virtualenv
+#### Step 2: Create your own virtual environment --> virtualenv "whatever name you choose for your virtual environment"
+#### Step 3: Activate your virtual environment --> "virtual environment"\scripts\activate
 #### Step 4: Install dependencies --> pip install -r requirements.txt (This might not be necessary though)
 #### Step 5: Start your stuff
