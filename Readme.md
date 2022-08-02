@@ -61,3 +61,14 @@
 11. Once you push the changes to your repo/branch, the **_`Compare & pull request`_** button will appear in GitHub page of your repo.
 12. Click the button and make your request. Leave a comment in your request.
 13. Click Create pull request to open a new pull request.
+
+
+## **_Working with the Django project_**
+
+### You'll have to install your own virtual environment and install the dependencies. Follow these steps.
+
+#### Step 1: go to your terminal and type --> pip instal virtualenv
+#### Step 2: Create your own virtual environment --> virtualenv <whatever name you choose>
+#### Step 3: Activate your virtual environment --> cd <The name of your environment> and after that type in (scripts/activate)
+#### Step 4: Install dependencies --> pip install -r requirements.txt (This might not be necessary though)
+#### Step 5: Start your stuff
