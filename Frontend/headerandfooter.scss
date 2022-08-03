@@ -1,0 +1,111 @@
+
+// **************************GENERAL/GLOBAL STYLING********************
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Inter', sans-serif;
+    font-size: 16px;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style: none;
+}
+
+// **************************HEADER STYLING********************
+header{
+    line-height: 24px;
+    padding-inline: calc(98.5/1440)*100%;
+    padding-block: 15px;
+}
+
+.headercontainer{
+    display: flex;
+    align-items: center;
+
+    ul{
+        display: flex;
+        flex-grow: 1;
+    }
+  
+    li{
+        margin-right: calc(40/16)*1em;
+    }
+    img{
+        width: 105px;
+        height: 60px;
+        margin-right: calc(300/1440)*100%;
+    }
+
+    .profile{
+        display: flex;
+        gap: 16px;
+        align-items: center;
+        justify-items: center;
+        margin-left: calc(70/1440)*100%;
+    
+        img{
+            width: 40px;
+            height: 40px;
+            margin: 0;
+            border-radius: 50%;
+        }
+
+        .icondown{
+            width: 10.56px;
+            height: 4.73px;
+        }
+    }
+}
+
+// **************************FOOTER STYLING********************
+footer{
+    height: 486px;
+    width: 100vw;
+    border-radius: 0px;
+    background-color: #5A189A;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 96px;
+    gap: 10px;
+    flex-shrink: 1;
+    line-height: 24px;
+}
+
+.footerColumnsContainer{
+    display: flex;
+    
+    a{
+        padding-bottom: 10px;
+    }
+}
+
+.footerCol{
+    display: flex;
+    flex-direction: column;
+    .heading{
+        margin-bottom: 30px;
+    }
+}
+
+.footerCol1{
+    width: 24%;
+    margin-bottom: 140px;
+    margin-right: 20%;
+
+    img{
+        margin-bottom: 32px;
+    }
+}
+
+.footerCol2, .footerCol3, .footerCol4{
+    width: 25%;
+    margin-right: 24px;
+}
