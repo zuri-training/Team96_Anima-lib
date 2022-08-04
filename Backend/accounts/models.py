@@ -5,7 +5,7 @@ class Profile (models.Model):
     def __str__(self):
         return str(self.profile_pic)
 
-        # To use this in the template you are going to use this in the <img src='{{ user.profile.image.url }}'
+        # To use this in the template you are going to use this in the <img src='{{ user.profile.image.url }}' This is not correct tho. I will make research on queryset.
 
 class User (models.Model):
     full_name = models.CharField(max_length = 300, null = True)
@@ -21,7 +21,7 @@ class User (models.Model):
 
 class Message (models.Model):
     title = models.CharField(max_length=200, null=True)
-    content = models.TextField(max_length = 300, null = True)
+    content = models.TextField(max_length = 500, null = True)
     image = models.OneToOneField(Profile, on_delete=models.CASCADE)
 
     @property
