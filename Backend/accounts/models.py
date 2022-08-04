@@ -1,38 +1,51 @@
 from django.db import models
-import uuid
-
-# Create your models here.
-
-# def user_directory_path(instance, filename):
   
-#     # file will be uploaded to MEDIA_ROOT / user_<id>/<filename>
-#     return 'user_{0}/{1}'.format(instance.user.id, filename)
+class Profile (models.Model):
+    profile_pic = models.ImageField(default='default.jpg', upload_to='profile_img')
+    def __str__(self):
+        return str(self.profile_pic)
 
-# The reason for this function is that incase we have created a file_path in our settings.py file and we want to 
-# store each image unique using filename into that file path we created. Then we are going to add the below line 
-# of code to the user model. If it's something we want to use we can add. Though I've not done much research on it
-# That's not a problem I can research more.
-
-#     profile_pic = models.ImageField(upload_to = user_directory_path)
-  
-
+        # To use this in the template you are going to use this in the <img src='{{ user.profile.image.url }}'
 
 class User (models.Model):
-    user_id = models.UUIDField(max_length=255, default = uuid.uuid4, primary_key=True)
     full_name = models.CharField(max_length = 300, null = True)
     email = models.EmailField(max_length = 300, null = True)
     bio = models.CharField(max_length = 500, null = True)
-    profile_pic = models.ImageField(Blank=True)
-    date_created = models.DateTimeField(auto_now_add=True, null=True)
+    image = models.OneToOneField(Profile, on_delete=models.CASCADE)
+    
+    date_added = models.DateTimeField(auto_now_add=True, null=True)
 
     def __str__(self):
         return self.full_name
 
 
 class Message (models.Model):
-    msg_id = models.UUIDField(max_length=255, default = uuid.uuid4, primary_key=True)
-    content = models.CharField(max_length = 300, null = True)
-    user = models.ForeignKey(User, null=True, on_delete=models.SET_NULL)
-    date_created = models.DateTimeField(auto_now_add=True, null=True)
+    title = models.CharField(max_length=200, null=True)
+    content = models.TextField(max_length = 300, null = True)
+    image = models.OneToOneField(Profile, on_delete=models.CASCADE)
 
+    @property
+    def profile_pic(self):
+        return self.image.profile_pic
+
+    def __str__(self):
+        return str(self.title)
+
+    date_added = models.DateTimeField(auto_now_add=True, null=True)
+
+
+class My_Lib (models.Model):
+    mylib_name = models.CharField(max_length = 300, null = True)
+    date_added = models.DateTimeField(auto_now_add=True, null=True)
+    # anima_type = 
+    def __str__(self):
+        return str(self.mylib_name)
+
+
+class Lib (models.Model):
+    anima_name = models.CharField(max_length=300, primary_key=True)
+    anima_type = models.CharField(max_length=300, null = True)
+    anima_desc = models.TextField(max_length=500, null = True)
     
+    def __str__(self):
+        return str(self.anima_name)
