@@ -128,6 +128,31 @@
     padding: 0 10px;
   }
   
+  #forgotp{
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+    margin-left: 1.2pc;
+    /* Fullname */
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-transform: capitalize;
+  
+    /* Black- Text Color */
+    color: #797979;
+  
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+
   form button,
   form input,
   .zuri {
