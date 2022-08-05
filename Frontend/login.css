@@ -1,0 +1,493 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+  }
+  /*main div {
+    text-align: left;
+    margin: 2px;
+    justify-content: space-between;
+  }*/
+  body {
+    background-color: #ffffff;
+  }
+  
+  
+  
+  
+  .box {
+    max-width: 100%;
+    padding: 0 20px;
+    margin: 100px auto 0 auto;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    border-radius: 15px;
+    height: auto;
+    width: auto;
+    align-content: space-between;
+  }
+  .fa {
+    position: absolute;
+    margin: 8px 0px;
+    left: 21pc;
+    
+  }
+  #fa{display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-grow: 0;
+    position: absolute;
+    left:16pc;
+    
+  
+  }
+  #icon{
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-grow: 0;
+    position: absolute;
+    left:16pc
+  
+  
+  }
+  .eye {
+    position: absolute;
+    left: 16pc;
+    margin: 14px 0px;
+  }
+  #hideeye {
+    display: none;
+  }
+  #purp{color: #8c3adb;}
+  .anime {
+    max-width: 250px;
+    max-height: 300px;
+  }
+  .anime2 {
+    max-width: 200px;
+    max-height: 300px;
+  }
+  .right-box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3px;
+    max-width: 50%;
+    padding: 0 10px;
+    color: #80558c;
+    align-content: space-around;
+  }
+  
+  .right-box h2 {
+    /* Welcome to Anibry */
+  
+    /* Sub- heading 2 */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 40px;
+    line-height: 60px;
+    /* identical to box height, or 150% */
+  
+    /* Primary Purple */
+    color: #5a189a;
+  
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+    text-align: left;
+  }
+  
+  .right-box p {
+    /* Anibry is an animation library with a simple, but powerful API. Create an account to get access. */
+  
+    /* Sub-heading 3 */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 30px;
+    /* or 150% */
+  
+    /* Middle Grey */
+    color: #797979;
+  
+    /* Inside auto layout */
+  }
+  
+  .left-box {
+    display: flex;
+    flex-direction: column;
+    margin-left: 3px;
+    width: 50%;
+    padding: 0 10px;
+  }
+  
+  form button,
+  form input,
+  .zuri {
+    border-radius: 10px;
+    font-weight: 600;
+    width: 100%;
+    color: #5A189A;
+  }
+  .left-box svg {
+    position: absolute;
+    margin: 5px 5px;
+    left: 20.72%;
+    right: 47.14%;
+    top: 25%;
+    bottom: 52.31%;
+    max-width: 90%;
+    max-height: 60%;
+    border-radius: 20%;
+  }
+  .left-box h2 {
+    /* Create an account */
+  
+    /* Heading 2 */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 84px;
+    text-align: center;
+    /* identical to box height, or 150% */
+  
+    /* Primary Purple */
+    color: #5a189a;
+  
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  .left-box p {
+    /* Fullname */
+  
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    text-align: left;
+    margin-left: 0;
+    /* Fullname */
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-transform: capitalize;
+  
+    /* Black- Text Color */
+    color: #16161d;
+  
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  
+  }
+  #lol {
+    text-align: center;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #BBBBBB;
+  }
+  #joy {
+    text-align: left;
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    color: #797979;
+  }
+  a {
+    text-decoration-color: #5a189a;
+  }
+  .zuri {
+    padding: 20px 50px;
+    color: #80558c;
+    background-color: #ffffff;
+    font-weight: 400;
+    font-size: 15px;
+    border: none;
+    height: auto;
+  }
+  
+  .zuri,
+  button {
+    cursor: pointer;
+  }
+  
+  form {
+    padding: 20px;
+    border: none;
+    width: 110%;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+  }
+  
+  form input {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 600;
+    line-height: 24px;
+    size: 16px;
+    padding: 15px;
+    
+    border: 1px solid #5a189a;
+    border-color: #5A189A;
+    cursor: pointer;
+    color: #3C3C3C;
+  }
+  form input:active{
+    border: 1px solid #5a189a;
+    
+  
+  }
+  form input:placeholder-shown{
+    color: #BBBBBB;
+    text-align: left;
+  }
+  ::placeholder {
+    color: #BBBBBB;
+    opacity: 1;
+    text-align: left; /* Firefox */
+  }
+  
+  :-ms-input-placeholder { /* Internet Explorer 10-11 */
+   color: #BBBBBB;text-align: left;
+  }
+  
+  ::-ms-input-placeholder { /* Microsoft Edge */
+   color: #BBBBBB;text-align: left;
+  }
+  
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #5a189a;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    outline: none;
+  }
+  
+  input[type=text]:focus {
+    border: 2px solid #80558c;
+  }
+  input[type=email] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #5a189a;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    outline: none;
+  }
+  
+  input[type=email]:focus {
+    border: 2px solid #80558c;
+  }
+  input[type=text] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #5a189a;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    outline: none;
+  }
+  
+  input[type=text], 
+          input[type=password] { 
+            width: 100%;
+            padding: 12px 20px;
+            margin: 8px 0;
+            box-sizing: border-box;
+            border: 1px solid #5a189a;
+            -webkit-transition: 0.1s;
+            transition: 0.1s;
+            outline: none;
+          } 
+  
+  form button {
+    background-color: #5a189a;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    margin: 15px 0;
+  }
+  form button:hover {
+    background-color: #DBBAFC;
+    color: #5a189a;
+  }
+  
+  form button:active {
+    background-color: #8C3ADB;
+    transition: 0s;
+  }
+  form button:disabled {
+    background-color: #C9C5CC;
+    transition: 0s;
+  
+  }
+  
+  /*form p {
+    font-size: 11px;
+    padding: 0;
+    opacity: 60%;
+    text-align: left;
+    color: #000000;
+  }*/
+  
+  .button1 {
+    background-color: white;
+    color: #5a189a;
+    padding: 15px;
+    font-size: 16px;
+    margin: 15px 0;
+    border: 2px solid #5a189a;
+    max-width: 100%;
+    border-radius: 10px;
+    font-size: 16px;
+    margin: 8px 0;
+    max-height: 10%;
+  }
+  .button1 p {
+    text-align: justify;
+    font-family: "Inter";
+    font-style: normal;
+    text-align: center;
+    color: #5a189a;
+    margin-bottom: 4px;
+    
+  }
+    
+  
+  .button1:hover {
+    background-color: #DBBAFC;
+    color: #5a189a;
+  }
+  .button1:active {
+    background-color: #8C3ADB;
+    transition: 0s;
+  }
+  .button1:disabled {
+    background-color: #C9C5CC;
+    transition: 0s;
+  
+  }
+  .button1 i {
+    max-width: 20%;
+    max-width: 13%;
+    background-color: transparent;
+    margin: 0;
+    position: left;
+  }
+  
+  a {
+    text-decoration: none;
+    color: inherit;
+  }
+  
+  li {
+    list-style: none;
+  }
+  
+  header {
+    line-height: 24px;
+    padding-inline: 6.8402777778%;
+    padding-block: 15px;
+  }
+  
+  .headercontainer {
+    display: flex;
+    align-items: center;
+  }
+  .headercontainer ul {
+    display: flex;
+    flex-grow: 1;
+  }
+  .headercontainer li {
+    margin-right: 2.5em;
+  }
+  .headercontainer img {
+    width: 105px;
+    height: 60px;
+    margin-right: 20.8333333333%;
+  }
+  
+  .headercontainer .profile {
+    display: flex;
+    gap: 16px;
+    align-items: center;
+    justify-items: center;
+    margin-left: 4.8611111111%;
+  }
+  .headercontainer .profile img {
+    width: 40px;
+    height: 40px;
+    margin: 0;
+    border-radius: 50%;
+  }
+  .headercontainer .profile .icondown {
+    width: 10.56px;
+    height: 4.73px;
+  }
+  
+  footer {
+    height: 486px;
+    width: 100vw;
+    border-radius: 0px;
+    background-color: #5A189A;
+    color: white;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 50px 96px;
+    gap: 10px;
+    flex-shrink: 1;
+    line-height: 24px;
+  }
+  
+  .footerColumnsContainer {
+    display: flex;
+  }
+  .footerColumnsContainer a {
+    padding-bottom: 10px;
+  }
+  
+  .footerCol {
+    display: flex;
+    flex-direction: column;
+  }
+  .footerCol .heading {
+    margin-bottom: 30px;
+  }
+  
+  .footerCol1 {
+    width: 24%;
+    margin-bottom: 140px;
+    margin-right: 20%;
+  }
+  .footerCol1 img {
+    margin-bottom: 32px;
+  }
+  
+  .footerCol2, .footerCol3, .footerCol4 {
+    width: 25%;
+    margin-right: 24px;
+  }
