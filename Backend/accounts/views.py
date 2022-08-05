@@ -15,7 +15,7 @@ def index(request):
             animation_types.append(animation.anima_type) 
     paginator = Paginator(animation_types,8)
     page = request.GET.get('page') 
-    animation_objects = paginator.get_page(page)  
+    animation_types = paginator.get_page(page)  
     context = {
         'animation_types': animation_types,
         'animation_objects': animation_objects        
