@@ -237,6 +237,30 @@
   a {
     text-decoration-color: #5a189a;
   }
+
+  #forgot{
+    padding: 20px;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+  }
+  a:visited {
+    color: #5a189a;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: #80558c;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:active {
+    color: #5A189A;
+    background-color: transparent;
+    text-decoration: none;}
+
+
   .zuri {
     padding: 20px 50px;
     color: #80558c;
