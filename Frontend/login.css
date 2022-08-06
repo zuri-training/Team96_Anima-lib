@@ -275,7 +275,17 @@
   button {
     cursor: pointer;
   }
+
+  #hideeye, #openeye {
+    position: absolute;
+    top: 15px;
+    left: 87%;
+  }
   
+  .inputs{
+    position: relative;
+    width: 100%;
+}
   form {
     padding: 20px;
     border: none;
@@ -539,4 +549,40 @@
   .footerCol2, .footerCol3, .footerCol4 {
     width: 25%;
     margin-right: 24px;
+  }
+
+  @media only screen and (max-width: 768px) {
+    .box {
+      flex-direction: column;
+    }
+  
+    .left-box, .right-box{
+      width: 100%;
+      max-width: 100%;
+    }
+  
+    form{
+      margin-bottom: 0;
+    }
+  
+    .left-box h2{
+      font-size: 40px;
+      margin-left: 1pc;
+    }
+    .left-box svg{
+    margin: 3px 3px;
+    left: 40.72%;
+    right: 47.14%;
+    top: 25%;
+    bottom: 42.31%;
+    }
+    .right-box h2{
+      font-size: 28px;
+      margin-left: 2pc;
+    }
+    .right-box img{
+      width: 400;
+      height: 450;
+    }
+    
   }
