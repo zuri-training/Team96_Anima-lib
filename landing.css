@@ -31,7 +31,7 @@ nav ul li{
     display: inline-block;
     padding: 2px;
     text-decoration: none;
-    
+
 }
 ul li a {
     color: #3c3c3c;
@@ -389,12 +389,14 @@ ul li a:hover{
     border: none;
     color: #fff;
     border-radius: 5px;
+
 }
 .subscribe-down input{
     width: 40%;
     padding: 10px 15px;
     border-radius: 5px;
     border: 1px solid #3c3c3c;
+
 }
 
 
@@ -483,6 +485,7 @@ footer{
     margin-bottom: 20px;
     
 }
+
  .grid{
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(2, 150px);
@@ -507,6 +510,7 @@ footer{
     text-align: center;
     padding: 5px;
 }
+
 .wrap-text .ceo-zack{
     text-align: right;
 }
@@ -526,7 +530,6 @@ footer{
   order: 1;
   width: 90%;
 }
-
 .circular .anibry{
     width: 150px;
     height: 150px;
@@ -575,7 +578,7 @@ footer{
 .community-text{
     width: 50%;
     margin-bottom: 10px;
-    
+  
 }
 .community-text h2{
     margin-bottom: 1rem;
@@ -624,7 +627,6 @@ footer{
 }
 @media screen and (max-width: 400px)
 {
-
     .intro p{
         margin: 10px;
         padding: 5px;
@@ -743,4 +745,3 @@ footer{
         
     }
 }    
-
