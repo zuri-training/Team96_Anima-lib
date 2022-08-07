@@ -2,24 +2,25 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
 body{
     background: #fff;
     min-width: 100%;
     
+    
 }
 /* -----------------------Style for the navbar--------------------- */
 nav{
     display: flex;
+    justify-content: space-between;
+    padding: 20px;
+    display: flex;
     position: relative;
     flex-direction: row;
-    padding: 15px 30px;
-    margin: 2px 5px;
-    background-color: #ffffff;
-    justify-content: space-between;
-    box-shadow: 3px 3px 3px hsla(0, 0%, 0%, 0.8);
-    align-items: center;
+    color: #fff;
+    box-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.7);
     
 }
 nav ul li{
@@ -29,7 +30,8 @@ nav ul li{
     align-items: center;
     display: inline-block;
     padding: 2px;
-
+    text-decoration: none;
+    
 }
 ul li a {
     color: #3c3c3c;
@@ -38,43 +40,45 @@ ul li a {
 ul li a:hover{
     color: #5a189a;
     border: 1.5px solid #5A189A;
-    border-radius: 8px;
-    padding: 10px;
+    border-radius: 5px;
+    padding: 5px;
     background-color: #ffffff;
+    margin: 1rem;
 }
+.nav-bar #icon{
+    color: #3c3c3c;
+}
+  
 /* -------------------header------------------------ */
 .container{
     display: flex;
     flex-direction: row;
-    margin: 10px 20px;
+    margin: 5px 10px;
     padding: 30px 35px;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
+    
 }
-.intro{
-    width: 50%;
-    padding: 30px;
-}
+
 .button{
-    width: 30%;
+    min-width: 50%;
     font-weight: 700;
-    padding: 10px 15px;
+    padding: 10px 10px;
     size: 20px;
     line-height: 20px;
     color: #ffffff;
     background-color: #5A189A;
     border-radius: 8px;
-    margin-top: 40px;
+    margin-top: 30px;
     outline: none;
     border: none;
 }
 .illustration{
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
+    height: auto;
 }
 /* intro Typography Styles */
 .intro h1{
-    width: 50vw;
+    
     color: #16161d;
     Line-height: 45px;
     font-weight: 600;
@@ -91,9 +95,8 @@ ul li a:hover{
  font-weight: 400;
  size: 16px;
  margin-bottom: 35px 0;
- width: 45vw;
+ width: 70%;
 }
-
 /* grid styles */
 
 .section-one{
@@ -102,8 +105,8 @@ ul li a:hover{
 .grid{
     display: grid;
     grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(4, 1fr);
-    gap: 30px;
+    grid-template-columns: repeat(4, 200px);
+    gap: 10px;
     align-items: center;
     justify-content: space-evenly;
 
@@ -116,13 +119,11 @@ ul li a:hover{
     align-items: center;
     justify-content: center;   
 }
-.section-one p, a{
+.section-one p{
     text-align: center;
     text-decoration: underline;
     color: #5A189A;
-    display: block;
-    margin-left: auto;
-    margin-right: auto;    
+    margin-top: 1rem;   
 }
 
 
@@ -169,7 +170,6 @@ ul li a:hover{
   .dropdown:hover .dropdown-content {
     display: block;
   }
-  
 
   /* section2 */
 .section-two{
@@ -204,9 +204,7 @@ ul li a:hover{
     color: #16161d;
     font-style: normal;
     font-size: 32px;
-    align-content: center;
-    
-    
+    align-content: center;    
 }
 .grid-two p{
     font-weight: 400;
@@ -215,7 +213,6 @@ ul li a:hover{
     width: 100%;
     color: #3c3c3c;
     order: 1;
-    
 }
 .start{
     width: 200px;
@@ -229,9 +226,15 @@ ul li a:hover{
     margin-top: 40px;
     display: inline;
     padding: 8px;
+    border: none;
+}
+.text{
+    text-align: center;
+    color: #763fab;
+    padding: 1rem;
+    margin-top: 1rem;
 
 }
-
 /*------------------------ section 3-------------------- */
 .section-three{
     
@@ -243,6 +246,7 @@ ul li a:hover{
     align-items: center;
     justify-content: center;
     padding: 30px 35px;
+    gap: 30px;
 }
 .wrap-text{
     width: 30%;
@@ -264,12 +268,7 @@ ul li a:hover{
 .wrapper img{
     width: 350px;
 }
-.text{
-    text-align: center;
-    color: #763fab;
-    padding: 1rem;
-
-}
+  
 /*----------------------- section 4. animations------------------------------ */
 .Animation{
     display: flex;
@@ -285,7 +284,7 @@ ul li a:hover{
 }
 .animate-text h2{
   color: #763fab;
-  width: 390px;
+  width: 40vw;
   text-align: center;
   order: 0;
   font-weight: 400;
@@ -297,7 +296,7 @@ ul li a:hover{
   line-height: 24px;
   text-align: center;
   color: #16161D;
-  width: 405px;
+  width: 45vw;
   order: 1;
   margin: 0.5rem;
 }
@@ -323,7 +322,6 @@ ul li a:hover{
 }
 .circular li{
     position: absolute;
-    
     list-style: none;
 }
 .top{
@@ -345,12 +343,12 @@ ul li a:hover{
 
 }
 .top-right{
-    right: 15%;
+    right: 5%;
     bottom: 10%;
     transform: translateX(-25%) translate(-25%);
 }
 .right{
-  right: 15%;
+  right: 5%;
   top: 30%;
   transform: translateX(-25%) translate(-25%);
 }
@@ -368,20 +366,35 @@ ul li a:hover{
     margin: auto;
     width: 100%;
     flex-direction: column;
-    
-    
+    height: 150px;    
+    text-align: center;
 }
 .subscribe-top h5{
     font-weight: 400;
     font-size: 20px;
     font-style: bold;
+    margin: 10px;
 }
 .border{
     border-top: 1px solid #3c3c3c;
 }
+.subscribe-down{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
 .subscribe-down button{
-    padding: 5px 20px;
+    padding: 13px 40px;
     background-color: #5A189A;
+    border: none;
+    color: #fff;
+    border-radius: 5px;
+}
+.subscribe-down input{
+    width: 40%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #3c3c3c;
 }
 
 
@@ -410,7 +423,7 @@ ul li a:hover{
 /* ----------------------------------footer--------------------------------- */
 
 footer{
-    width: 100%;
+    
     border-radius: 0px;
     background-color: #5A189A;
     color: white;
@@ -425,6 +438,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     
     margin: 5px;
 }
@@ -434,6 +448,7 @@ footer{
 }
 .footerColumnsContainer .build{
     text-align: left;
+    width: 40%;
 }
 .footerColumnsContainer .copyright p{
     text-align: center;
@@ -450,10 +465,282 @@ footer{
     width: 25%;
     margin-right: 24px;
 } 
+/* ---------------------media queries--------------------- */
+@media screen and (max-width: 800px){
+ .container{
+    flex-direction: column;
+    text-align: center;
+ }   
+ .intro p{
+    margin: 0.5rem 0.5rem;
+    padding: 2rem;
+    width: 90%;
+ }
+ .button{
+    min-width: 50%;
+    font-weight: 700;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    
+}
+ .grid{
+    grid-template-rows: repeat(4, 1fr);
+    grid-template-columns: repeat(2, 150px);
+    gap: 5px;
+    align-items: center;
+    justify-content: space-evenly;
 
- /*----------------------MEDIA QUERIES----------------------  */
- @media only screen and (max-width: 1024px) and (min-width:300px){
-    .container{
+}
+.grid-two{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+
+
+}
+.wrapper{
+    display: flex;
+    flex-direction: column-reverse;
+}
+.wrap-text{
+    width: 100%;
+    text-align: center;
+    padding: 5px;
+}
+.wrap-text .ceo-zack{
+    text-align: right;
+}
+.Animation{
+    display: flex;
+    flex-direction: column;
+}
+.animate-text{
+    width: 90%;
+}
+.animate-text h2{
+  width: 100%;
+  text-align: center;
+
+}
+.animate-text p{
+  order: 1;
+  width: 90%;
+}
+
+.circular .anibry{
+    width: 150px;
+    height: 150px;
+    background-color: #5A189A;
+    z-index: 100;
+}
+.top{
+    top: -5%;
+    left: 50%;
+    transform: translateX(-25%) translate(-25%);
+    bottom: 10%;
+}
+.left{
+    top: 10%;
+    left: 10%;
+    transform: translateX(-25%) translate(-25%);
+}
+.bottom{
+    bottom: -10%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%)
+ 
+
+}
+.top-right{
+    right: -10%;
+    bottom: 15%;
+    transform: translateX(-25%) translate(-25%);
+}
+.right{
+  right: -10%;
+  top: 10%;
+  transform: translateX(-25%) translate(-25%);
+}
+.right-top{
+    bottom: 15%;
+    left: 5%;
+    transform: translateX(-25%) translate(-25%);
+}
+.community{
+    text-align: center;
+    align-items: center;
+    margin: auto;
+}
+
+.community-text{
+    width: 50%;
+    margin-bottom: 10px;
+    
+}
+.community-text h2{
+    margin-bottom: 1rem;
+    text-align: center;
+}
+.community-text p{
+    margin-bottom: 1rem;
+}
+.community-text a{
+    text-align: center;
+}
+.footerColumnsContainer{
+    display: flex;
+    justify-content: space-around;
+    
+    flex-direction: row;
+    margin: 5px;
+}
+.community-image img{
+  width: 300px;
+ }
+.footerColumnsContainer p{
+    text-align: right;
+
+}
+.footerColumnsContainer .build{
+    text-align: left;
+    width: 40%;
+}
+.footerColumnsContainer .copyright p{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+.footerCol1 img{
+   margin-bottom: 32px;
+}
+
+
+.footerCol2, .footerCol3, .footerCol4{
+    width: 25%;
+    margin-right: 24px;
+}
+
+}
+@media screen and (max-width: 400px)
+{
+
+    .intro p{
+        margin: 10px;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+     }
+     .intro h1{
+        color: #16161d;
+        Line-height: 45px;
+        font-weight: 600;
+        font-size: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 500px;
+        max-width: 90%;
+        
+    } 
+     .grid{
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 150px);
+        gap: 5px;
+        align-items: center;
+        justify-content: space-evenly;
+    
+    }
+    .grid-two{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    
+    
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .wrap-text{
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+    }
+    .Animation{
+        display: flex;
         flex-direction: column;
     }
- }
+    .animate-text{
+        width: 90%;
+    }
+    .animate-text h2{
+      width: 100%;
+      text-align: center;
+    
+    }
+    .animate-text p{
+      order: 1;
+      width: 90%;
+    }
+    .circular{
+        width: 50%;
+        height: 500px;
+    }
+    .circular .anibry{
+        width: 150px;
+        height: 150px;
+        background-color: #5A189A;
+        z-index: 100;
+    }
+    .top{
+        top: 10%;
+        left: 50%;
+        transform: translateX(-25%) translate(-25%);
+        bottom: 10%;
+    }
+    .left{
+        top: 30%;
+        left: -5%;
+        transform: translateX(-25%) translate(-25%);
+    }
+    .bottom{
+        bottom: -5%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%)
+     
+    
+    }
+    .top-right{
+        right: -30%;
+        bottom: 20%;
+        transform: translateX(-25%) translate(-25%);
+    }
+    .right{
+      right: -30%;
+      top: 30%;
+      transform: translateX(-25%) translate(-25%);
+    }
+    .right-top{
+        bottom: 20%;
+        left: 10%;
+        transform: translateX(-25%) translate(-25%);
+    }
+    
+    .community-text{
+        width: 50%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .community-text h2{
+        margin-bottom: 1rem;
+    }
+    .community-text p{
+        margin-bottom: 1rem;
+    }
+    
+    .subscribe-down input{
+        width: 100%;
+        
+    }
+}    
+
