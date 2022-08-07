@@ -297,7 +297,7 @@ ul li a:hover{
   line-height: 24px;
   text-align: center;
   color: #16161D;
-  width: 45vw;
+  width: 40vw;
   order: 1;
   margin: 0.5rem;
 }
@@ -636,6 +636,9 @@ footer{
 }
 @media screen and (max-width: 400px)
 {
+    nav ul li{
+        display: none;
+    }
 
     .intro p{
         margin: 10px;
