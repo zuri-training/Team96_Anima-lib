@@ -2,11 +2,13 @@
     margin: 0;
     padding: 0;
     text-decoration: none;
+    box-sizing: border-box;
     font-family: 'Inter', sans-serif;
 }
 body{
     background: #fff;
     min-width: 100%;
+    
     
 }
 /* -----------------------Style for the navbar--------------------- */
@@ -18,7 +20,7 @@ nav{
     position: relative;
     flex-direction: row;
     color: #fff;
-    box-shadow: 3px 3px 3px hsla(0, 0%, 0%, 0.8);
+    box-shadow: 1px 1px 1px hsla(0, 0%, 0%, 0.7);
     
 }
 nav ul li{
@@ -29,6 +31,7 @@ nav ul li{
     display: inline-block;
     padding: 2px;
     text-decoration: none;
+    
 }
 ul li a {
     color: #3c3c3c;
@@ -37,9 +40,10 @@ ul li a {
 ul li a:hover{
     color: #5a189a;
     border: 1.5px solid #5A189A;
-    border-radius: 8px;
-    padding: 10px;
+    border-radius: 5px;
+    padding: 5px;
     background-color: #ffffff;
+    margin: 1rem;
 }
 .nav-bar #icon{
     color: #3c3c3c;
@@ -57,18 +61,20 @@ ul li a:hover{
 .button{
     min-width: 50%;
     font-weight: 700;
-    padding: 10px 15px;
+    padding: 10px 10px;
     size: 20px;
     line-height: 20px;
     color: #ffffff;
     background-color: #5A189A;
     border-radius: 8px;
-    margin-top: 40px;
+    margin-top: 30px;
     outline: none;
     border: none;
 }
 .illustration{
-    width: 450px;
+    max-width: 450px;
+    width: 100%;
+    height: auto;
 }
 /* intro Typography Styles */
 .intro h1{
@@ -361,6 +367,7 @@ ul li a:hover{
     width: 100%;
     flex-direction: column;
     height: 150px;    
+    text-align: center;
 }
 .subscribe-top h5{
     font-weight: 400;
@@ -371,12 +378,23 @@ ul li a:hover{
 .border{
     border-top: 1px solid #3c3c3c;
 }
+.subscribe-down{
+    width: 50%;
+    align-items: center;
+    justify-content: center;
+}
 .subscribe-down button{
-    padding: 5px 30px;
+    padding: 13px 40px;
     background-color: #5A189A;
     border: none;
     color: #fff;
     border-radius: 5px;
+}
+.subscribe-down input{
+    width: 40%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #3c3c3c;
 }
 
 
@@ -420,6 +438,7 @@ footer{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    flex-direction: row;
     
     margin: 5px;
 }
@@ -429,6 +448,7 @@ footer{
 }
 .footerColumnsContainer .build{
     text-align: left;
+    width: 40%;
 }
 .footerColumnsContainer .copyright p{
     text-align: center;
@@ -452,10 +472,17 @@ footer{
     text-align: center;
  }   
  .intro p{
-    margin: 1rem 2rem;
+    margin: 0.5rem 0.5rem;
     padding: 2rem;
     width: 90%;
  }
+ .button{
+    min-width: 50%;
+    font-weight: 700;
+    padding: 5px 15px;
+    margin-bottom: 20px;
+    
+}
  .grid{
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(2, 150px);
@@ -473,12 +500,15 @@ footer{
 }
 .wrapper{
     display: flex;
-    flex-direction: column;
+    flex-direction: column-reverse;
 }
 .wrap-text{
     width: 100%;
     text-align: center;
     padding: 5px;
+}
+.wrap-text .ceo-zack{
+    text-align: right;
 }
 .Animation{
     display: flex;
@@ -496,10 +526,7 @@ footer{
   order: 1;
   width: 90%;
 }
-.circular{
-    width: 50%;
-    height: 500px;
-}
+
 .circular .anibry{
     width: 150px;
     height: 150px;
@@ -507,18 +534,18 @@ footer{
     z-index: 100;
 }
 .top{
-    top: 10%;
+    top: -5%;
     left: 50%;
     transform: translateX(-25%) translate(-25%);
     bottom: 10%;
 }
 .left{
-    top: 30%;
+    top: 10%;
     left: 10%;
     transform: translateX(-25%) translate(-25%);
 }
 .bottom{
-    bottom: -5%;
+    bottom: -10%;
     left: 50%;
     transform: translateX(-50%) translateY(-50%)
  
@@ -530,24 +557,190 @@ footer{
     transform: translateX(-25%) translate(-25%);
 }
 .right{
-  right: -15%;
-  top: 30%;
+  right: -10%;
+  top: 10%;
   transform: translateX(-25%) translate(-25%);
 }
 .right-top{
     bottom: 15%;
-    left: 10%;
+    left: 5%;
     transform: translateX(-25%) translate(-25%);
+}
+.community{
+    text-align: center;
+    align-items: center;
+    margin: auto;
 }
 
 .community-text{
     width: 50%;
     margin-bottom: 10px;
+    
 }
 .community-text h2{
     margin-bottom: 1rem;
+    text-align: center;
 }
 .community-text p{
     margin-bottom: 1rem;
 }
+.community-text a{
+    text-align: center;
 }
+.footerColumnsContainer{
+    display: flex;
+    justify-content: space-around;
+    
+    flex-direction: row;
+    margin: 5px;
+}
+.community-image img{
+  width: 300px;
+ }
+.footerColumnsContainer p{
+    text-align: right;
+
+}
+.footerColumnsContainer .build{
+    text-align: left;
+    width: 40%;
+}
+.footerColumnsContainer .copyright p{
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    
+}
+.footerCol1 img{
+   margin-bottom: 32px;
+}
+
+
+.footerCol2, .footerCol3, .footerCol4{
+    width: 25%;
+    margin-right: 24px;
+}
+
+}
+@media screen and (max-width: 400px)
+{
+
+    .intro p{
+        margin: 10px;
+        padding: 5px;
+        width: 100%;
+        text-align: center;
+     }
+     .intro h1{
+        color: #16161d;
+        Line-height: 45px;
+        font-weight: 600;
+        font-size: 40px;
+        margin-bottom: 20px;
+        text-align: center;
+        width: 500px;
+        max-width: 90%;
+        
+    } 
+     .grid{
+        grid-template-rows: repeat(4, 1fr);
+        grid-template-columns: repeat(2, 150px);
+        gap: 5px;
+        align-items: center;
+        justify-content: space-evenly;
+    
+    }
+    .grid-two{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(3, 1fr);
+    
+    
+    }
+    .wrapper{
+        display: flex;
+        flex-direction: column-reverse;
+    }
+    .wrap-text{
+        width: 100%;
+        text-align: center;
+        padding: 5px;
+    }
+    .Animation{
+        display: flex;
+        flex-direction: column;
+    }
+    .animate-text{
+        width: 90%;
+    }
+    .animate-text h2{
+      width: 100%;
+      text-align: center;
+    
+    }
+    .animate-text p{
+      order: 1;
+      width: 90%;
+    }
+    .circular{
+        width: 50%;
+        height: 500px;
+    }
+    .circular .anibry{
+        width: 150px;
+        height: 150px;
+        background-color: #5A189A;
+        z-index: 100;
+    }
+    .top{
+        top: 10%;
+        left: 50%;
+        transform: translateX(-25%) translate(-25%);
+        bottom: 10%;
+    }
+    .left{
+        top: 30%;
+        left: -5%;
+        transform: translateX(-25%) translate(-25%);
+    }
+    .bottom{
+        bottom: -5%;
+        left: 50%;
+        transform: translateX(-50%) translateY(-50%)
+     
+    
+    }
+    .top-right{
+        right: -30%;
+        bottom: 20%;
+        transform: translateX(-25%) translate(-25%);
+    }
+    .right{
+      right: -30%;
+      top: 30%;
+      transform: translateX(-25%) translate(-25%);
+    }
+    .right-top{
+        bottom: 20%;
+        left: 10%;
+        transform: translateX(-25%) translate(-25%);
+    }
+    
+    .community-text{
+        width: 50%;
+        margin-bottom: 10px;
+        text-align: center;
+    }
+    .community-text h2{
+        margin-bottom: 1rem;
+    }
+    .community-text p{
+        margin-bottom: 1rem;
+    }
+    
+    .subscribe-down input{
+        width: 100%;
+        
+    }
+}    
+
