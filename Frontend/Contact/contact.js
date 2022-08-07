@@ -33,7 +33,7 @@ $(document).ready(function() {
           
         }
       }
-      if (pass.length < 10) {
+      if (pass.length < 1) {
         $('#textarea').after('<span class="error">Type your Request here!</span>');
         $('#textarea').addClass('error-icon');
       } else {
