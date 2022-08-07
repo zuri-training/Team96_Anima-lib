@@ -64,14 +64,7 @@
     display: none;
   }
   #purp{color: #8c3adb;}
-  .anime {
-    max-width: 250px;
-    max-height: 300px;
-  }
-  .anime2 {
-    max-width: 200px;
-    max-height: 300px;
-  }
+  
   .right-box {
     display: flex;
     flex-direction: column;
@@ -82,44 +75,7 @@
     align-content: space-around;
   }
   
-  .right-box h2 {
-    /* Welcome to Anibry */
-  
-    /* Sub- heading 2 */
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 600;
-    font-size: 40px;
-    line-height: 60px;
-    /* identical to box height, or 150% */
-  
-    /* Primary Purple */
-    color: #5a189a;
-  
-    /* Inside auto layout */
-    flex: none;
-    order: 0;
-    flex-grow: 0;
-    text-align: left;
-  }
-  
-  .right-box p {
-    /* Anibry is an animation library with a simple, but powerful API. Create an account to get access. */
-  
-    /* Sub-heading 3 */
-    font-family: "Inter";
-    font-style: normal;
-    font-weight: 500;
-    font-size: 20px;
-    line-height: 30px;
-    /* or 150% */
-  
-    /* Middle Grey */
-    color: #797979;
-  
-    /* Inside auto layout */
-  }
-  
+ 
   .left-box {
     display: flex;
     flex-direction: column;
@@ -144,7 +100,7 @@
     text-transform: capitalize;
   
     /* Black- Text Color */
-    color: #797979;
+    color: #16161D;
   
     /* Inside auto layout */
     flex: none;
@@ -166,7 +122,7 @@
     margin: 5px 5px;
     left: 20.72%;
     right: 47.14%;
-    top: 25%;
+    top: 2vh;
     bottom: 52.31%;
     max-width: 90%;
     max-height: 60%;
@@ -224,7 +180,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    color: #BBBBBB;
+    color: #16161D;
   }
   #joy {
     text-align: left;
@@ -232,7 +188,7 @@
     font-style: normal;
     font-weight: 500;
     font-size: 14px;
-    color: #797979;
+    color: #16161D;
   }
   a {
     text-decoration-color: #5a189a;
@@ -245,6 +201,32 @@
     border-radius: 10px;
     margin-bottom: 4rem;
   }
+
+  #forgotp{
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 600;
+    font-size: 15px;
+    line-height: 24px;
+    text-align: left;
+    margin-left: 1.2pc;
+    /*to align the h2 of forgot.html */
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    
+    text-transform: capitalize;
+    color: #16161d;
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+
+  a {
+    text-decoration: none;
+    color: #5A189A;
+  }
+
   a:visited {
     color: #5a189a;
     background-color: transparent;
@@ -404,153 +386,8 @@
   
   }
   
-  /*form p {
-    font-size: 11px;
-    padding: 0;
-    opacity: 60%;
-    text-align: left;
-    color: #000000;
-  }*/
-  
-  .button1 {
-    background-color: white;
-    color: #5a189a;
-    padding: 15px;
-    font-size: 16px;
-    margin: 15px 0;
-    border: 2px solid #5a189a;
-    max-width: 100%;
-    border-radius: 10px;
-    font-size: 16px;
-    margin: 8px 0;
-    max-height: 10%;
-  }
-  .button1 p {
-    text-align: justify;
-    font-family: "Inter";
-    font-style: normal;
-    text-align: center;
-    color: #5a189a;
-    margin-bottom: 4px;
-    
-  }
-    
-  
-  .button1:hover {
-    background-color: #DBBAFC;
-    color: #5a189a;
-  }
-  .button1:active {
-    background-color: #8C3ADB;
-    transition: 0s;
-  }
-  .button1:disabled {
-    background-color: #C9C5CC;
-    transition: 0s;
-  
-  }
-  .button1 i {
-    max-width: 20%;
-    max-width: 13%;
-    background-color: transparent;
-    margin: 0;
-    position: left;
-  }
-  
-  a {
-    text-decoration: none;
-    color: inherit;
-  }
-  
-  li {
-    list-style: none;
-  }
-  
-  header {
-    line-height: 24px;
-    padding-inline: 6.8402777778%;
-    padding-block: 15px;
-  }
-  
-  .headercontainer {
-    display: flex;
-    align-items: center;
-  }
-  .headercontainer ul {
-    display: flex;
-    flex-grow: 1;
-  }
-  .headercontainer li {
-    margin-right: 2.5em;
-  }
-  .headercontainer img {
-    width: 105px;
-    height: 60px;
-    margin-right: 20.8333333333%;
-  }
-  
-  .headercontainer .profile {
-    display: flex;
-    gap: 16px;
-    align-items: center;
-    justify-items: center;
-    margin-left: 4.8611111111%;
-  }
-  .headercontainer .profile img {
-    width: 40px;
-    height: 40px;
-    margin: 0;
-    border-radius: 50%;
-  }
-  .headercontainer .profile .icondown {
-    width: 10.56px;
-    height: 4.73px;
-  }
-  
-  footer {
-    height: 486px;
-    width: 100vw;
-    border-radius: 0px;
-    background-color: #5A189A;
-    color: white;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 50px 96px;
-    gap: 10px;
-    flex-shrink: 1;
-    line-height: 24px;
-  }
-  
-  .footerColumnsContainer {
-    display: flex;
-  }
-  .footerColumnsContainer a {
-    padding-bottom: 10px;
-  }
-  
-  .footerCol {
-    display: flex;
-    flex-direction: column;
-  }
-  .footerCol .heading {
-    margin-bottom: 30px;
-  }
-  
-  .footerCol1 {
-    width: 24%;
-    margin-bottom: 140px;
-    margin-right: 20%;
-  }
-  .footerCol1 img {
-    margin-bottom: 32px;
-  }
-  
-  .footerCol2, .footerCol3, .footerCol4 {
-    width: 25%;
-    margin-right: 24px;
-  }
 
+  
   @media only screen and (max-width: 768px) {
     .box {
       flex-direction: column;
@@ -563,6 +400,7 @@
   
     form{
       margin-bottom: 0;
+      margin-left: 0;
     }
   
     .left-box h2{
@@ -571,17 +409,17 @@
     }
     .left-box svg{
     margin: 3px 3px;
-    left: 40.72%;
+    left: 38.72%;
     right: 47.14%;
-    top: 25%;
-    bottom: 42.31%;
+    top: 6%;
+    bottom: 46.31%;
     }
     .right-box h2{
       font-size: 28px;
       margin-left: 2pc;
     }
     .right-box img{
-      width: 400;
+      width: 300;
       height: 450;
     }
     
