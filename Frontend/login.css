@@ -400,9 +400,18 @@
   
     form{
       margin-bottom: 0;
-      margin-left: 0;
-    }
+      margin-left: -2.5pc;
+      padding: 20px;
+      border: none;
+      width: 140%;
+      border-radius: 10px;
+      margin-bottom: 4rem;
   
+    }
+    #forgotmob{
+      margin:0;
+      width:110%;}
+
     .left-box h2{
       font-size: 40px;
       margin-left: 1pc;
@@ -421,6 +430,7 @@
     .right-box img{
       width: 300;
       height: 450;
+      margin-left:-2pc ;
     }
     
   }

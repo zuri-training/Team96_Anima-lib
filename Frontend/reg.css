@@ -380,9 +380,13 @@ form button:disabled {
 
   form{
     margin-bottom: 0;
-    margin-left: 0;
-  }
-
+    margin-left: -2.5pc;
+    padding: 20px;
+    border: none;
+    width: 140%;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+}
   .left-box h2{
     font-size: 40px;
     margin-left: 0;
@@ -402,7 +406,9 @@ form button:disabled {
   }
   .right-box p{ text-align: center;}
   .right-box img{
-    width: 300;
-    height: 450;
+      width: 360;
+      height: 450;
+      margin-left: -3.7pc;
+    
   }
 }
