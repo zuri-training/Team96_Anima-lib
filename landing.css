@@ -31,6 +31,7 @@ nav ul li{
     display: inline-block;
     padding: 2px;
     text-decoration: none;
+
     
 }
 ul li a {
@@ -330,7 +331,7 @@ main p a{
   line-height: 24px;
   text-align: center;
   color: #16161D;
-  width: 45vw;
+  width: 40vw;
   order: 1;
   margin: 0.5rem;
 }
@@ -423,6 +424,14 @@ main p a{
     border: none;
     color: #fff;
     border-radius: 5px;
+
+}
+.subscribe-down input{
+    width: 40%;
+    padding: 10px 15px;
+    border-radius: 5px;
+    border: 1px solid #3c3c3c;
+
 }
 .subscribe-down input{
     width: 40%;
@@ -517,6 +526,7 @@ footer{
     margin-bottom: 20px;
     
 }
+
  .grid{
     grid-template-rows: repeat(4, 1fr);
     grid-template-columns: repeat(2, 150px);
@@ -541,6 +551,7 @@ footer{
     text-align: center;
     padding: 5px;
 }
+
 .wrap-text .ceo-zack{
     text-align: right;
 }
@@ -609,6 +620,7 @@ footer{
 .community-text{
     width: 50%;
     margin-bottom: 10px;
+  
     
 }
 .community-text h2{
@@ -658,6 +670,9 @@ footer{
 }
 @media screen and (max-width: 450px)
 {
+    nav ul li{
+        display: none;
+    }
 
     .intro p{
         margin: 10px;
@@ -740,6 +755,7 @@ footer{
         left: -5%;
         transform: translateX(-25%) translate(-25%);
     }
+    
     .bottom{
         bottom: -5%;
         left: 50%;
@@ -774,10 +790,9 @@ footer{
     .community-text p{
         margin-bottom: 1rem;
     }
-    
     .subscribe-down input{
         width: 100%;
         
     }
-}    
-
+ 
+}
