@@ -48,7 +48,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 3px;
+  margin-left: 20px;
+  width: 45%;
   max-width: 50%;
   padding: 0 10px;
 }
@@ -96,6 +97,7 @@ body {
   flex-direction: column;
   margin-left: 3px;
   width: 50%;
+  max-width: 700px;
   padding: 0 10px;
 }
 
@@ -153,7 +155,6 @@ form input,
   font-size: 16px;
   line-height: 24px;
   /* identical to box height, or 150% */
-  text-transform: capitalize;
 
   /* Black- Text Color */
   color: #16161d;
@@ -180,7 +181,8 @@ form input,
   color: #16161D;
 }
 a {
-  text-decoration-color: #5a189a;
+  color: #5a189a;
+  text-decoration: none;
 }
 
 a:visited {
@@ -211,6 +213,7 @@ button {
   position: absolute;
   top: 27px;
   right: 5%;
+  color:  #BBBBBB;
 }
 
 form {
