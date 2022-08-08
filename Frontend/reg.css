@@ -180,6 +180,9 @@ form input,
   font-size: 14px;
   color: #16161D;
 }
+#joy a{
+  color: #5a189a;
+}
 a {
   color: #5a189a;
   text-decoration: none;
