@@ -10,7 +10,7 @@
   }
   
   .box {
-    max-width: 80%;
+    width: 100%;
     padding: 0 20px;
     margin: 100px auto 0 auto;
     display: flex;
@@ -81,17 +81,17 @@
     order: 0;
     flex-grow: 0;
   }
-  
-  #p{margin-left:1.2pc ;}
-  .left-box p {
+   .left-box p {
     /* Fullname */
   
     font-family: "Inter";
     font-style: normal;
+    width: 80%;
+    text-align: left;
+    margin: auto;
     font-weight: 500;
     font-size: 24px;
     line-height: 36px;
-    text-align: left;
     margin-left: 0;
     /* Fullname */
     font-weight: 600;
@@ -109,6 +109,11 @@
     flex-grow: 0;
   }
   
+  #p{
+    margin-left:1.2pc;
+    text-align: center;
+  }
+ 
   form {
     padding: 20px;
     border: none;
@@ -201,3 +206,7 @@
     left: 90%;
   }
   
+
+  @media screen and (max-width:768px) {
+    
+  }
