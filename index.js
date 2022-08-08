@@ -1,0 +1,1 @@
+const mobilemenu = document.querySelector(".menu")
