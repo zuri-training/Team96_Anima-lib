@@ -22,24 +22,8 @@ body {
   justify-content: center;
   align-items: center;
   background-color: #ffffff;
-  border-radius: 15px;
-  height: auto;
-  width: auto;
-  align-content: space-between;
 }
-.fa {
-  position: absolute;
-  margin: 8px 0px;
-  left: 21pc;
-}
-#fa {
-  display: flex;
-  flex-wrap: wrap;
-  flex-shrink: 1;
-  flex-grow: 0;
-  position: absolute;
-  left: 16pc;
-}
+
 #icon {
   display: flex;
   flex-wrap: wrap;
@@ -48,14 +32,7 @@ body {
   position: absolute;
   left: 16pc;
 }
-.eye {
-  position: absolute;
-  left: 16pc;
-  margin: 14px 0px;
-}
-#hideeye {
-  display: none;
-}
+
 #purp {
   color: #8c3adb;
 }
@@ -70,11 +47,10 @@ body {
 .right-box {
   display: flex;
   flex-direction: column;
+  align-items: center;
   margin-left: 3px;
   max-width: 50%;
   padding: 0 10px;
-  color: #80558c;
-  align-content: space-around;
 }
 
 .right-box h2 {
@@ -95,7 +71,7 @@ body {
   flex: none;
   order: 0;
   flex-grow: 0;
-  text-align: left;
+  align-self: flex-start;
 }
 
 .right-box p {
@@ -222,17 +198,6 @@ a:active {
   background-color: transparent;
   text-decoration: none;}
 
-.zuri {
-  padding: 20px 50px;
-  color: #80558c;
-  background-color: #ffffff;
-  font-weight: 400;
-  font-size: 15px;
-  border: none;
-  height: auto;
-}
-
-.zuri,
 button {
   cursor: pointer;
 }
@@ -244,14 +209,14 @@ button {
 
 #hideeye, #openeye {
   position: absolute;
-  top: 15px;
-  left: 85%;
+  top: 27px;
+  right: 5%;
 }
 
 form {
   padding: 20px;
   border: none;
-  width: 110%;
+  width: 100%;
   border-radius: 10px;
   margin-bottom: 4rem;
 }
@@ -353,15 +318,11 @@ form button {
   font-size: 16px;
   margin: 15px 0;
 }
-form button:hover {
-  background-color: #dbbafc;
-  color: #5a189a;
+form button:hover, form button:active, form button:focus {
+  background-color: #763FAB;
+
 }
 
-form button:active {
-  background-color: #8c3adb;
-  transition: 0s;
-}
 form button:disabled {
   background-color: #c9c5cc;
   transition: 0s;
@@ -370,17 +331,21 @@ form button:disabled {
 @media only screen and (max-width: 768px) {
   .box {
     flex-direction: column;
-    margin: 100px auto 0 auto;
+    margin: 50px auto;
+    width: 95%;
+    padding-inline: 10px;
   }
 
   .left-box, .right-box{
     width: 100%;
     max-width: 100%;
+    margin: 0;
   }
 
   form{
     margin-bottom: 0;
     margin-left: 0;
+    padding: 0;
   }
 
   .left-box h2{
@@ -397,12 +362,24 @@ form button:disabled {
   .right-box h2{
     font-size: 28px;
     margin-left: 0;
-    text-align: center;
+    align-self: center;
+    gap: 0;
 
   }
   .right-box p{ text-align: center;}
-  .right-box img{
-    width: 300;
-    height: 450;
+}
+@media screen and (max-width:450px) {
+  .left-box h2{
+    font-size: 35px;
+   
+  }
+  .right-box{
+    display: none;
+  }
+}
+
+@media screen and (max-width:370px) {
+  .left-box h2{
+    font-size: 25px;
   }
 }

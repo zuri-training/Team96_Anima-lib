@@ -79,7 +79,7 @@
   .left-box {
     display: flex;
     flex-direction: column;
-    margin-left: 3px;
+    margin-inline: 3px;
     width: 50%;
     padding: 0 10px;
   }
@@ -252,8 +252,6 @@
     border: none;
     height: auto;
   }
-  
-  .zuri,
   button {
     cursor: pointer;
   }
@@ -269,9 +267,8 @@
     width: 100%;
 }
   form {
-    padding: 20px;
     border: none;
-    width: 110%;
+    width: 90%;
     border-radius: 10px;
     margin-bottom: 4rem;
   }
@@ -401,6 +398,7 @@
     form{
       margin-bottom: 0;
       margin-left: 0;
+      width: 95%;
     }
   
     .left-box h2{
@@ -419,8 +417,16 @@
       margin-left: 2pc;
     }
     .right-box img{
-      width: 300;
-      height: 450;
+      width: 100%;
     }
     
+  }
+
+  @media screen and (max-width:450px) {
+    form{
+      width:100%;
+    }
+    .right-box{
+      display: none;
+    }
   }
