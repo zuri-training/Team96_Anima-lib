@@ -5,13 +5,13 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="headerandfooter.css" />
-    <link rel="stylesheet" href="documentation.css">
+    <link rel="stylesheet" href="documentation.css" />
     <title>Documentation | Anibry</title>
   </head>
   <body>
     <header>
       <div class="headercontainer">
-        <img src="./images/anibry-logo-header.svg" alt="logo" />
+        <img src="./images/anibry-logo-header.svg" alt="logo"/>
         <ul>
           <li><a href="#">Library</a></li>
           <li><a href="documentation.html">Documentation</a></li>
@@ -22,34 +22,52 @@
         </ul>
         <div class="profile">
           <img src="./images/anibry-logo-header.svg" alt="profile-image" />
-          <p class="profile-name"> Harriet </p>
+          <p class="profile-name">Harriet</p>
           <img class="icondown" src="./images/icondown.svg" alt="icondown" />
         </div>
       </div>
     </header>
     <div id="container">
-      <img class="asidehamburger" src="./images/menuhamburger.svg" alt="asidehamburger">
+      <img
+        class="asidehamburger"
+        src="./images/menuhamburger.svg"
+        alt="asidehamburger"
+      />
       <div class="aside">
         <div class="tableofcontent">
           <img class="closeasidemenu" src="./images/closeicon.svg" alt="closeicon">
-          <a href="documentation.html" class="active">Overview</a>
-          <a href="gettingstarted.html">Getting Started</a>
-          <a href="usingclasses.html">Using Animations <img src="./images/icondown.svg" alt="icondown"></a>
+          <a href='documentation.html' target="_self" class="active">Overview</a>
+          <a href="gettingstarted.html" target="_self">Getting Started</a>
+          <a href="usingclasses.html" target="_self">Using Animations <img src="./images/icondown.svg" alt="icondown"/></a>
           <div id="listContent">
-            <a href="usingclasses.html">Using Classes</a>
-            <a href="usingclasses.html">Using Keyframes</a>
+            <a href="usingclasses.html" target="_self">Using Classes</a>
+            <a href="#" target="_self">Using Keyframes</a>
           </div>
-          <a href="#">Best Practices</a>
+          <a href="importantanimationtips.html" target="_self">Best Practices</a>
         </div>
       </div>
-      <div id="content">    
-        <h1>Anibry Library</h1>
+      <div id="content">
+        <h1>Using Classes</h1>
         <p>
-          Anibry is a library of ready-to-use, cross-browser animations for use in
-          your web projects. Great for emphasis, home pages, sliders, and
-          attention-guiding hints. Enjoy the fast, seamless, easy to use and easy
-          to integrate library. Click here to download <a href="#" class="downloadbutton"> Anibry Library</a>
+          Now that the files are set, let's start adding animations! <br> All you
+          have to do find the animation you are interested in and add the class name of that animation to the element.
         </p>
+        <div class="codearea">
+          <p style="padding-left: 20px;"><span class="grey"><</span><span class="blue">button </span> <span class="cloud">class</span>=<span class="brown">"jiggle"</span><span class="grey">></span> Submit <span class="grey"> < /</span><span class="blue">button</span><span class="grey">></span></p>
+        </div>
+        <p>Your animation is all set! <br>Alternatively, you can use keyframes.</p>
+        <div id="interaction">
+          <p> Is this information above useful for you? <img src="./images/like.svg" alt="thumbsup"> <img src="./images/dislike.svg" alt="thumbsdown"> </p>
+          <div>
+            <div>
+              <textarea name="documentationInteraction" id="documentationInteraction" cols="20" rows="30" placeholder="Tell us why in this comment section"></textarea>
+            </div>
+            <div class="submitandcancel">
+              <input class="submit" type="submit" value="Send Comment">
+              <input class="cancel" type="button" value="Cancel">
+            </div>
+          </div>
+        </div>
       </div>
     </div>
     <footer>
@@ -87,7 +105,7 @@
             <a href="#">Community</a>
           </div>
         </div>
-        <div class="copyright">© 2022 Anibry. All right reserved.</div>
+        <div class="copyright" >© 2022 Anibry. All right reserved.</div>
       </div>
     </footer>
     <script src="documentation.js"></script>
