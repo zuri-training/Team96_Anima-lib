@@ -31,8 +31,10 @@ nav ul li{
     display: inline-block;
     padding: 2px;
     text-decoration: none;
+}
 
-    
+.menu{
+    display: none;
 }
 ul li a {
     color: #3c3c3c;
@@ -40,14 +42,12 @@ ul li a {
     border-bottom: 2px solid transparent;
     
 }
-ul li a:hover{
-    border-bottom: 2px solid #5A189A;
-    padding: 5px;
-}
+
 .nav-bar #icon{
     color: #3c3c3c;
 }
-  
+
+
 /* -------------------header------------------------ */
 .container{
     display: flex;
@@ -169,9 +169,32 @@ main p a{
     color: black;
     background-color: white;
     padding: 7px 16px;
-    
-  
   }
+
+.register{
+    color: white;
+    background-color: #5A189A;
+    border-radius: 5px;
+    padding: 10px 16px;    
+}
+
+.register:hover{
+    background-color: #DBBAFC;
+    color: #5a189a;
+}
+
+.login{
+    color: #5A189A;
+    background-color: white;
+    border: 1px solid #5A189A;
+    border-radius: 5px;
+    padding: 8px 10px;  
+}
+
+.login:hover{
+    background-color:#5a189a ;
+    color: #DBBAFC;
+}
   .dropdown-content {
     display: none;
     position: absolute;
@@ -508,6 +531,10 @@ footer{
     width: 25%;
     margin-right: 24px;
 } 
+
+.menulist{
+    display: none;
+}
 /* ---------------------media queries--------------------- */
 @media screen and (max-width: 800px){
  .container{
@@ -668,12 +695,11 @@ footer{
 }
 
 }
-@media screen and (max-width: 450px)
-{
-    nav ul li{
-        display: none;
+@media screen and (max-width: 500px)
+{   
+    .register{
+        font-weight: 700;
     }
-
     .intro p{
         margin: 10px;
         padding: 5px;
@@ -795,4 +821,21 @@ footer{
         
     }
  
+    .desktopmenu{
+        display: block;
+    }
+    .menulist{
+    display: none;
+    position: absolute;
+    display: flex;
+    flex-direction: row;
+    right: 10px;
+    top: 20px;
+    }
+    .submenu{
+        display: flex;
+        flex-direction: row;
+    }
+ 
+
 }
