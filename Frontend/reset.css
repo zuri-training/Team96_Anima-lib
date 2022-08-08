@@ -111,7 +111,7 @@
   
   #p{
     margin-left:1.2pc;
-    text-align: center;
+    text-align: left;
   }
  
   form {
@@ -202,11 +202,20 @@
   #hideeye,
   #openeye {
     position: absolute;
-    top: 23px;
+    top: 19px;
     left: 90%;
+    color: #bbbbbb;
   }
   
 
   @media screen and (max-width:768px) {
-    
+    .left-box{
+      width: 80%;
+    }
+  }
+
+   @media screen and (max-width:450px) {
+    .left-box{
+      width: 90%;
+    }
   }
