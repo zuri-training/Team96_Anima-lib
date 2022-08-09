@@ -6,8 +6,6 @@ from django.contrib.auth.models import User
 #     def __str__(self):
 #         return str(self.profile_pic)
 
-#         # To use this in the template you are going to use this in the <img src='{{ user.profile.image.url }}'
-
 # class User (models.Model):
 #     full_name = models.CharField(max_length = 300, null = True)
 #     email = models.EmailField(max_length = 300, null = True)
@@ -51,6 +49,18 @@ from django.contrib.auth.models import User
 #     def __str__(self):
 #         return str(self.anima_name)
 
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete = models.CASCADE)
+    image = models.ImageField(default='profilepic.jpg', upload_to = 'profile_pictures')
+    bio = models.CharField(max_length = 200, null=True)
+    
+    def __str__(self):
+        return self.user.username
+
+class Message (models.Model):
+    title = models.CharField(max_length=200, null=True)
+    content = models.TextField(max_length = 500, null = True)
+    image = models.OneToOneField(Profile, on_delete=models.CASCADE)
 
 
 # There is no need to create a new user model, we will use Django default user model to make things easy.
@@ -87,11 +97,5 @@ class Message(models.Model):
 
    
 
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete = models.CASCADE)
-    image = models.ImageField(default='profilepic.jpg', upload_to = 'profile_pictures')
-    bio = models.CharField(max_length = 200, null=True)
-    
-    def __str__(self):
-        return self.user.username    
+
                      
