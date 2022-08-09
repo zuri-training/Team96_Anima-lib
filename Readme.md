@@ -67,11 +67,13 @@
 
 ### You'll have to install your own virtual environment and install the dependencies. Follow these steps.
 
- Step 1: Go to your terminal and type --> pip install virtualenv
- Step 2: Create your own virtual environment --> virtualenv "whatever name you choose for your virtual environment"
- Step 3: Activate your virtual environment --> cd (name of virtual environment from step 2)
- Step 4: Write this (scripts/activate) into the terminal
- Step 5: Install dependencies --> pip install -r requirements.txt (This might not be necessary though)
- Step 6: Write (python manage.py createsuperuser) into the terminal
- Step 7: Write (python manage.py runserver) into the terminal
- Step 8: Do your thing.
+1. Step 1: Go to your terminal and type --> pip install virtualenv
+2. Step 2: Create your own virtual environment --> virtualenv "whatever name you choose for your virtual environment"
+3. Step 3: Activate your virtual environment --> cd (name of virtual environment from step 2)
+4. Step 4: Write this (scripts/activate) into the terminal
+5. Step 5: Install dependencies --> pip install -r requirements.txt (This might not be necessary though)
+6. Step 6: Write (python manage.py createsuperuser) into the terminal
+7. Step 7: python manage.py makemigrations
+8. Step 8: python manage.py migrate
+9. Step 7: Write (python manage.py runserver) into the terminal
+10. Step 8: Do your thing.
