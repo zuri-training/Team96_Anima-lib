@@ -23,7 +23,7 @@ nav {
   position: relative;
   flex-direction: row;
   color: #fff;
-  border-bottom: 3px solid #e5e5e5;
+  box-shadow: 3px 3px 10px #e5e5e5;
 }
 nav ul li {
   list-style: none;
@@ -165,7 +165,7 @@ main p a {
 .dropdown .dropbtn {
   font-size: 16px;
   margin-top: 15px;
-  border: 1.5px solid rgb(5, 5, 250);
+  border: 1.5px solid #5a189a;
   border-radius: 5px;
   outline: none;
   color: black;

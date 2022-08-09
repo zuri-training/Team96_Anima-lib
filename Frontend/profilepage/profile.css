@@ -1,0 +1,527 @@
+body {
+	position: relative;
+	width: 1440px;
+	height: 1525px;
+	background: #ffffff;
+}
+
+/*navbar stylimg*/
+
+.nav {
+	position: absolute;
+	width: 1440px;
+	height: 90px;
+	left: 0px;
+	top: 0px;
+	z-index: 999;
+	background-color: #ffffff;
+}
+
+.nav .navbar {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 300px;
+
+	position: absolute;
+	left: 6.94%;
+	right: 6.94%;
+	top: 16.67%;
+	bottom: 16.67%;
+}
+
+.nav .logo a img {
+	width: 105px;
+	height: 60px;
+}
+.nav .max-width {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 79px;
+
+	width: 835px;
+	height: 40px;
+}
+
+.nav .nav-links {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 40px;
+	width: 624px;
+	height: 24px;
+}
+.nav .nav-links li {
+	list-style: none;
+	display: inline-block;
+}
+
+.nav .nav-links li a {
+	width: 53px;
+	height: 24px;
+
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	color: #16161d;
+	text-decoration-line: none;
+}
+
+.nav .max-width .user {
+	position: relative;
+	display: flex;
+	width: 132px;
+	height: 40px;
+
+	gap: 16px;
+}
+.max-width .user img {
+	width: 40px;
+	height: 40px;
+}
+.max-width .user .username {
+	width: 76px;
+	height: 24px;
+}
+
+.banner {
+	position: absolute;
+	width: 1440px;
+	height: 305px;
+	left: 0px;
+	top: 0px;
+
+	background: url(/Rectangle\ 2.png), #e0aaff;
+}
+
+section.profile {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0px;
+	position: absolute;
+	width: 318px;
+	height: 627px;
+	left: 200px;
+	top: 337px;
+}
+
+section.profile img {
+	width: 276px;
+	height: 276px;
+	left: 21px;
+	position: absolute;
+}
+
+section.profile .profile2 {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding-left: 0px;
+
+	width: 318px;
+	height: 351px;
+	top: 276px;
+	position: relative;
+}
+.profile2 p {
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 500;
+	font-size: 32px;
+	line-height: 48px;
+}
+.profile2 .texts {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0px;
+	gap: 12px;
+	width: 318px;
+	height: 116px;
+}
+.profile2 .texts h3 {
+	width: 61px;
+	height: 32px;
+	font-family: "Inter";
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 32px;
+}
+.profile2 .texts h4 {
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+	text-align: center;
+	position: relative;
+	top: -20px;
+}
+
+.profile2 .location {
+	width: 109px;
+	height: 24px;
+	position: relative;
+	top: -30px;
+}
+.profile2 .location img {
+	height: 20px;
+	width: 17px;
+	left: -20px;
+	top: 0px;
+	border-radius: 0px;
+}
+.profile2 .icons {
+	display: flex;
+	flex-direction: row;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 10px;
+	width: 92px;
+	height: 24px;
+	position: relative;
+	top: -20px;
+}
+
+.profile2 .icons a img {
+	width: 22px;
+	height: 22px;
+	left: 1px;
+	top: 1px;
+	position: relative;
+}
+
+.profile2 button {
+	background-color: #ffffff;
+
+	box-sizing: border-box;
+	color: #5a189a;
+	height: 56px;
+
+	border: 1.5px solid #5a189a;
+	border-radius: 8px;
+	width: 210px;
+
+	padding: 16px 24px;
+	text-transform: capitalize;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 700;
+	font-size: 20px;
+}
+
+button:hover {
+	color: #ffffff;
+	background-color: #5a189a;
+	transition: ease 0.5s;
+}
+
+/* animation section */
+section.animations {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	padding: 0px;
+	gap: 16px;
+
+	position: absolute;
+	width: 554px;
+	height: 32px;
+	left: 626px;
+	top: 373px;
+}
+.anima-list a {
+	color: #16161d;
+	font-weight: 700;
+	font-size: 20px;
+	line-height: 32px;
+	text-decoration-line: none;
+}
+.anima-list a span {
+	color: #16161d;
+	font-weight: 400;
+	font-size: 16px;
+	line-height: 24px;
+}
+
+section.anima-boxes {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	gap: 24px;
+
+	position: absolute;
+	width: 564px;
+	height: 413.5px;
+	left: 626px;
+	top: 434px;
+}
+
+/* anime-1 styling */
+
+section.anima-boxes .anima-1 {
+	position: absolute;
+	width: 264px;
+	height: 195px;
+	left: 0px;
+	top: 0px;
+
+	background: url(/Rectangle\ 3303.png), #3c3c3c;
+	border-radius: 6px;
+}
+section.anima-boxes .anima-1 .info {
+	background: #e8e4f0;
+	position: absolute;
+	width: 264px;
+	height: 53px;
+	left: 0px;
+	top: 141px;
+	border-radius: 0px 0px 6px 6px;
+	display: flex;
+	justify-content: space-between;
+}
+.anima-1 .info img.image1 {
+	height: 24px;
+	width: 24px;
+	left: 10px;
+	top: 14px;
+	border-radius: 0px;
+	position: relative;
+}
+.anima-1 .info img.image2 {
+	height: 24px;
+	width: 24px;
+	left: 10px;
+	top: 14px;
+	border-radius: 0px;
+	position: relative;
+}
+.anima-1 .info span {
+	width: 15px;
+	height: 20px;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 20px;
+	position: relative;
+	top: 15px;
+	right: 10px;
+}
+
+/* anima-2 styling */
+
+section.anima-boxes .anima-2 {
+	position: absolute;
+	width: 264px;
+	height: 195px;
+	left: 300px;
+	top: 0px;
+
+	background: url(/Rectangle\ 3303-1.png), #3c3c3c;
+	border-radius: 6px;
+}
+
+section.anima-boxes .anima-2 .info {
+	background: #e8e4f0;
+	position: absolute;
+	width: 264px;
+	height: 53px;
+
+	top: 141px;
+	border-radius: 0px 0px 6px 6px;
+	display: flex;
+	justify-content: space-between;
+}
+.anima-2 .info img.image1 {
+	height: 24px;
+	width: 24px;
+	left: 10px;
+	top: 14px;
+	border-radius: 0px;
+	position: relative;
+}
+.anima-2 .info img.image2 {
+	height: 24px;
+	width: 24px;
+	left: 10px;
+	top: 14px;
+	border-radius: 0px;
+	position: relative;
+}
+.anima-2 .info span {
+	width: 15px;
+	height: 20px;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 20px;
+	position: relative;
+	top: 15px;
+	right: 10px;
+}
+
+/* anima-3 styling */
+
+section.anima-boxes .anima-3 {
+	position: absolute;
+	width: 264px;
+	height: 195px;
+	left: 0px;
+	top: 219px;
+
+	background: url(/Rectangle\ 3303-2.png), #3c3c3c;
+	border-radius: 6px;
+}
+
+section.anima-boxes .anima-3 .info {
+	background: #e8e4f0;
+	position: absolute;
+	width: 264px;
+	height: 53px;
+
+	top: 141px;
+	border-radius: 0px 0px 6px 6px;
+	display: flex;
+	justify-content: space-between;
+}
+.anima-3 .info img.image1 {
+	height: 24px;
+	width: 24px;
+	left: 10px;
+	top: 14px;
+	border-radius: 0px;
+	position: relative;
+}
+.anima-3 .info img.image2 {
+	height: 24px;
+	width: 24px;
+	left: 10px;
+	top: 14px;
+	border-radius: 0px;
+	position: relative;
+}
+.anima-3 .info span {
+	width: 15px;
+	height: 20px;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 20px;
+	position: relative;
+	top: 15px;
+	right: 10px;
+}
+
+/* anima-4 styling */
+
+section.anima-boxes .anima-4 {
+	position: absolute;
+	width: 264px;
+	height: 195px;
+	left: 300px;
+	top: 219px;
+
+	background: url(/Rectangle\ 3303-3.png), #3c3c3c;
+	border-radius: 6px;
+}
+section.anima-boxes .anima-4 .info {
+	background: #e8e4f0;
+	position: absolute;
+	width: 264px;
+	height: 53px;
+
+	top: 141px;
+	border-radius: 0px 0px 6px 6px;
+	display: flex;
+	justify-content: space-between;
+}
+.anima-4 .info img.image1 {
+	height: 24px;
+	width: 24px;
+	left: 10px;
+	top: 14px;
+	border-radius: 0px;
+	position: relative;
+}
+.anima-4 .info img.image2 {
+	height: 24px;
+	width: 24px;
+	left: 10px;
+	top: 14px;
+	border-radius: 0px;
+	position: relative;
+}
+.anima-4 .info span {
+	width: 15px;
+	height: 20px;
+	font-family: "Inter";
+	font-style: normal;
+	font-weight: 400;
+	font-size: 12px;
+	line-height: 20px;
+	position: relative;
+	top: 15px;
+	right: 10px;
+}
+
+/* footer styling */
+
+footer {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	height: 486px;
+	width: 1440px;
+	left: 0px;
+	top: 1039px;
+	border-radius: 0px;
+	padding: 50px, 96px;
+	background-color: #5a189a;
+	border-radius: 0px;
+	position: relative;
+	gap: 10px;
+}
+
+.footer-copywrite {
+	display: flex;
+	flex-direction: column;
+	align-items: flex-start;
+	padding: 0px;
+	height: 386px;
+	width: 1036px;
+	left: 96px;
+	top: 50px;
+	border-radius: 0px;
+	gap: 100px;
+}
+
+.footer-copywrite .footer-content {
+	height: 262px;
+	width: 1036px;
+	left: 0px;
+	top: 0px;
+	border-radius: 0px;
+}
+
+.footer-content .frame1 {
+	height: 222px;
+	width: 188px;
+	gap: 32px;
+	padding: 0px;
+}
+.footer-content .frame1 img {
+	height: 60px;
+	width: 105px;
+	left: 0px;
+	top: 0px;
+	border-radius: 0px;
+}
