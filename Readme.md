@@ -73,5 +73,7 @@
 4. Step 4: Write this (scripts/activate) into the terminal
 5. Step 5: Install dependencies --> pip install -r requirements.txt (This might not be necessary though)
 6. Step 6: Write (python manage.py createsuperuser) into the terminal
-7. Step 7: Write (python manage.py runserver) into the terminal
-8. Step 8: Do your thing.
+7. Step 7: python manage.py makemigrations
+8. Step 8: python manage.py migrate
+9. Step 7: Write (python manage.py runserver) into the terminal
+10. Step 8: Do your thing.
