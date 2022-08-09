@@ -8,6 +8,6 @@ admin.site.register(Profile)
 # admin.site.register(User)
 admin.site.register(Message)
 admin.site.register(Lib)
-admin.site.register(My_Lib)
+admin.site.register(MyLib)
 
 # Register your models here.

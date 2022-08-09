@@ -1,0 +1,7 @@
+Links to my contributions.
+
+Link to Project Brief/Documentation issue closed.
+https://github.com/zuri-training/Team96_Anima-lib/issues/23#issuecomment-1209720626
+
+Link to the "Contact Us" page issue closed.
+https://github.com/zuri-training/Team96_Anima-lib/issues/4#issuecomment-1203856364

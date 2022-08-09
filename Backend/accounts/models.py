@@ -6,8 +6,6 @@ from django.contrib.auth.models import User
 #     def __str__(self):
 #         return str(self.profile_pic)
 
-#         # To use this in the template you are going to use this in the <img src='{{ user.profile.image.url }}'
-
 # class User (models.Model):
 #     full_name = models.CharField(max_length = 300, null = True)
 #     email = models.EmailField(max_length = 300, null = True)
@@ -51,13 +49,19 @@ from django.contrib.auth.models import User
 #     def __str__(self):
 #         return str(self.anima_name)
 
-
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete = models.CASCADE, null=True)
+    image = models.ImageField(default='profilepic.jpg', upload_to = 'profile_pictures')
+    bio = models.CharField(max_length = 200, null=True)
+    
+    def __str__(self):
+        return self.user.username
 
 # There is no need to create a new user model, we will use Django default user model to make things easy.
 
 class Lib(models.Model):
     anima_name = models.CharField(max_length=300, primary_key=True)
-    anima_type = models.CharField(max_length=300)
+    anima_type = models.CharField(max_length=300, null=True)
     anima_desc = models.TextField(max_length=500, null=True)
 
     def __str__(self):
@@ -65,7 +69,7 @@ class Lib(models.Model):
 
 
 class MyLib(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     animation = models.ForeignKey(Lib, on_delete=models.CASCADE)
     date_added = models.DateTimeField(auto_now_add=True, null=True)
     liked = models.BooleanField(default=False)
@@ -77,7 +81,7 @@ class MyLib(models.Model):
 
 
 class Message(models.Model):
-    user = models.ForeignKey(User, on_delete=models.CASCADE)
+    user = models.ForeignKey(User, on_delete=models.CASCADE, null=True)
     title = models.CharField(max_length=200, null=True)
     content = models.TextField(max_length=500, null=True)   
     date_added = models.DateTimeField(auto_now_add=True, null=True)
@@ -87,11 +91,5 @@ class Message(models.Model):
 
    
 
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete = models.CASCADE)
-    image = models.ImageField(default='profilepic.jpg', upload_to = 'profile_pictures')
-    bio = models.CharField(max_length = 200, null=True)
-    
-    def __str__(self):
-        return self.user.username    
+
                      

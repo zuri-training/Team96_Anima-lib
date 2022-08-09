@@ -1,0 +1,313 @@
+:root {
+    --primary: #5A189A;
+}
+
+* {
+    font-family: Inter, sans-serif;
+    color: #16161D;
+}
+body{
+    background-color: #F9F9F9;
+}
+
+.primary {
+    color: var(--primary);
+}
+
+.btn-primary {
+    background: var(--primary);
+    border: #5A189A;
+    outline: none;
+    border-radius: 8px;
+}
+
+.btn-primary:hover {
+    background: #DBBAFC;
+    border: 1px solid #DBBAFC;
+    color: #16161D;
+}
+
+.btn-primary:focus {
+    background: var(--primary);
+    border: 1px solid #5A189A;
+    outline: var(--primary);
+}
+
+.btn-primary:active {
+    background: var(--primary);
+    border: 1px solid #5A189A;
+    outline: var(--primary);
+}
+
+.community{
+    margin-top: 64px;
+}
+
+.community .post-button input {
+    padding: 10px 40px;
+    border-radius: 8px;
+    border: 1px solid #16161D;
+    outline: none;
+}
+
+.community .post-button input:focus{
+    border: 1px solid #5A189A;
+}
+
+.community .post-button img{
+    position: absolute;
+    top: 13px;
+    left: 14px;
+    width: 20px;
+}
+
+.community .card-body {
+    padding: 40px;
+}
+
+.community .card h5 {
+    margin: 16px 0;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.community .card .card-body .avatar{
+    margin-right: 24px;
+}
+
+.community .card-body .display-name {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.community .card-body .time {
+    font-size: 16px;
+    font-weight: 400;
+    color: #BBBBBB;
+}
+
+.community .card .tag-wrapper .tag-name {
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-size: 12px;
+}
+
+.community .card .tag-wrapper span:not(:last-child) {
+    margin-right: 16px;
+}
+
+.community .card .tag-wrapper span:nth-child(2) {
+    background: rgba(146, 227, 169, 0.3);
+}
+
+.community .card .tag-wrapper span:nth-child(3) {
+    background: rgba(255, 199, 39, 0.3);
+}
+
+.community .card .tag-wrapper span:nth-child(4) {
+    background: rgba(64, 123, 255, 0.3);
+}
+
+.community .card .card-text {
+    margin-top: 16px;
+    margin-bottom: 8px;
+    font-weight: 400;
+    /* font */
+}
+
+.community .card .btn-more {
+    font-size: 12px;
+    color: #5A189A;
+}
+
+.community .card .icons .like {
+    padding: 8px 12px;
+    border-radius: 50%;
+    background-color: #F9F9F9;
+    cursor: pointer;
+}
+
+.community .card .icons .like:nth-child(3) {
+    border-radius: 30px;
+}
+
+.community .card .icons .like:nth-child(3) p {
+    font-size: 12px;
+}
+
+
+
+.community .card .icons .like:not(:last-child) {
+    margin-right: 16px;
+}
+
+.community .card .icons .like:hover {
+    background-color: #5A189A;
+}
+
+.community .card .icons .like:hover p {
+    color: #fff;
+}
+
+
+.community .card .icons .like:hover svg path {
+    stroke: #fff;
+}
+
+.community .card .users {
+    position: relative;
+    min-width: 100px;
+    margin-left: 10px;
+}
+
+.community .card .users img {
+    border-radius: 50%;
+    position: relative;
+    /* right: 0; */
+    border: 1.5px solid #fff;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.06));
+}
+
+.community .card .users span {
+    background: #ffffff;
+    padding: 8px 7px;
+    border-radius: 50%;
+    font-size: 10px;
+    border: 1px solid #fff;
+    margin-left: -15px;
+    position: relative;
+    filter: drop-shadow(0px 4px 12px rgba(0, 0, 0, 0.06));
+}
+
+.community .card .users img:not(:first-child) {
+    margin-left: -15px;
+}
+
+
+.community .response {
+    margin-top: 16px;
+}
+
+.community .response .user .name {
+    margin-left: 16px;
+}
+
+.community .response .user .name h6 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.community .response .user .name span {
+    color: #BBBBBB;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.community .modal-header{
+    display: none;
+}
+
+.community .modal-body {
+    padding: 40px 40px 0 40px;
+}
+
+.community .modal-footer{
+    border: none;
+    padding: 10px 40px 40px 40px ;
+}
+
+.community  .pagination{
+    background-color: #fff;
+    padding: 16px;
+    border-radius: 8px;
+    margin-top: 16px;
+    width: 27%;
+}
+
+.community  .pagination small:first-child, .community  .pagination small:last-child{
+    color: #BBBBBB;
+}
+
+.community  .pagination small:nth-child(2){
+    background-color: var(--primary);
+    padding: 8px 16px;
+    color: #fff;
+    border-radius: 8px;
+   
+}
+
+
+/* -------------- Portfoli --------------- */
+.portfolio {
+    margin-top: 64px;
+}
+
+.portfolio  h1{
+    font-weight: 800;
+}
+
+.portfolio p{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.portfolio .card {
+    cursor: pointer;
+    transition: all .40s  ease-in-out ;
+}
+
+.portfolio .card .card-img-top {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+}
+
+.portfolio .card:hover .effect .overlay {
+    opacity: 0.4;
+    transition: all .40s  ease-in-out ;
+}
+
+.portfolio .card:hover .effect img {
+    opacity: 1;
+}
+
+.portfolio .card .effect .overlay{
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+    background: #16161D;
+    position: relative;
+}
+.portfolio .card .effect {
+    position: absolute;
+    width: 100%;
+    height: 240px;
+}
+
+.portfolio .card .effect img{
+    position:absolute;
+    bottom: 15px;
+    right: 15px;
+    z-index: 3;
+    opacity: 0;
+}
+
+.portfolio .card .creator img{
+    width: 50px;
+    height: 50px;
+    margin-right: 16px;
+    border-radius:50% ;
+}
+
+.portfolio .card .creator .name h6{
+    font-weight: 700;
+    font-size: 16px;
+}
+
+.portfolio .card .creator .name span{
+    color: #797979;
+}
+
+.portfolio .portfolio-list{
+    margin-top: 60px;
+}

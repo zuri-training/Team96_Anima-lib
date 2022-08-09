@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import Lib
 from django.contrib.auth.models import User
@@ -53,3 +54,8 @@ def register(request):
 @login_required
 def profilepage(request):
     return render(request, 'accounts/profile.html')
+
+#ContactUs Page View
+
+def contact(request):
+    return render(request, 'accounts/contact.html')

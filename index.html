@@ -10,25 +10,38 @@
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
+        <!-- FOR MOBILE MENU -->
+    <div class="mobilemenulist">
+        <div class="menuimgdiv">
+            <img class="closemenu" src="./img/Vector.png" alt="exiticon">
+        </div>
+        <li class="mobilemenuitem"><a href="./Frontend/documentation.html">Documentation</a></li>
+        <li class="mobilemenuitem"><a href="#">About</a></li>
+        <li class="mobilemenuitem"><a href="./Frontend/login.html" class="login">Log in</a></li>
+    </div>
+
+    <!-- MOBILE MENU ENDS -->
     <!-- The navbar i.e the logo and other pages -->
     <div>
         <nav class="nav-bar">
-            <img src="img/Logo-purple.png" alt="">
-            <ul>
-
+            <img src="img/Logo-purple.png" alt="logo">
+            <ul class="desktopmenu">
                 <li><a href="./Frontend/documentation.html">Documentation</a></li>
                 <li><a href="#">About</a></li>
-                <li><a href="./Frontend/login.html">Log in</a></li>
-                <li><a href="./Frontend/registration.html">Registration</a></li>
+                <li><a href="./Frontend/login.html" class="login">Log in</a></li>
+                <li><a href="./Frontend/registration.html" class="register">Register</a></li>
             </ul>
-
+            <ul class="mobilemenu">
+                <li><a href="./Frontend/registration.html" class="register">Register</a></li>
+                <img class="menu" src="./Frontend/images/menuhamburger.svg" alt="hamburger"> 
+            </ul>
         </nav>
     </div>
     <!-- The header  -->
     <header>
         <div class="container">
             <div class="intro">
-                <h1><span>Beginner-friendly library,</span>with<br> tiny powerful animations<br> for your web projects</h1>
+                <h1><span>Beginner-friendly library,</span> with<br> tiny powerful animations<br> for your web projects</h1>
                 <p>Anibry offers cross tools integration and works great with CSS properties, SVG, DOM attributes and JavaScript Objects</p>
                 <button class="button">Start Animating</button>
             </div>
@@ -43,7 +56,7 @@
         <section class="section-one">
             <h1 class="text">Basic Anibry Animations</h1>
             <div class="grid">
-                <div>
+                <div class="boxcontainer">
                     <div class="bounce">BOUNCE</div>
                     <div class="dropdown">
                     <button class="dropbtn">Select a style
@@ -60,7 +73,7 @@
                     </div>
                 </div>
                 <!-- The move animation -->
-                <div>
+                <div class="boxcontainer">
                     <div class="move">MOVE</div>
                     <div class="dropdown">
                         
@@ -77,7 +90,7 @@
                     </div>
                 </div>
                 <!-- The Attention animation -->
-                <div>
+                <div class="boxcontainer">
                     <div class="attention">ATTENTION</div>
                     <div class="dropdown"> 
                         <button class="dropbtn">select a style
@@ -93,7 +106,7 @@
                     </div>
                   </div>
                 <!-- The Dissolve Animation -->
-                <div>
+                <div class="boxcontainer">
                     <div class="dissolve">FADE</div>
                     <div class="dropdown">
                         <button class="dropbtn">
@@ -117,7 +130,7 @@
                 </div>
                    
                 <!-- The Rotate Animation -->
-                <div>
+                <div class="boxcontainer">
                     <div class="rotate">ROTATE</div>
                     <div class="dropdown">
                         <button class="dropbtn">
@@ -133,7 +146,7 @@
                     </div>
                 </div>
                 <!-- The Slide Animation -->
-                <div>
+                <div class="boxcontainer">
                     <div class="slide">SLIDE</div>
                     <div class="dropdown">
                         <button class="dropbtn">
@@ -148,7 +161,7 @@
                     </div>
                 </div>
                 <!-- The Zoom Animation -->
-                <div>
+                <div class="boxcontainer">
                     
                     <div class="zoom">ZOOM</div>
                     <div class="dropdown"><button class="dropbtn">
@@ -165,7 +178,7 @@
                 </div>
                 </div>
                 <!-- The Flip Animation -->
-                <div>
+                <div class="boxcontainer">
                     <div class="flip">FLIP</div>
                     <div class="dropdown">
                         <button class="dropbtn">
@@ -177,41 +190,41 @@
                      </div>
                 </div>
             </div>
-            <p><a href="library.html">View more in library</a></p>
         </section>
+        <p><a href="library.html">View more in library</a></p>
 
         <!-- section about our library features -->
         <section class="section-two">
             <h1 class="text">Everything you need in an an animation library</h1>
 
             <div class="grid-two">
-                <div>
+                <div class="grid-two-box">
                     <img class="img-features" src="img/arcticons_tinybit.png" alt="">
                     <h3>Tiny</h3>
                     <p>The animations are less than 10kb and every value function is importable</p></div>
-                <div>
+                <div class="grid-two-box">
                     <img class="img-features" src="img/healthicons_low-level.png" alt="">
                     <h3>Low Level</h3>
                     <p>Easy integration, composable functions, portable to any framework environment </p>
                 </div>
-                <div>
+                <div class="grid-two-box">
                     <img class="img-features" src="img/emojione_atom-symbol.png" alt="">
                     <h3>Fast</h3>
                     <p>Silky smooth animations and effects for staggering user's experience</p></div>
-                <div>
+                <div class="grid-two-box">
                     <img class="img-features" src="img/ri_open-source-fill.png" alt="">
                     <h3>Open Sourced</h3>
                     <p>Fast growing community refines Anibry and ships frequently</p></div>
-                <div>
+                <div class="grid-two-box">
                     <img class="img-features" src="img/iconoir_magnet-energy (1).png" alt="">
                     <h3>Powerful</h3>
                     <p>Supports keyframes, spring and inertia animations on numbers, colors, and complex strings</p></div>
-                <div>
+                <div class="grid-two-box">
                     <img class="img-features" src="img/carbon_desk-adjustable.png" alt="">
                     <h3>Stable</h3>
                     <p>Consistent reviews and community contributions to ensure reliability</p></div>
                     </div>
-                    <button class="start">Start Animating</button>
+                    <button class="button">Start Animating</button>
         </section>
 
         
@@ -230,16 +243,16 @@
         <section>
             <div class="Animation">
                 <ul class="circular">
-                    <div class="anibry">
-                        <img src="img/Group 13875.png" alt="">
-                    </div>
-                   <li class="top" ><img src="img/figma 1.png" alt=""></li>
-                   <li class="right"><img  src="img/vscode-icons_file-type-xcode (1).png" alt=""></li>
-                   <li class="top-right" ><img src="img/emojione_atom-symbol.png" alt=""></li>
-                   <li class="bottom" ><img src="img/xd 1.png" alt=""></li>
-                   <li class="left"><img src="img/vscode 1.png" alt=""></li>
-                   <li class="right-top"><img src="img/AE 1.png" alt=""></li>
+                    <div class="anibry toggle target">
+                        <img src="img/Group 13875.png" alt="anibrylogo">
                     
+                   <li class="top" ><img src="img/figma 1.png" alt="figmalogo"></li>
+                   <li class="right"><img  src="img/vscode-icons_file-type-xcode (1).png" alt="xcodelogo"></li>
+                   <li class="top-right" ><img src="img/emojione_atom-symbol.png" alt="atomlogo"></li>
+                   <li class="bottom" ><img src="img/xd 1.png" alt="xdlogo"></li>
+                   <li class="left"><img src="img/vscode 1.png" alt="vscodelogo"></li>
+                   <li class="right-top"><img src="img/AE 1.png" alt="AElogo"></li>
+                    </div>
                 </ul>
                 <div class="animate-text">
                    <h2>Amazing Integration across your tools</h2>
@@ -258,18 +271,10 @@
                 <a href="#">View community</a>
             </div>
             <div class="community-image">
-<<<<<<< HEAD
                 <img src="img/Frame 12.png" alt="">       
             </div>
         </div>
     </section>
-=======
-                <img src="img/Frame 12.png" alt="">
-            </div> 
-        </div> 
-    </section>
-
->>>>>>> b424bfc (modified my landing page)
     <!-- section for subscribe -->
     <section>
         
@@ -295,10 +300,6 @@
                 <div class="footerCol footerCol1">
                   <img src="img/anibry-logo-footer.svg" alt="logo" />
                   <p class="build">
-<<<<<<< HEAD
-=======
-
->>>>>>> b424bfc (modified my landing page)
                     Build with all the love in the world by the using Anibry library
                     in your projects </br>
                     Currently v1.0
@@ -313,6 +314,7 @@
               <div class="copyright"><p>copyright © 2022 Anibry. All right reserved.</p></div>
             
           </footer>
+          <script src="index.js"></script>
 </body>
 
 </html>

@@ -48,7 +48,8 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-left: 3px;
+  margin-left: 20px;
+  width: 45%;
   max-width: 50%;
   padding: 0 10px;
 }
@@ -71,9 +72,11 @@ body {
   flex: none;
   order: 0;
   flex-grow: 0;
-  align-self: flex-start;
 }
 
+.right-box .vov{
+  width: 100%;
+}
 .right-box p {
   /* Anibry is an animation library with a simple, but powerful API. Create an account to get access. */
 
@@ -94,17 +97,23 @@ body {
 .left-box {
   display: flex;
   flex-direction: column;
+  align-content: center;
+  justify-content: center;
   margin-left: 3px;
   width: 50%;
+  max-width: 700px;
   padding: 0 10px;
 }
-
+.vov{
+  align-self: center;
+}
 form button,
 form input,
-.zuri {
+.zuri, .vov {
   border-radius: 10px;
   font-weight: 600;
   width: 100%;
+  max-width: 450px;
   color: #5a189a;
 }
 .left-box svg {
@@ -125,7 +134,7 @@ form input,
   font-family: "Inter";
   font-style: normal;
   font-weight: 700;
-  font-size: 56px;
+  font-size: min(46px, 4vw);
   line-height: 84px;
   text-align: center;
   /* identical to box height, or 150% */
@@ -153,7 +162,6 @@ form input,
   font-size: 16px;
   line-height: 24px;
   /* identical to box height, or 150% */
-  text-transform: capitalize;
 
   /* Black- Text Color */
   color: #16161d;
@@ -179,8 +187,12 @@ form input,
   font-size: 14px;
   color: #16161D;
 }
+#joy a{
+  color: #5a189a;
+}
 a {
-  text-decoration-color: #5a189a;
+  color: #5a189a;
+  text-decoration: none;
 }
 
 a:visited {
@@ -211,6 +223,7 @@ button {
   position: absolute;
   top: 27px;
   right: 5%;
+  color:  #BBBBBB;
 }
 
 form {
@@ -319,7 +332,8 @@ form button {
   margin: 15px 0;
 }
 form button:hover, form button:active, form button:focus {
-  background-color: #763FAB;
+    background-color: #DBBAFC;
+    color: #5a189a;
 
 }
 

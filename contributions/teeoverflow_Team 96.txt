@@ -1,0 +1,11 @@
+Low Fidelity designs for Landing page.
+
+https://github.com/zuri-training/Team96_Anima-lib/issues/6
+
+High Fidelity designs for Landing page
+
+https://github.com/zuri-training/Team96_Anima-lib/issues/7
+
+User flow structure and documentation
+
+https://github.com/zuri-training/Team96_Anima-lib/issues/21
