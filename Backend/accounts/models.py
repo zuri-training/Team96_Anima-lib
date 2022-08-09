@@ -49,14 +49,19 @@ from django.contrib.auth.models import User
 #     def __str__(self):
 #         return str(self.anima_name)
 
+class Profile(models.Model):
+    user = models.OneToOneField(User, on_delete = models.CASCADE)
+    image = models.ImageField(default='profilepic.jpg', upload_to = 'profile_pictures')
+    bio = models.CharField(max_length = 200, null=True)
+    
+    def __str__(self):
+        return self.user.username
 
-<<<<<<< HEAD
 class Message (models.Model):
     title = models.CharField(max_length=200, null=True)
     content = models.TextField(max_length = 500, null = True)
     image = models.OneToOneField(Profile, on_delete=models.CASCADE)
-=======
->>>>>>> origin/main
+
 
 # There is no need to create a new user model, we will use Django default user model to make things easy.
 
@@ -92,11 +97,5 @@ class Message(models.Model):
 
    
 
-class Profile(models.Model):
-    user = models.OneToOneField(User, on_delete = models.CASCADE)
-    image = models.ImageField(default='profilepic.jpg', upload_to = 'profile_pictures')
-    bio = models.CharField(max_length = 200, null=True)
-    
-    def __str__(self):
-        return self.user.username    
+
                      

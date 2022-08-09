@@ -1,118 +1,99 @@
 @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap');
 
-
-
-body{
-    background: #FFFFFF;
+*{
     margin: 0;
     padding: 0;
     box-sizing: 0;
+}
+
+body{
+    background: #FFFFFF;
+    
    /* display: flex;
    justify-content: center; */
-
+   font-family: 'Inter';
    
 }
 
-h1{
-font-family: 'Inter';
-font-style: normal;
-font-weight: 800;
-font-size: 64px;
-line-height: 96px;
-margin-bottom: 15px;
-padding: 30px 40px 0 300px;
+.container{
+    width: 60%;
+    margin: 0 auto;
 }
 
-h3,h5{
-    color: #16161D;
-    font-family: 'inter';
-    font-style: normal;
-    font-weight: 700;
 
+
+.team-ctn{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: baseline;
+    padding: 1rem 0 3rem 0;
+}
+
+.team-ctn p{
+    padding: 0;
+    
+}
+
+h1{
+    font-size: 64px;
+    line-height: 96px;
+    
 }
 
 h3{
     font-size: 32px;
-    line-height: 48px;
-    letter-spacing: -0.03em;
-    margin: 0;
-    padding: 20px 0 0 300px;
+    padding: 1rem 0;
+}
+
+h3, h5 {
+    line-height: 32px;
+}
+
+p{
+    line-height: 24px;
+    padding: 1rem 0;
 }
 
 h5{
     font-size: 20px;
-    line-height: 32px;
-    margin-bottom: 0;
-    margin-top: 10px;
-    
 }
 
-p{
-    color: #16161D;
-    font-family: 'inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    width: 60%;
-    padding: 0px 0px 0 300px;
-    /* text-align: center;
-    margin: auto; */
-}
-
-.team_job{
-    color: #797979;
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    letter-spacing: -0.03em;
-    margin-top: 2px;
-    margin-bottom: 30px;
-    padding: 0;
-}
-
-.read-more{
-    color: #5A189A;
-    font-family: 'inter';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 24px;
-    margin: 0;
-    border: none;
-    /* border-image-repeat:0; */
-    /* padding: auto; */
-    
-    
-    /* margin-top: 1px; */
-    padding: 0 0 0 300px;
-}
-
-.our-story{
-width: 61%;
-height: 96px;
-
-}
-
-.team_picture{
-display: flex;
-flex-direction: column;
-width: 188px;
-
-gap: 32px;
-}
-
-.team-picture{
-   
-    /* flex-direction: ; */
-    padding: 5px;
+.team-ctn img{
+    width: 100%;
+    max-width: 188px;
+    padding-bottom: 10px;
 }
 
 .lower_picture{
     display: flex;
-    flex-direction: row;
-    align-items: flex-start;
-    padding: 0px;
-   }
+    width: 100%;
+}
+
+img{
+    width: 100%;
+    max-width: 270px;
+}
+small{
+    color: #5A189A;
+}
+
+small img{
+    width: 8px;
+}
+
+@media (max-width:786px) {
+    .container{
+        width: 85%;
+        margin: 0 auto;
+    }
+}
+
+@media (max-width:460px) {
+    .container{
+        width: 90%;
+        margin: 0 auto;
+    }
+}
+
+
