@@ -1,0 +1,221 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: "Inter", sans-serif;
+  }
+  
+  body {
+    background-color: #ffffff;
+  }
+  
+  .box {
+    width: 100%;
+    padding: 0 20px;
+    margin: 100px auto 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #ffffff;
+    height: auto;
+    width: auto;
+  }
+  
+  .fa {
+    position: absolute;
+    margin: 8px 0px;
+    left: 21pc;
+    
+  }
+  #fa{display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-grow: 0;
+    position: absolute;
+    left:16pc;
+    
+  
+  }
+  #icon{
+    display: flex;
+    flex-wrap: wrap;
+    flex-shrink: 1;
+    flex-grow: 0;
+    position: absolute;
+    left:16pc
+  
+  
+  }
+  
+  .eye {
+    position: absolute;
+    left: 16pc;
+    margin: 14px 0px;
+  }
+  #hideeye {
+    display: none;
+  }
+  .left-box{
+    display: flex;
+    margin-left: 3px;
+    width: 50%;
+    padding: 0 10px;
+  }
+  .left-box h2 {
+    /* Create an account */
+  
+    /* Heading 2 */
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 700;
+    font-size: 56px;
+    line-height: 84px;
+    text-align: center;
+    /* identical to box height, or 150% */
+  
+    /* Primary Purple */
+    color: #5a189a;
+  
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+   .left-box p {
+    /* Fullname */
+  
+    font-family: "Inter";
+    font-style: normal;
+    width: 80%;
+    text-align: left;
+    margin: auto;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 36px;
+    margin-left: 0;
+    /* Fullname */
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 24px;
+    /* identical to box height, or 150% */
+    text-transform: capitalize;
+  
+    /* Black- Text Color */
+    color: #16161d;
+  
+    /* Inside auto layout */
+    flex: none;
+    order: 0;
+    flex-grow: 0;
+  }
+  
+  #p{
+    margin-left:1.2pc;
+    text-align: left;
+  }
+ 
+  form {
+    padding: 20px;
+    border: none;
+    width: 100%;
+    border-radius: 10px;
+    margin-bottom: 4rem;
+  }
+  
+  form input {
+    text-align: left;
+    margin-bottom: 5px;
+    font-weight: 600;
+    line-height: 24px;
+    size: 16px;
+    padding: 15px;
+    border-radius: 10px;
+    border: 1px solid #5a189a;
+    border-color: #5a189a;
+    cursor: pointer;
+    color: #3c3c3c;
+  }
+  form input:active {
+    border: 1px solid #5a189a;
+  }
+  form input:placeholder-shown {
+    color: #bbbbbb;
+    text-align: left;
+  }
+  ::placeholder {
+    color: #bbbbbb;
+    opacity: 1;
+    text-align: left; /* Firefox */
+  }
+  
+  :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #bbbbbb;
+    text-align: left;
+  }
+  
+  ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #bbbbbb;
+    text-align: left;
+  }
+  
+  input[type="text"],
+  input[type="password"] {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    box-sizing: border-box;
+    border: 1px solid #5a189a;
+    -webkit-transition: 0.1s;
+    transition: 0.1s;
+    outline: none;
+  }
+  .inputs {
+    position: relative;
+    width: 100%;
+  }
+  
+  form button {
+    background-color: #5a189a;
+    color: white;
+    border: none;
+    padding: 20px;
+    font-size: 16px;
+    margin: 15px 0;
+    border-radius: 10px;
+    width: 100%;
+  }
+  form button:hover {
+    background-color: #dbbafc;
+    color: #5a189a;
+  }
+  
+  form button:active {
+    background-color: #8c3adb;
+    transition: 0s;
+  }
+  form button:disabled {
+    background-color: #c9c5cc;
+    transition: 0s;
+  }
+  #hideeye,
+  #openeye {
+    position: absolute;
+    top: 19px;
+    left: 90%;
+    color: #bbbbbb;
+  }
+  
+
+  @media screen and (max-width:768px) {
+    .left-box{
+      width: 80%;
+    }
+  }
+
+   @media screen and (max-width:450px) {
+    .left-box{
+      width: 90%;
+    }
+  }

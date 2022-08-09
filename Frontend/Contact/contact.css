@@ -1,0 +1,258 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap");
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Inter", sans-serif;
+  font-size: 16px;
+  background-color: hsl(0, 0%, 100%);
+
+}
+
+main {
+  margin-top: 120px;
+}
+
+
+
+.col-1 {width: 8.33%;}
+.col-2 {width: 16.66%;}
+.col-3 {width: 25%;}
+.col-4 {width: 33.33%;}
+.col-5 {width: 41.66%;}
+.col-6 {width: 50%;}
+.col-7 {width: 58.33%;}
+.col-8 {width: 66.66%;}
+.col-9 {width: 75%;}
+.col-10 {width: 83.33%;}
+.col-11 {width: 91.66%;}
+.col-12 {width: 100%;}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.flex-container {
+  display: flex;
+}
+
+#wrapper {
+  max-width: 1110px;
+  margin: auto;
+}
+
+.right-col {
+  margin-left: 60px;
+}
+
+h1 {
+    font-size: 64px;
+    font-weight: 800;
+    line-height: 96px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #5A189A;
+}
+
+a {
+    text-decoration: none;
+    color: #5A189A;
+    font-weight: 700;
+}
+
+p {
+    font-size: 16px;
+    font-weight: 400;
+    line-height: 24px;
+    letter-spacing: 0em;
+    text-align: left;
+    color: #3c3c3c;
+}
+
+label {
+    color: #3c3c3c;
+    font-weight: 500;
+}
+
+#p1{
+     font-size: 20px;
+     font-weight: 700;
+     line-height: 32px;
+     letter-spacing: 0em;
+     text-align: left;
+     color: #3c3c3c;
+}
+input[type=text], input[type="email"], textarea {
+  width: 100%;
+  padding: 16px 31px;
+  border: 2px solid #3c3c3c;
+  border-radius: 8px;
+  resize: vertical;
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+
+input[type=submit] {
+  background-color: #5A189A;
+  color: white;
+  padding: 14px 20px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 100%;
+  text-transform: capitalize;
+  font-family: inherit;
+  font-size: 15px;
+  letter-spacing: 1px;
+  
+}
+
+input[type=submit]:hover {
+  background-color: #5A189A;
+  
+}
+
+input[type=submit]:focus {
+  color: white;
+  border: none;
+  
+}
+
+input:focus {
+  border: 1px solid hsl(250, 7%, 64%);
+  color: hsl(249, 10%, 26%);
+}
+
+input,textarea:focus {
+    border: 1px solid hsl(250, 7%, 64%);
+    color: hsl(249, 10%, 26%);
+  }
+
+.col-75 {
+  width: 100%;
+  
+  margin-bottom: 15px;
+}
+
+.error-icon {
+  background-image: url(/images/icon-error.svg);
+  background-repeat: no-repeat;
+  background-position: 97% 49%;
+  border: 2px solid #ff7171 !important;
+}
+.col-6 {
+  width: 50%;
+}
+
+.box1 p {
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+}
+
+form {
+  padding: 40px 40px 20px;
+  border-radius: 8px;
+  box-shadow: 1px 1px 1px 1px #5a189a;
+
+}
+
+form div {
+  margin-bottom: 6px;
+}
+
+.error {
+  color: #ff7171;
+  margin-left: 5px;
+  float: right;
+  font-style: italic;
+  font-size: 12px;
+  margin: 7px 0 12px;
+}
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (max-width: 768px) {
+
+
+  main {
+    margin: 90px 23px 0;
+}
+
+  .flex-container {
+    display: block;
+  }
+
+  /* For mobile phones: */
+[class*="col-"] {
+  width: 100%;
+}
+
+.left-col{
+  color: #ffffff;
+}
+
+.right-col {
+margin-left: 0;
+}
+
+.content-container {
+  margin-top: auto;
+  text-align: center;
+  margin-bottom: 80px
+}
+h1 {
+  font-size: 35px;
+  line-height: 39px;
+  font-weight: 600;
+}
+
+form {
+  padding: 25px 25px 1px;
+}
+
+input[type=text], input[type="email"], textarea {
+  width: 100%;
+  padding: 16px 17px;
+  border: 2px solid #3c3c3c;
+  border-radius: 4px;
+  resize: vertical;
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 14px;
+  outline: none;
+}
+input:focus {
+    border: 1px solid hsl(250, 7%, 64%);
+    color: hsl(249, 10%, 26%);
+  }
+
+input,textarea:focus {
+    border: 1px solid hsl(250, 7%, 64%);
+    color: hsl(249, 10%, 26%);
+  }
+
+}
+
+
+@media screen and (max-width: 600px) {
+  .col-75, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}

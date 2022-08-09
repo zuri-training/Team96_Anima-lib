@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet" href="headerandfooter.css" />
+    <link rel="stylesheet" href="documentation.css">
     <title>Documentation | Anibry</title>
   </head>
   <body>
@@ -13,19 +14,44 @@
         <img src="./images/anibry-logo-header.svg" alt="logo" />
         <ul>
           <li><a href="#">Library</a></li>
-          <li><a href="#">Documentation</a></li>
+          <li><a href="documentation.html">Documentation</a></li>
           <li><a href="#">Community</a></li>
           <li><a href="#">Portfolio</a></li>
           <li><a href="#">Team</a></li>
-          <li><a href="#">Contact</a></li>
+          <li><a href="./Contact/contact.html">Contact</a></li>
         </ul>
         <div class="profile">
           <img src="./images/anibry-logo-header.svg" alt="profile-image" />
-          <p class="profile-name">Harriet </p>
-        <img class="icondown"  src="./images/icondown.svg" alt="icondown">
+          <p class="profile-name"> Harriet </p>
+          <img class="icondown" src="./images/icondown.svg" alt="icondown" />
         </div>
       </div>
     </header>
+    <div id="container">
+      <img class="asidehamburger" src="./images/menuhamburger.svg" alt="asidehamburger">
+      <div class="aside">
+        <div class="tableofcontent">
+          <img class="closeasidemenu" src="./images/closeicon.svg" alt="closeicon">
+          <a href="documentation.html" class="active">Overview</a>
+          <a href="gettingstarted.html">Getting Started</a>
+          <a href="usingclasses.html">Using Animations <img src="./images/icondown.svg" alt="icondown"></a>
+          <div id="listContent">
+            <a href="usingclasses.html">Using Classes</a>
+            <a href="usingclasses.html">Using Keyframes</a>
+          </div>
+          <a href="#">Best Practices</a>
+        </div>
+      </div>
+      <div id="content">    
+        <h1>Anibry Library</h1>
+        <p>
+          Anibry is a library of ready-to-use, cross-browser animations for use in
+          your web projects. Great for emphasis, home pages, sliders, and
+          attention-guiding hints. Enjoy the fast, seamless, easy to use and easy
+          to integrate library. Click here to download <a href="#" class="downloadbutton"> Anibry Library</a>
+        </p>
+      </div>
+    </div>
     <footer>
       <div id="desktopfooter" class="footer-wrapper">
         <div class="footerColumnsContainer">
@@ -51,7 +77,7 @@
             <a href="#">Team</a>
             <a href="#">Terms of Service</a>
             <a href="#">Policy Privacy</a>
-            <a href="#">Cookies Pollicy</a>
+            <a href="#">Cookies Policy</a>
           </div>
           <div class="footerCol footerCol4">
             <a class="heading" href="#"><strong>Help</strong></a>
@@ -61,8 +87,9 @@
             <a href="#">Community</a>
           </div>
         </div>
-        <div>© 2022 Anibry. All right reserved.</div>
+        <div class="copyright">© 2022 Anibry. All right reserved.</div>
       </div>
     </footer>
+    <script src="documentation.js"></script>
   </body>
 </html>
