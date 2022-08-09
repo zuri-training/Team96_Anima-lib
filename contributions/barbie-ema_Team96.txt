@@ -1,0 +1,19 @@
+I was assigned to worked on the SignUp page: https://github.com/zuri-training/Team96_Anima-lib/issues/26
+and my comment:https://github.com/zuri-training/Team96_Anima-lib/issues/26#issuecomment-1209717725
+these are the results:
+https://github.com/barbie-ema/Team96_Anima-lib/blob/main/Frontend/registration.html
+https://zuri-training.github.io/Team96_Anima-lib/Frontend/registration.html
+
+I was also assigned to work on the SignIn page, Forgot password page and the reset password page. https://github.com/zuri-training/Team96_Anima-lib/issues/27
+my comment https://github.com/zuri-training/Team96_Anima-lib/issues/27#issuecomment-1209721984
+the results:
+resolved this issue https://zuri-training.github.io/Team96_Anima-lib/Frontend/login.html
+codes https://github.com/barbie-ema/Team96_Anima-lib/blob/main/Frontend/login.html
+
+also resolved forgot.html
+https://zuri-training.github.io/Team96_Anima-lib/Frontend/forgot.html
+code https://github.com/barbie-ema/Team96_Anima-lib/blob/main/Frontend/forgot.html
+
+and reset password reset.html
+https://github.com/barbie-ema/Team96_Anima-lib/blob/main/Frontend/resetpassword.html
+
