@@ -1,0 +1,11 @@
+I designed the following pages alongside Evelyn604;
+- Style guides Lo-Fi: https://github.com/zuri-training/Team96_Anima-lib/issues/15
+- Style guides Hi-Fi: https://github.com/zuri-training/Team96_Anima-lib/issues/16
+- Signup page Lo-Fi: https://github.com/zuri-training/Team96_Anima-lib/issues/15
+- Signup page Hi-Fi: https://github.com/zuri-training/Team96_Anima-lib/issues/16
+- Login page Lo-Fi: https://github.com/zuri-training/Team96_Anima-lib/issues/15
+- Login page Hi-Fi: https://github.com/zuri-training/Team96_Anima-lib/issues/16
+- Forgot password page Lo-Fi & Hi-Fi: https://github.com/zuri-training/Team96_Anima-lib/issues/65
+- Reset password page with Successful, Error and Notification states (Lo-Fi & Hi-Fi): https://github.com/zuri-training/Team96_Anima-lib/issues/66
+- Signup prompt page Lo-Fi & Hi-Fi: https://github.com/zuri-training/Team96_Anima-lib/issues/67
+- Userflow and Documentation page: https://github.com/zuri-training/Team96_Anima-lib/issues/21
