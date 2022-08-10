@@ -4,3 +4,5 @@ https://github.com/zuri-training/Team96_Anima-lib/issues/76#issue-1334146464
 https://github.com/zuri-training/Team96_Anima-lib/issues/32#issue-1327146991
 
 I was assigned to work on the Library page and Team page.
+
+I was able to code it and style it and got help from some people in my team to do some structures to it.
