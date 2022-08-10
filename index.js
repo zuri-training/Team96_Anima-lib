@@ -9,6 +9,7 @@ const mobilemenulist = document.querySelector(".mobilemenulist");
 const closemenu = document.querySelector(".closemenu");
 const mobilemenuitem = document.getElementsByClassName("mobilemenuitem");
 
+
 mobilemenu.addEventListener("click", function () {
   mobilemenulist.classList.add("displayflex");
 });
