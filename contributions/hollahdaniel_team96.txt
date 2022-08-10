@@ -1,0 +1,11 @@
+Zuri Project Task Contribution (Team 96) (Proj-anima_lib)
+
+1. Logo design - https://github.com/zuri-training/Team96_Anima-lib/issues/1
+
+2. Community page design, Portfolio page design and Team page design- https://github.com/zuri-training/Team96_Anima-lib/issues/19
+
+3. User Flow structure and Documentation Page design - https://github.com/zuri-training/Team96_Anima-lib/issues/22
+
+4. Documentation/Project brief - https://github.com/zuri-training/Team96_Anima-lib/issues/23
+
+5. Project slide creation and prototype - https://github.com/zuri-training/Team96_Anima-lib/issues/25
