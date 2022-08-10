@@ -1,0 +1,3 @@
+Contributed to the login views and urls
+contributed to the logout views and urls
+contributed by linking the login page frontend to backend
