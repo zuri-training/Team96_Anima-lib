@@ -47,7 +47,7 @@ def register(request):
             return redirect('login')
     else:
         form = RegisterForm()
-    return render(request, 'accounts/register.html', {'form':form})
+    return render(request, 'accounts/registration.html', {'form':form})
 
 
 # Profile page view
