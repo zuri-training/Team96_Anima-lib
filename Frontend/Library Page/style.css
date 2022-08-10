@@ -1,0 +1,224 @@
+/* .container{
+    display: inline-block;
+    text-decoration: none;
+} */
+
+/* .box {
+    background-color: #5A189A;
+    width: 120px;
+    height: 30px;
+    border: 1px solid #999;
+    font-size: 18px;
+    color: #5A189A;
+    /* border-radius: 5px; */
+    /* box-shadow: 4px 4px #E0AAFF; */
+/* } */
+
+/* li{
+    text-decoration: none;
+}
+
+ li ul li {
+    display: block;
+    font-size: 18px;
+    background-color: rgba(234, 204, 252, 0.12);
+    color: #5A189A;
+    text-decoration: none;
+    margin: 0;
+    /* padding: 10px; */
+/* } */ 
+/* */ 
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'inter';
+    background-color: #ffffff;
+}
+
+.container{
+
+    padding: 32px;
+    margin-top: 100px;
+    background: rgba(224, 170, 255, 0.1);
+}
+
+
+.select-box{
+    display: flex;
+    width: 400px;
+      flex-direction: column;
+}
+
+.selected1{
+    color:white;
+    background-color: #5A189A;
+    padding: 15px 0px 10px 25px;
+    position: relative;
+    cursor: pointer;
+    
+    width: 400px;
+   
+    
+    
+    order: 0;
+}
+
+.selected{
+    color: black;
+    background-color: rgba(224, 170, 255, 0.1);
+    
+    position: relative;
+     border: 1px solid rgba(60, 60, 60, 0.4);
+    order: 0;
+}
+
+.selected::after{
+    content: "";
+    background: url(image/expand_more_FILL0_wght400_GRAD0_opsz48.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+
+    position: absolute;
+    height: 100%;
+    width: 32px;
+    right: 10px;
+    top: 5px;
+
+    transition: all 0.4s;
+}
+
+.select-box .options-container{
+    background-color: rgba(234, 204, 252, 0.12);
+    color: #5A189A;
+    max-height: 0;
+    width: 100%;
+    opacity: 0;
+    transition: all 0.4s;
+    /* border-radius: 8px; */
+    overflow: hidden;
+
+    order: 1;
+
+    position: absolute;
+    z-index: 100;
+}
+
+.select-box .options-container.active +.selected::after{
+    transform: rotate(180deg);
+    top: -6px;
+}
+
+.select-box .options-container.active{
+    max-height: 240px;
+    opacity: 1;
+    /* overflow-y: scroll; */
+    margin-top: 104px;
+} 
+
+/* .select-box .option-container::-webkit-scrollbar{
+    width: 8px;
+    background-color: ;
+    border-radius: 0 8px 8px 0;
+} */
+ 
+ /* .select-box .options-container::-webkit-scrollbar{
+    width: 8px;
+    background-color: ;
+    border-radius: 0 8px 8px 0;
+
+} */
+
+.select-box .option,
+.selected{
+     padding: 12px 24px;
+     cursor: pointer;
+} 
+
+.select-box .option:hover{
+    background-color: #5A189A;
+    color: #ffffff;
+}
+
+.select-box label{
+    cursor: pointer;
+}
+
+.select-box .option .radio{
+    display: none;
+} 
+
+
+
+.left-side{
+    display: flex;
+    
+}
+
+
+.right-side-animation{
+    display: flex;
+    flex-direction: row;
+}
+
+.love{
+    
+position: absolute;
+background-color: #F9F9F9;
+margin-right: 30px;
+
+
+}
+
+.ellipse{
+    width: 200px;
+    
+}
+
+.line{
+    position: absolute;
+width: 718px;
+
+background: #F9F9F9;
+}
+
+
+.search{
+    float: left;
+    padding: 16px 24px;
+    gap: 16px;
+  /* margin-top: 8px;
+  margin-right: 16px; */
+  color: #BBBBBB;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-size: 17px;
+  border: 1.5px solid #3C3C3C;
+border-radius: 8px;
+}
+
+.download{
+  float: right;
+  background-color: #5A189A;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color:  #FFFFFF;
+  line-height: 32px;
+  padding: 16px 24px;
+  border: none;
+  /* margin-top: 8px;
+  margin-right: 16px; */
+  border-radius: 8px;
+  
+
+}
