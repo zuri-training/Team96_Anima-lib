@@ -37,6 +37,8 @@ def register(request):
         if form.is_valid():
             username = form.cleaned_data.get('username')
             email = form.cleaned_data.get('email')
+            if User.objects.filter(username=username).exists():
+                messages.error(request, f'This username {username} already exists!')
             if User.objects.filter(email=email).exists():
                 messages.error(request, f'The email {email} already exists!')
                 return redirect('accounts:register') 
@@ -45,7 +47,7 @@ def register(request):
             return redirect('login')
     else:
         form = RegisterForm()
-    return render(request, 'accounts/register.html', {'form':form})
+    return render(request, 'accounts/registration.html', {'form':form})
 
 
 # Profile page view
