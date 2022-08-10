@@ -1,7 +1,11 @@
 let acc = document.getElementsByClassName("aniFamilyName");
 const dropicon = document.getElementsByClassName("dropicon")
-let i;
+const view = document.querySelector(".view");
+const codeblock = document.querySelector(".row3");
+const p = document.querySelectorAll("p")
+const ellipse = document.querySelector("#ellipse")
 
+let i;
 for (i = 0; i < acc.length; i++) {
   acc[i].addEventListener("click", function () {
     /* Toggle between adding and removing the "active" class,
@@ -28,3 +32,18 @@ for (i = 0; i < acc.length; i++) {
     }
   });
 }
+
+view.addEventListener("click", function () {
+  codeblock.classList.toggle("display");
+});
+
+for (let x = 0; x < p.length; x++) {
+  const targetClass = p[x];
+  let targetClassName = targetClass.innerHTML
+  targetClass.addEventListener("click", function(){
+    ellipse.className = ""
+    ellipse.classList.add(`${targetClassName}`);
+  })
+  
+}
+

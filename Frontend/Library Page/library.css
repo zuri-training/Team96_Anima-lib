@@ -23,6 +23,8 @@ main{
 }
 
 .right-box{
+    position: sticky;
+    top: 0;
     flex: 6;
     flex-shrink: 1;
     margin-left: 10vw;
@@ -35,7 +37,7 @@ main{
     display: flex;
     justify-content: space-between;
 }
-.row1, .row2, .row3{
+.row1, .row2, .row3, .row4{
     margin-bottom: 10px;
 }
 
@@ -68,8 +70,7 @@ border-radius: 8px;
   padding: 10px 18px;
   border: none;
   border-radius: 8px;
-  
-
+  cursor: pointer;
 }
 
 .download img{
@@ -81,14 +82,16 @@ border-radius: 8px;
     height: 380px;
     background-color: #f9f9f9;
     position: relative;
+    border-radius: 8px;
 }
 
 .love{
     position: absolute;
     left: 50px;
     top: 50px;
+    cursor: pointer;
 }
-.ellipse{
+#ellipse{
     position: absolute;
     left:0;
     right: 0;
@@ -104,6 +107,18 @@ border-radius: 8px;
     margin: 0 auto;
     width: 50%;
     height: 1px;
+}
+.row3{
+    background-color: #F2DBFF;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.596);
+    max-width: 100%;
+    max-height: 250px;
+    overflow: scroll;
+    display: none;
+}
+pre{
+    max-width:90%;
 }
 .row4{
     display: flex;
@@ -188,12 +203,23 @@ justify-content: space-between;
 }
 
 
-@media screen and (max-width:1000px) {
+@media screen and (max-width:1024px) {
     .row1{
         flex-direction: column;
         align-content: center;
         gap: 10px;
     }
+        #ellipse{
+        transform: scale(0.8);
+    }
+    .line{
+        transform: translateY(-20.2px);
+        width: 80%;
+    }
+    .row4{
+        justify-content: space-between;
+    }
+
 }
 
 @media screen and (max-width:800px) {
@@ -204,12 +230,11 @@ justify-content: space-between;
     .left-box{
         flex: 1;
     }
-    .ellipse{
+    #ellipse{
         transform: scale(0.8);
     }
     .line{
         transform: translateY(-20.2px);
-        width: 80%;
     }
 }
 
@@ -220,13 +245,18 @@ justify-content: space-between;
         width: 50vw;
     }
 
-    .ellipse{
+    #ellipse{
         transform: scale(0.6);
     }
     .line{
-        transform: translateY(-48.5px);
+        transform: translateY(-40.5px);
     }
     .right-box{
         /* display: none; */
     }
+}
+
+
+.display{
+    display: block;
 }

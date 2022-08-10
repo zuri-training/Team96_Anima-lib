@@ -17,3 +17,6 @@ code https://github.com/barbie-ema/Team96_Anima-lib/blob/main/Frontend/forgot.ht
 and reset password reset.html
 https://github.com/barbie-ema/Team96_Anima-lib/blob/main/Frontend/resetpassword.html
 
+I contributed to making the database schema 
+https://github.com/zuri-training/Team96_Anima-lib/issues/85
+
