@@ -31,7 +31,7 @@
           <br>
           <h2>Create an account </h2>
        
-            <form action="POST">
+            {% comment %} <form action="POST">
               <div class="form-container">
                 
                 <p>Full name</p>
@@ -57,8 +57,40 @@
                      <br>
                   <p id="lol"><small>Already have an Anibry account? <a href="login.html">Log in</a></small></p>
               </div>
-            </form>
-        
+            </form> {% endcomment %}
+
+
+          {% if messages %}
+          <ul class="messages">
+            {% for message in messages %}
+            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+          {% endfor %}
+          </ul>
+          {% endif %}
+
+            <form action="" method="POST">
+              {% csrf_token %}
+                {{form}} 
+
+              {% comment %} {% for field in form %}
+              {% comment %} <div class="form-group"> {% endcomment %}
+              {% comment %} <div class="inputs"> 
+                  {{ field.name }}
+                  <br>
+                  {{ field }}
+              </div>
+              {% endfor%} {% endcomment %} 
+          <br>
+          <i id="hideeye" class="fa fa-eye" onclick="myFunction()"></i>
+                  <i id ="openeye" class="fa fa-eye-slash" onclick="myFunction()"></i>
+                       <!-- </span> -->
+                  <p id="joy"><small>By creating an Anibry account, you agree to our <a href="#">Terms of Service,</a> and <a href="#"> Privacy Policy</a></small></p>
+                </div>
+                  <button type="submit">Create account</button>
+                     <br>
+                  <p id="lol"><small>Already have an Anibry account? <a href="login.html">Log in</a></small></p>
+              {% comment %} <button class="btn-info" type="submit">Sign up</button> {% endcomment %}
+          </form>        
         
         </div>
       </div>
