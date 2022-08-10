@@ -43,8 +43,7 @@ main{
 
 .search{
     float: left;
-    padding: 16px 24px;
-    gap: 16px;
+    padding: 10px 18px;
   color: #BBBBBB;
   font-family: 'Inter';
   font-style: normal;
@@ -52,8 +51,11 @@ main{
   font-size: 16px;
   line-height: 24px;
   font-size: 17px;
-  border: 1.5px solid #3C3C3C;
+  border: 1px solid #3C3C3C;
 border-radius: 8px;
+}
+.search:active, .search:focus{
+    outline: 1px solid #5A189A;
 }
 
 .download{
@@ -62,10 +64,10 @@ border-radius: 8px;
   font-family: 'Inter';
   font-style: normal;
   font-weight: 700;
-  font-size: 20px;
+  font-size: 16px;
   color:  #FFFFFF;
   line-height: 32px;
-  padding: 16px 24px;
+  padding: 10px 18px;
   border: none;
   border-radius: 8px;
   
@@ -133,7 +135,7 @@ justify-content: space-between;
   border: none;
   outline: none;
   border-bottom:2px solid #BBBBBB;
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 500;
 }
 .aniFamilyName img{

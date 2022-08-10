@@ -16,14 +16,14 @@ closemenu.addEventListener("click", function () {
   mobilemenulist.classList.remove("displayflex");
 });
 
-for (let x = 0; x < mobilemenuitem.length; x++) {
-  const activeitem = mobilemenuitem[x];
-  activeitem.style.backgroundColor = "white";
-  activeitem.addEventListener("click", function () {
-    activeitem.style.backgroundColor = "#5A189A";
-    activeitem.style.Color = "white";
-  });
-}
+// for (let x = 0; x < mobilemenuitem.length; x++) {
+//   const activeitem = mobilemenuitem[x];
+//   activeitem.style.backgroundColor = "white";
+//   activeitem.addEventListener("click", function () {
+//     activeitem.style.backgroundColor = "#5A189A";
+//     activeitem.style.Color = "white";
+//   });
+// }
 
 function start() {
   clearInterval(runner2);
