@@ -1,0 +1,4 @@
+- Created the models for the project https://github.com/zuri-training/Team96_Anima-lib/issues/80
+
+- Solved the bug mistakenly created by one of the team members https://github.com/zuri-training/Team96_Anima-lib/issues/79
+- Helped with the styling of the Team page https://github.com/zuri-training/Team96_Anima-lib/issues/76
