@@ -1,0 +1,168 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'inter';
+    background-color: #ffffff;
+}
+
+.container{
+    padding: 32px;
+    margin-top: 100px;
+    background: rgba(224, 170, 255, 0.1);
+}
+
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-inline: 6vw;
+    gap: 5%;
+}
+.left-box{
+    flex: 2;
+    flex-shrink: 1;
+}
+
+.right-box{
+    flex: 6;
+    flex-shrink: 1;
+    margin-inline: 20px;
+}
+.rowscontainer{
+    display: flex;
+    flex-direction: column;
+}
+.row1, .row2, .row3{
+    margin-bottom: 10px;
+}
+
+.search{
+    float: left;
+    padding: 16px 24px;
+    gap: 16px;
+  color: #BBBBBB;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-size: 17px;
+  border: 1.5px solid #3C3C3C;
+border-radius: 8px;
+}
+
+.download{
+  float: right;
+  background-color: #5A189A;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 20px;
+  color:  #FFFFFF;
+  line-height: 32px;
+  padding: 16px 24px;
+  border: none;
+  border-radius: 8px;
+  
+
+}
+
+.download img{
+    margin-left: 10px;
+}
+.row2{
+    width: 100%;
+    min-width: 250px;
+    height: 380px;
+    background-color: #f9f9f9;
+    position: relative;
+}
+
+.love{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+}
+.ellipse{
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+}
+.line{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 288px;
+    margin: 0 auto;
+    width: 50%;
+    height: 1px;
+}
+.row4{
+    display: flex;
+    align-items: center;
+}
+.view   {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+#animations{
+    font-size: max(25px, 2vw);
+    font-weight: 600;
+    background-color: #5A189A;
+    color: white;
+}
+.aniFamilyName {
+display: flex;
+align-content: center;
+justify-content: space-between;
+  background-color: #f9f9f9;
+  color: black;
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  border-bottom:2px solid #BBBBBB;
+  font-size: 22px;
+  font-weight: 500;
+}
+.aniFamilyName img{
+    align-self: center;
+    width: 20px;
+    height: 19px;
+}
+.active, .aniFamilyName:hover {
+  background-color: #5A189A;
+  color: #f9f9f9;
+  transition: 0s;
+}
+
+
+.aniList{
+  background-color: #f9f9f9;
+  color: #5A189A;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.aniList p{
+    padding: 5px 18px;
+    font-size: 18px;
+}
+
+.active, .aniList p:hover{
+    background-color: #5A189A;
+  color: #f9f9f9;
+  margin: 0;
+}
