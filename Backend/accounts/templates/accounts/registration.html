@@ -69,17 +69,20 @@
           {% endif %}
 
             <form action="" method="POST">
-              {% csrf_token %}
-                {{form}} 
-
-              {% comment %} {% for field in form %}
-              {% comment %} <div class="form-group"> {% endcomment %}
-              {% comment %} <div class="inputs"> 
-                  {{ field.name }}
-                  <br>
-                  {{ field }}
-              </div>
-              {% endfor%} {% endcomment %} 
+              {% csrf_token %}               
+              {% for field in form %}
+                  <div class="inputs">
+                    {{ field.label_tag }}   
+                    <br>
+                    {{ field }}
+                    <br>
+                    {% if field.help_text %}
+                      <small class="form-text text-muted">
+                        {{ field.help_text|safe }}  
+                      </small>
+                    {% endif %}
+                  </div>
+            {% endfor %}
           <br>
           <i id="hideeye" class="fa fa-eye" onclick="myFunction()"></i>
                   <i id ="openeye" class="fa fa-eye-slash" onclick="myFunction()"></i>
