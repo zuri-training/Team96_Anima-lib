@@ -10,12 +10,6 @@ body{
     background-color: #ffffff;
 }
 
-.container{
-    padding: 32px;
-    margin-top: 100px;
-    background: rgba(224, 170, 255, 0.1);
-}
-
 
 main{
     display: flex;
@@ -24,18 +18,22 @@ main{
     gap: 5%;
 }
 .left-box{
-    flex: 2;
+    flex: 2.4;
     flex-shrink: 1;
 }
 
 .right-box{
     flex: 6;
     flex-shrink: 1;
-    margin-inline: 20px;
+    margin-left: 10vw;
 }
 .rowscontainer{
     display: flex;
     flex-direction: column;
+}
+.row1{
+    display: flex;
+    justify-content: space-between;
 }
 .row1, .row2, .row3{
     margin-bottom: 10px;
@@ -110,17 +108,36 @@ border-radius: 8px;
 .row4{
     display: flex;
     align-items: center;
+    gap: 20px;
+}
+.row4 div img{
+    width: 30px;
+    height: 30px;
+}
+.copyicon{
+    height: 35px;
+    width: 85px;
+    cursor: pointer;
 }
 .view   {
     display: flex;
-    gap: 10px;
+    gap: 2px;
     align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+.fileicon{
+    display: none;
 }
 #animations{
-    font-size: max(25px, 2vw);
+    font-size: max(22px, 1.7vw);
     font-weight: 600;
     background-color: #5A189A;
     color: white;
+    width: 100%;
+    border: none;
+    padding: 14px;
+    text-align: left;
 }
 .aniFamilyName {
 display: flex;
@@ -135,7 +152,7 @@ justify-content: space-between;
   border: none;
   outline: none;
   border-bottom:2px solid #BBBBBB;
-  font-size: 20px;
+  font-size: 18px;
   font-weight: 500;
 }
 .aniFamilyName img{
@@ -161,10 +178,55 @@ justify-content: space-between;
 .aniList p{
     padding: 5px 18px;
     font-size: 18px;
+    cursor: pointer;
 }
 
 .active, .aniList p:hover{
     background-color: #5A189A;
   color: #f9f9f9;
   margin: 0;
+}
+
+
+@media screen and (max-width:1000px) {
+    .row1{
+        flex-direction: column;
+        align-content: center;
+        gap: 10px;
+    }
+}
+
+@media screen and (max-width:800px) {
+    .right-box{
+        flex: 4;
+        margin: 0;
+    }
+    .left-box{
+        flex: 1;
+    }
+    .ellipse{
+        transform: scale(0.8);
+    }
+    .line{
+        transform: translateY(-20.2px);
+        width: 80%;
+    }
+}
+
+@media screen and (max-width:650px){
+    .left-box{
+        display: none;
+        position: absolute;
+        width: 50vw;
+    }
+
+    .ellipse{
+        transform: scale(0.6);
+    }
+    .line{
+        transform: translateY(-48.5px);
+    }
+    .right-box{
+        /* display: none; */
+    }
 }
