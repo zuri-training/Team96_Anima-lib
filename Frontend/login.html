@@ -28,16 +28,18 @@
           </svg></a>
           <h2>Welcome!</h2>
         
-          <form action="GET">
+          <form action="" method="post">
+
+            {% csrf_token %}
             <div class="form-container">
               <br/>
               <p>Email Address</p>
               <div class="inputs">
-                <input type="email" placeholder="harrietolanrewaju@gmail.com" required />
+                <input type="email"  name="Email" placeholder="harrietolanrewaju@gmail.com" required />
               </div>
               <p>Password</p>
               <div class="inputs">
-                <input type="password" placeholder="Minimum of 8 Characters" id="myinput" minlength="8" maxlength="15"
+                <input type="password" name="Password"  placeholder="Minimum of 8 Characters" id="myinput" minlength="8" maxlength="15"
                 required> 
                       <!-- <span class="eye" > -->
                 <i id="hideeye" class="fa fa-eye" onclick="myFunction()"></i>
@@ -45,6 +47,11 @@
                       <!-- </span> -->
                 <p id="purp"><small><a href="forgot.html">Forgot Password?</a></small></p>
               </div>
+
+              {% for message in messages %}
+              <p id="messages"> {{message}} </p>
+              {% endfor%}
+
               <button type="submit">Log In</button>
               <br>
               <p id="lol"><small>Don't have an Anibry account?<a href="registration.html"> Create account</a></small></p>

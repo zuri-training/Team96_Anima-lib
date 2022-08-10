@@ -6,6 +6,7 @@ from django.core.paginator import Paginator
 from django.contrib import messages
 from .forms import RegisterForm
 from django.contrib.auth.decorators import login_required
+from django.contrib.auth import authenticate, login , logout
 
 
 # Create your views here.
@@ -55,7 +56,30 @@ def register(request):
 def profilepage(request):
     return render(request, 'accounts/profile.html')
 
+#Login page view
+def login_user (request):
+    if request.method == 'POST':
+        email = request.POST.get['Email']
+        password = request.POST.get['Password']
+        user = authenticate(request, Email= email, Password = password)
+        
+        if  user is not None:
+            login (request, user)
+            # return redirect
+            
+        else:
+            messages.error(request, "Incorrect Email address or Password")
+        
+    return render(request,'accounts/login.html' )
+
+#logout page view
+def logout_user(request):
+    
+    logout(request)
+    return redirect (request, 'index.html')
+
 #ContactUs Page View
 
 def contact(request):
     return render(request, 'accounts/contact.html')
+
