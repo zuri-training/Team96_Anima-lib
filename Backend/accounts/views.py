@@ -1,3 +1,4 @@
+from django.http import HttpResponse
 from django.shortcuts import render, redirect
 from .models import Lib
 from django.contrib.auth.models import User
@@ -37,15 +38,17 @@ def register(request):
         if form.is_valid():
             username = form.cleaned_data.get('username')
             email = form.cleaned_data.get('email')
+            if User.objects.filter(username=username).exists():
+                messages.error(request, f'This username {username} already exists!')
             if User.objects.filter(email=email).exists():
                 messages.error(request, f'The email {email} already exists!')
-                return direct('accounts:register') 
+                return redirect('accounts:register') 
             form.save()                              
             messages.success(request, f'Welcome {username}, your account is created.')            
             return redirect('login')
     else:
         form = RegisterForm()
-    return render(request, 'accounts/register.html', {'form':form})
+    return render(request, 'accounts/registration.html', {'form':form})
 
 
 # Profile page view
@@ -74,3 +77,9 @@ def logout_user(request):
     
     logout(request)
     return redirect (request, 'index.html')
+
+#ContactUs Page View
+
+def contact(request):
+    return render(request, 'accounts/contact.html')
+

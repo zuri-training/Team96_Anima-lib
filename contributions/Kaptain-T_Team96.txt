@@ -1,0 +1,17 @@
+- Speaker for first presentation - https://github.com/zuri-training/Team96_Anima-lib/issues/24
+
+- Contributed and compiled the Database Schema for the backend - https://github.com/zuri-training/Team96_Anima-lib/issues/85
+
+- Made the contents for the documentation pages - https://github.com/zuri-training/Team96_Anima-lib/issues/22#issuecomment-1210496504
+
+- Created and compiled the animations library for Anibry (Anima_lib-Team96) alongside Agbali Blessing - https://github.com/zuri-training/Team96_Anima-lib/issues/31
+
+- Coded the documentation pages - https://github.com/zuri-training/Team96_Anima-lib/issues/28
+
+- Edited/Completed coding of the Library page - https://github.com/zuri-training/Team96_Anima-lib/pull/82
+
+- Edited/Completed coding the Landing page - https://github.com/zuri-training/Team96_Anima-lib/pull/60
+
+- Edited/Completed coding the Registration pages - https://github.com/zuri-training/Team96_Anima-lib/pull/57 ; https://github.com/zuri-training/Team96_Anima-lib/pull/55 
+
+- Team lead role

@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+*{
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'inter';
+    background-color: #ffffff;
+}
+
+
+main{
+    display: flex;
+    flex-direction: row;
+    margin-inline: 6vw;
+    gap: 5%;
+}
+.left-box{
+    flex: 2.4;
+    flex-shrink: 1;
+}
+
+.right-box{
+    position: sticky;
+    top: 0;
+    flex: 6;
+    flex-shrink: 1;
+    margin-left: 10vw;
+}
+.rowscontainer{
+    display: flex;
+    flex-direction: column;
+}
+.row1{
+    display: flex;
+    justify-content: space-between;
+}
+.row1, .row2, .row3, .row4{
+    margin-bottom: 10px;
+}
+
+.search{
+    float: left;
+    padding: 10px 18px;
+  color: #BBBBBB;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 24px;
+  font-size: 17px;
+  border: 1px solid #3C3C3C;
+border-radius: 8px;
+}
+.search:active, .search:focus{
+    outline: 1px solid #5A189A;
+}
+
+.download{
+  float: right;
+  background-color: #5A189A;
+  font-family: 'Inter';
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  color:  #FFFFFF;
+  line-height: 32px;
+  padding: 10px 18px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+}
+
+.download img{
+    margin-left: 10px;
+}
+.row2{
+    width: 100%;
+    min-width: 250px;
+    height: 380px;
+    background-color: #f9f9f9;
+    position: relative;
+    border-radius: 8px;
+}
+
+.love{
+    position: absolute;
+    left: 50px;
+    top: 50px;
+    cursor: pointer;
+}
+#ellipse{
+    position: absolute;
+    left:0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    margin:auto;
+}
+.line{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 288px;
+    margin: 0 auto;
+    width: 50%;
+    height: 1px;
+}
+.row3{
+    background-color: #F2DBFF;
+    font-size: 17px;
+    color: rgba(0, 0, 0, 0.596);
+    max-width: 100%;
+    max-height: 250px;
+    overflow: scroll;
+    display: none;
+}
+pre{
+    max-width:90%;
+}
+.row4{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.row4 div img{
+    width: 30px;
+    height: 30px;
+}
+.copyicon{
+    height: 35px;
+    width: 85px;
+    cursor: pointer;
+}
+.view   {
+    display: flex;
+    gap: 2px;
+    align-items: center;
+    font-size: 15px;
+    cursor: pointer;
+}
+.fileicon{
+    display: none;
+}
+#animations{
+    font-size: max(22px, 1.7vw);
+    font-weight: 600;
+    background-color: #5A189A;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 14px;
+    text-align: left;
+}
+.aniFamilyName {
+display: flex;
+align-content: center;
+justify-content: space-between;
+  background-color: #f9f9f9;
+  color: black;
+  cursor: pointer;
+  padding: 14px;
+  width: 100%;
+  text-align: left;
+  border: none;
+  outline: none;
+  border-bottom:2px solid #BBBBBB;
+  font-size: 18px;
+  font-weight: 500;
+}
+.aniFamilyName img{
+    align-self: center;
+    width: 20px;
+    height: 19px;
+}
+.active, .aniFamilyName:hover {
+  background-color: #5A189A;
+  color: #f9f9f9;
+  transition: 0s;
+}
+
+
+.aniList{
+  background-color: #f9f9f9;
+  color: #5A189A;
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+
+.aniList p{
+    padding: 5px 18px;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+.active, .aniList p:hover{
+    background-color: #5A189A;
+  color: #f9f9f9;
+  margin: 0;
+}
+
+
+@media screen and (max-width:1024px) {
+    .row1{
+        flex-direction: column;
+        align-content: center;
+        gap: 10px;
+    }
+        #ellipse{
+        transform: scale(0.8);
+    }
+    .line{
+        transform: translateY(-20.2px);
+        width: 80%;
+    }
+    .row4{
+        justify-content: space-between;
+    }
+
+}
+
+@media screen and (max-width:800px) {
+    .right-box{
+        flex: 4;
+        margin: 0;
+    }
+    .left-box{
+        flex: 1;
+    }
+    #ellipse{
+        transform: scale(0.8);
+    }
+    .line{
+        transform: translateY(-20.2px);
+    }
+}
+
+@media screen and (max-width:650px){
+    .left-box{
+        display: none;
+        position: absolute;
+        width: 50vw;
+    }
+
+    #ellipse{
+        transform: scale(0.6);
+    }
+    .line{
+        transform: translateY(-40.5px);
+    }
+    .right-box{
+        /* display: none; */
+    }
+}
+
+
+.display{
+    display: block;
+}

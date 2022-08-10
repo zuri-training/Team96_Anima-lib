@@ -11,14 +11,14 @@
 </head>
 <body>
         <!-- FOR MOBILE MENU -->
-    <ul class="menulist">
-        <img src="" alt="exiticon">
-        <ul class="submenu">
-            <li><a href="./Frontend/documentation.html">Documentation</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="./Frontend/login.html" class="login">Log in</a></li>
-        </ul>
-    </ul>
+    <div class="mobilemenulist">
+        <div class="menuimgdiv">
+            <img class="closemenu" src="./img/Vector.png" alt="exiticon">
+        </div>
+        <li class="mobilemenuitem"><a href="./Frontend/documentation.html">Documentation</a></li>
+        <li class="mobilemenuitem"><a href="#">About</a></li>
+        <li class="mobilemenuitem"><a href="./Frontend/login.html" class="login">Log in</a></li>
+    </div>
 
     <!-- MOBILE MENU ENDS -->
     <!-- The navbar i.e the logo and other pages -->
@@ -31,17 +31,17 @@
                 <li><a href="./Frontend/login.html" class="login">Log in</a></li>
                 <li><a href="./Frontend/registration.html" class="register">Register</a></li>
             </ul>
-            <!-- <ul>
+            <ul class="mobilemenu">
                 <li><a href="./Frontend/registration.html" class="register">Register</a></li>
-                <img class="menu" src="" alt="hamburger"> 
-            </ul> -->
+                <img class="menu" src="./Frontend/images/menuhamburger.svg" alt="hamburger"> 
+            </ul>
         </nav>
     </div>
     <!-- The header  -->
     <header>
         <div class="container">
             <div class="intro">
-                <h1><span>Beginner-friendly library,</span>with<br> tiny powerful animations<br> for your web projects</h1>
+                <h1><span>Beginner-friendly library,</span> with<br> tiny powerful animations<br> for your web projects</h1>
                 <p>Anibry offers cross tools integration and works great with CSS properties, SVG, DOM attributes and JavaScript Objects</p>
                 <button class="button">Start Animating</button>
             </div>
@@ -243,16 +243,16 @@
         <section>
             <div class="Animation">
                 <ul class="circular">
-                    <div class="anibry">
-                        <img src="img/Group 13875.png" alt="">
-                    </div>
-                   <li class="top" ><img src="img/figma 1.png" alt=""></li>
-                   <li class="right"><img  src="img/vscode-icons_file-type-xcode (1).png" alt=""></li>
-                   <li class="top-right" ><img src="img/emojione_atom-symbol.png" alt=""></li>
-                   <li class="bottom" ><img src="img/xd 1.png" alt=""></li>
-                   <li class="left"><img src="img/vscode 1.png" alt=""></li>
-                   <li class="right-top"><img src="img/AE 1.png" alt=""></li>
+                    <div class="anibry toggle target">
+                        <img src="img/Group 13875.png" alt="anibrylogo">
                     
+                   <li class="top" ><img src="img/figma 1.png" alt="figmalogo"></li>
+                   <li class="right"><img  src="img/vscode-icons_file-type-xcode (1).png" alt="xcodelogo"></li>
+                   <li class="top-right" ><img src="img/emojione_atom-symbol.png" alt="atomlogo"></li>
+                   <li class="bottom" ><img src="img/xd 1.png" alt="xdlogo"></li>
+                   <li class="left"><img src="img/vscode 1.png" alt="vscodelogo"></li>
+                   <li class="right-top"><img src="img/AE 1.png" alt="AElogo"></li>
+                    </div>
                 </ul>
                 <div class="animate-text">
                    <h2>Amazing Integration across your tools</h2>
@@ -314,6 +314,6 @@
               <div class="copyright"><p>copyright © 2022 Anibry. All right reserved.</p></div>
             
           </footer>
+          <script src="index.js"></script>
 </body>
-
 </html>
