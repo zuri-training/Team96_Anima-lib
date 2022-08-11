@@ -18,43 +18,50 @@ li {
 
 header {
   line-height: 24px;
-  padding-right: 6.8402777778%;
-  padding-left: 98.5px;
+  padding-inline: 2vw;
   padding-block: 15px;
-  width: 100%;
+  width: 100vw;
 }
 
 .headercontainer {
   display: flex;
   align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
 }
-.headercontainer ul {
-  display: flex;
-}
-.headercontainer li {
-  margin-right: 2.5em;
-}
+
 .headercontainer img {
   width: 105px;
   height: 60px;
-  margin-right: 20.8333333333%;
+  margin-right: 4vw;
+  flex: 1;
+}
+
+.headercontainer a{
+  margin-inline: 1vw;
+}
+.headercontainer .navmenu{
+  flex: 5;
+}
+.hamburger{
+  display: none;
 }
 .headercontainer .profile {
   display: flex;
-  gap: 16px;
+  gap: 1vw;
   align-items: center;
   justify-items: center;
-  margin-left: 4.8611111111%;
+  flex: 1;
 }
 .headercontainer .profile img {
-  width: 40px;
-  height: 40px;
+  max-width: 40px;
+  max-height: 40px;
   margin: 0;
   border-radius: 50%;
 }
 .headercontainer .profile .icondown {
-  width: 10.56px;
-  height: 4.73px;
+  max-width: 10.56px;
+  max-height: 4.73px;
 }
 
 footer {
@@ -101,15 +108,10 @@ footer {
   margin-right: 24px;
 }
 
-
+.close{
+  display: none;
+}
 @media screen and (max-width:900px) {
-
-  /* HEADER */
-
-
-
-  /* FOOTER */
-
   footer{
     padding-left: 20px;
   }
@@ -123,6 +125,7 @@ footer {
 
   .footerColumnsContainer{
   flex-direction: column;
+  margin: 0 auto;
 }
 
   .footerCol{
@@ -147,4 +150,72 @@ footer {
     flex-wrap: wrap;
   }
 
+    header{
+    padding-inline: 0px;
+    padding-block: 9px;
+  }
+  .headercontainer{
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .headercontainer > img{
+    margin-left: 10px;
+    justify-self: flex-start;
+  }
+  .headercontainer .profile{
+    margin-inline: 0px;
+    justify-self: flex-end;
+  }
+  .hamburger{
+    display: inline;
+    width: 30px;
+    height: 30px;
+  }
+  .hamburger img{
+    width: 30px;
+    height: 30px;
+  }
+
+  .navmenu{
+    position: absolute;
+    display: none;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding-top: 20px;
+    top: 0;
+    right: 0;
+    width: 45vw;
+    background-color: #5A189A;
+    font-weight: 600;
+    height: 100%;
+    z-index: 1;
+    color: white;
+  }
+  .navmenu a{
+    padding-bottom: 10px;
+    padding-right: 10px;
+    color: white;
+  }
+  .close{
+    float: right;
+    display: block;
+    max-width: 30px;
+    height: 20px;
+  }
+  .headercontainer img{
+    margin-right: 0;
+  }
+  .headercontainer > img{
+    max-width: 100px;
+    height: 40px;
+  }
+  .headercontainer .profile{
+    max-width: 160px;
+    gap: 1.5vw;
+    align-items: center;
+}
+}
+.displayflex{
+  display: flex;
 }
