@@ -38,7 +38,7 @@ def register(request):
             email = form.cleaned_data.get('email')
             if User.objects.filter(email=email).exists():
                 messages.error(request, f'The email {email} already exists!')
-                return direct('accounts:register') 
+                return redirect('accounts:register') 
             form.save()                              
             messages.success(request, f'Welcome {username}, your account is created.')            
             return redirect('login')
