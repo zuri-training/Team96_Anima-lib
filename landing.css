@@ -44,6 +44,12 @@ nav > img {
 .menu{
   width: 40px;
   height: 40px;
+  cursor: pointer;
+}
+.closemenu{
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
 }
 .desktopmenu {
   display: block;
@@ -881,12 +887,12 @@ footer {
     top: 0px;
     background-color: white;
     z-index: 4;
-    height: 54vw;
+    height: 50vw;
     width: 63vw;
     border-radius: 3px 3px 8px 8px;
   }
   .menuimgdiv {
-    height: 38px;
+    height: 45px;
     width: 100%;
     align-self: flex-end;
     justify-content: center;

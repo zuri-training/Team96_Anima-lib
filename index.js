@@ -160,6 +160,15 @@ for (let x = 0; x < invertItem.length; x++) {
     invert.classList.add(`${targetClassName}`);
   })
 }
+const suspendItem = document.querySelectorAll(".suspendItem");
+for (let x = 0; x < suspendItem.length; x++) {
+  const targetClass = suspendItem[x];
+  let targetClassName = targetClass.innerHTML;
+  targetClass.addEventListener("click", function () {
+    suspend.className = "rebound anibry";
+    suspend.classList.add(`${targetClassName}`);
+  });
+}
 for (let x = 0; x < reboundItem.length; x++) {
   const targetClass = reboundItem[x];
   let targetClassName = targetClass.innerHTML

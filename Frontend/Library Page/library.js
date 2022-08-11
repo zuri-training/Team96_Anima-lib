@@ -4,6 +4,8 @@ const view = document.querySelector(".view");
 const codeblock = document.querySelector(".row3");
 const p = document.querySelectorAll("p")
 const ellipse = document.querySelector("#ellipse")
+const animationsmenu = document.querySelector(".animationsmenu")
+const leftbox = document.querySelector(".left-box")
 
 let i;
 for (i = 0; i < acc.length; i++) {
@@ -35,6 +37,12 @@ for (i = 0; i < acc.length; i++) {
 
 view.addEventListener("click", function () {
   codeblock.classList.toggle("display");
+  const togglecode = document.querySelector(".togglecode")
+  if (togglecode.innerHTML = "view code"){
+    togglecode.innerHTML = "hide code"
+  }else{
+    togglecode.innerHTML = "view code";
+  }
 });
 
 for (let x = 0; x < p.length; x++) {
@@ -43,7 +51,22 @@ for (let x = 0; x < p.length; x++) {
   targetClass.addEventListener("click", function(){
     ellipse.className = "anibry"
     ellipse.classList.add(`${targetClassName}`);
+    let windowWidth = window.innerWidth;
+    if (windowWidth == 650 || windowWidth < 650){
+      leftbox.classList.remove("display")
+    }
   })
   
 }
+
+// FOR MOBILE VIEW OF ANIMATIONS
+const closeicon = document.querySelector(".closeicon")
+animationsmenu.addEventListener("click", function(){
+  leftbox.classList.toggle("display")
+})
+closeicon.addEventListener("click", function(){
+  leftbox.classList.remove("display")
+})
+
+
 

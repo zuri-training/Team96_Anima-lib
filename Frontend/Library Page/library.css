@@ -22,8 +22,15 @@ main{
     flex-shrink: 1;
     height: 100vh;
     overflow: scroll;
+    min-width: 230px;
+}
+.animationsmenu{
+    display: none;
 }
 
+.closeicon{
+    display: none;
+}
 .right-box{
     position: sticky;
     top: 0;
@@ -212,7 +219,8 @@ justify-content: space-between;
         gap: 10px;
     }
         #ellipse{
-        transform: scale(0.8);
+        width: 170px;
+        height: 170px;
     }
     .line{
         transform: translateY(-20.2px);
@@ -231,30 +239,49 @@ justify-content: space-between;
     }
     .left-box{
         flex: 1;
+        max-width: 250px;
     }
     #ellipse{
-        transform: scale(0.8);
+        width: 170px;
+        height: 170px;
     }
     .line{
-        transform: translateY(-20.2px);
+        transform: translateY(-30px);
     }
 }
 
 @media screen and (max-width:650px){
+    .animationsmenu{
+    display: block;
+    }   
+    main{
+        flex-direction: column;
+        margin-top: 10px;
+    }
     .left-box{
         display: none;
         position: absolute;
         width: 50vw;
+        left: 0;
+        z-index: 1;
+        border-radius: 2px;
+    }
+
+    .left-box::-webkit-scrollbar{
+        display: none;
     }
 
     #ellipse{
-        transform: scale(0.6);
+        width: 145px;
+        height: 145px;
     }
     .line{
         transform: translateY(-40.5px);
     }
-    .right-box{
-        /* display: none; */
+    .closeicon{
+        display: inline;
+        float: right;
+        margin-top: 8px;
     }
 }
 
