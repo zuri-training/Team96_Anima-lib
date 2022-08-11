@@ -41,6 +41,10 @@ nav ul li {
 nav > img {
   margin-left: 1.2rem;
 }
+.menu{
+  width: 40px;
+  height: 40px;
+}
 .desktopmenu {
   display: block;
 }
@@ -393,7 +397,7 @@ main p a {
   justify-content: center;
   align-items: center;
   cursor: pointer;
-  z-index: 1000;
+  z-index: 100;
 }
 .circular li {
   position: absolute;
@@ -447,6 +451,14 @@ div li img {
   bottom: -55px;
 }
 
+.viewcommunity{
+  font-weight: 600;
+  font-size: 18px;
+  color: #5a189a;
+  text-decoration: underline;
+  text-decoration-color: #5a189a;
+
+}
 /* ---------------------------subscribe--------------------- */
 .subscribe {
   display: flex;
@@ -545,6 +557,10 @@ footer {
   align-items: center;
   justify-content: center;
 }
+
+.copyright{
+  margin-top: 20px;
+}
 .footerCol1 {
   display: flex;
   flex-direction: column;
@@ -568,6 +584,9 @@ footer {
   background-color: white;
   box-shadow: 0 0 5px rgb(0, 0, 0, 0.7);
 }
+  button, a{
+    cursor: pointer;
+  }
 /* ---------------------media queries--------------------- */
 @media screen and (max-width: 800px) {
   nav {
@@ -671,9 +690,12 @@ footer {
     width: 150px;
     height: 150px;
     background-color: #5a189a;
-    z-index: 100;
+    z-index: 1;
   }
 
+  .subscribe{
+    margin-block: 25px;
+  }
   .subscribe-down {
     width: 100%;
   }
@@ -823,7 +845,7 @@ footer {
     width: 150px;
     height: 150px;
     background-color: #5a189a;
-    z-index: 100;
+    z-index: 1;
   }
 
   .community-text {
@@ -853,14 +875,14 @@ footer {
   }
   .mobilemenulist {
     display: none;
-    position: absolute;
+    position: fixed;
     flex-direction: column;
     right: 0;
     top: 0px;
     background-color: white;
     z-index: 4;
-    height: 176px;
-    width: 56vw;
+    height: 54vw;
+    width: 63vw;
     border-radius: 3px 3px 8px 8px;
   }
   .menuimgdiv {
@@ -873,8 +895,8 @@ footer {
   }
   .mobilemenulist img {
     width: 17px;
-    height: 25px;
-    padding-top: 8px;
+    height: 28px;
+    padding-top: 9px;
     margin-right: 30px;
   }
   .mobilemenulist li {
@@ -940,6 +962,8 @@ footer {
     right: -70px;
     bottom: -35px;
   }
+
+
 }
 
 .displayblock {
