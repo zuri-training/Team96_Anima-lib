@@ -59,25 +59,27 @@
                   <p id="lol"><small>Already have an Anibry account? <a href="login.html">Log in</a></small></p>
               </div>
             </form> {% endcomment %}
-            <div class="form-container">
+          {% comment %} <form>   {% endcomment %}
+           
             {% if messages %}             
             {% for message in messages %}
           <p><li>{% if message.tags %} class="{{ message.tags }}"{% endif %} style="color: red; font-size:18px">{{ message }}</li></p>
           {% endfor %}          
           {% endif %}                    
 
-            <form action="" method="POST">
+          <form action="" method="POST">
+            <div class="form-container">           
              
               {% csrf_token %}                            
                {% for field in form %}
-                    {% for error in field.errors %}
-                        <li style="color: red; font-size: 18px">{{ error }}</li>
+               {% for error in field.errors %}
+                 <li style="color: red; font-size: 18px">{{ error }}</li>
                     {% endfor %}      
-                    <div class="inputs">
-                      {{ field.label_tag }}   
-                      <br>
-                      {{ field }}
-                      <br>                                
+                  <div class="inputs">
+                    {{ field.label_tag }}   
+                    <br>
+                    {{ field }}
+                    <br>                                
                     {% if field.help_text %}
                       <small class="form-text text-muted">
                         {{ field.help_text|safe }}  
@@ -85,7 +87,7 @@
                     {% endif %}
                   </div>
                 {% endfor %} 
-          <br>
+              <br>
           {% comment %} <i id="hideeye" class="fa fa-eye" onclick="myFunction()"></i>
                   <i id ="openeye" class="fa fa-eye-slash" onclick="myFunction()"></i>
                        <!-- </span> --> {% endcomment %}
@@ -93,7 +95,7 @@
                 </div>
                   <button type="submit">Create account</button>
                      <br>
-                  <p id="lol"><small>Already have an Anibry account? <a href="{% url 'login' %}">Log in</a></small></p>
+                  <p id="lol"><small>Already have an Anibry account? <a href="login.html">Log in</a></small></p>
               {% comment %} <button class="btn-info" type="submit">Sign up</button> {% endcomment %}
           </form>  
         </div>      
