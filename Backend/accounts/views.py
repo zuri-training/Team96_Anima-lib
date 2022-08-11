@@ -1,4 +1,5 @@
 from django.http import HttpResponse
+from django.http import HttpResponseRedirect
 from django.shortcuts import render, redirect
 from .models import Lib
 from django.contrib.auth.models import User
@@ -7,6 +8,7 @@ from django.contrib import messages
 from .forms import RegisterForm
 from django.contrib.auth.decorators import login_required
 from django.contrib.auth import authenticate, login , logout
+from .forms import ContactForm
 
 
 # Create your views here.
@@ -81,5 +83,16 @@ def logout_user(request):
 #ContactUs Page View
 
 def contact(request):
-    return render(request, 'accounts/contact.html')
+    submitted = False
+    form = ContactForm()
+    if request.method == 'POST':
+        if form.is_valid():
+            form = ContactForm(request.POST)
+            cd = form.cleaned_data
+            # assert False
+            # form = ContactForm()
+            form.save()
+            return HttpResponseRedirect('/contact?submitted=True')
+
+    return render(request, 'accounts/contact.html', {'form': form, 'submitted': submitted})
 

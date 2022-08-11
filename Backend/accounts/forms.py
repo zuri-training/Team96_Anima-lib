@@ -19,4 +19,10 @@ class RegisterForm(UserCreationForm):
         user.email = self.cleaned_data["email"]
         if commit:
             user.save()
-        return user       
+        return user    
+# placeholder="Harletolarewaju17@gmail.com", name="email" placeholder=""
+# (attrs={'placeholder':'(xxx)xxx-xxxx'})
+class ContactForm(forms.Form):
+    yourname = forms.CharField(max_length=100, label='', widget=forms.TextInput(attrs={'placeholder':'Harlet Olarewaju'}))
+    email = forms.EmailField(label='', widget=forms.TextInput(attrs={'placeholder':'Harletolarewaju17@gmail.com'}))
+    message = forms.CharField(widget=forms.Textarea(attrs={'placeholder':'Tell us more about what information you are looking to recieve.'}))   

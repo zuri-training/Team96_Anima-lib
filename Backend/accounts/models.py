@@ -90,6 +90,9 @@ class Message(models.Model):
         return self.title
 
    
-
+# class Contact_Us(models.Model):
+#     yourname = forms.CharField(max_length=100, label='', widget=forms.TextInput(attrs={'placeholder':'Harlet Olarewaju'}))
+#     email = forms.EmailField(label='', widget=forms.TextInput(attrs={'placeholder':'Harletolarewaju17@gmail.com'}))
+#     message = forms.CharField(widget=forms.Textarea(attrs={'placeholder':'Tell us more about what information you are looking to recieve.'}))
 
                      
