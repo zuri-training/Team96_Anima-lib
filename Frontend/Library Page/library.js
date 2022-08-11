@@ -41,7 +41,7 @@ for (let x = 0; x < p.length; x++) {
   const targetClass = p[x];
   let targetClassName = targetClass.innerHTML
   targetClass.addEventListener("click", function(){
-    ellipse.className = ""
+    ellipse.className = "anibry"
     ellipse.classList.add(`${targetClassName}`);
   })
   
