@@ -11,6 +11,7 @@ body{
 }
 
 
+
 main{
     display: flex;
     flex-direction: row;
@@ -178,6 +179,7 @@ justify-content: space-between;
   border-bottom:2px solid #BBBBBB;
   font-size: 18px;
   font-weight: 500;
+  animation-fill-mode: backwards !important;
 }
 .aniFamilyName img{
     align-self: center;

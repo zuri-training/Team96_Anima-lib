@@ -38,7 +38,7 @@ for (i = 0; i < acc.length; i++) {
 view.addEventListener("click", function () {
   codeblock.classList.toggle("display");
   const togglecode = document.querySelector(".togglecode")
-  if (togglecode.innerHTML = "view code"){
+  if (togglecode.innerHTML == "view code"){
     togglecode.innerHTML = "hide code"
   }else{
     togglecode.innerHTML = "view code";
