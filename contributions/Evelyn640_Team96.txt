@@ -1,0 +1,15 @@
+-I designed these pages for Low fidelity and High Fidelity Designs alongside abi-holla;
+
+-Create an account page, Login page for Hi-fi Designs and Style Guide;
+ 	Link for High Fidelity Designs: https://github.com/zuri-training/Team96_Anima-lib/issues/16
+	Link for Low Fidelity Designs: https://github.com/zuri-training/Team96_Anima-lib/issues/15
+
+-Forgot password page: https://github.com/zuri-training/Team96_Anima-lib/issues/65
+
+-Reset Password pages with Successful, Error, and Notification State: https://github.com/zuri-training/Team96_Anima-lib/issues/66
+
+-Sign Up Prompt: https://github.com/zuri-training/Team96_Anima-lib/issues/67
+
+-Speaker for First Presentation: https://github.com/zuri-training/Team96_Anima-lib/issues/24
+
+-User Flow and Documentation Page: https://github.com/zuri-training/Team96_Anima-lib/issues/21
