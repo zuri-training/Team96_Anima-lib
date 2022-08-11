@@ -13,5 +13,3 @@ closeasidemenu.addEventListener("click", function () {
   mobilemenu.classList.remove("display");
   closeasidemenu.classList.remove("display");
 });
-
-
