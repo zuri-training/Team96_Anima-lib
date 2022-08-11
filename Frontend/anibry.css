@@ -1771,7 +1771,7 @@
   -webkit-transform-origin: center bottom;
   transform-origin: center bottom;
 }
-/* Sliding entrances */
+/* Slide From */
 
 @-webkit-keyframes slideFromSouth {
   from {
@@ -1891,13 +1891,13 @@
   animation-name: slideFromNorth;
 }
 
-/* Sliding exits */
-.slideToSouth {
-  -webkit-animation-name: slideToSouth;
-  animation-name: slideToSouth;
+/* Slide To */
+.moveUp {
+  -webkit-animation-name: moveUp;
+  animation-name: moveUp;
 }
 
-@-webkit-keyframes slideToSouth {
+@-webkit-keyframes moveUp {
   from {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -1909,7 +1909,7 @@
     transform: translate3d(0, 100%, 0);
   }
 }
-@keyframes slideToSouth {
+@keyframes moveUp {
   from {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -1922,7 +1922,7 @@
   }
 }
 
-@-webkit-keyframes slideToWest {
+@-webkit-keyframes moveLeft {
   from {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -1934,7 +1934,7 @@
     transform: translate3d(-100%, 0, 0);
   }
 }
-@keyframes slideToWest {
+@keyframes moveLeft {
   from {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -1946,12 +1946,12 @@
     transform: translate3d(-100%, 0, 0);
   }
 }
-.slideToWest {
-  -webkit-animation-name: slideToWest;
-  animation-name: slideToWest;
+.moveLeft {
+  -webkit-animation-name: moveLeft;
+  animation-name: moveLeft;
 }
 
-@-webkit-keyframes slideToEast {
+@-webkit-keyframes moveRight {
   from {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -1963,7 +1963,7 @@
     transform: translate3d(100%, 0, 0);
   }
 }
-@keyframes slideToEast {
+@keyframes moveRight {
   from {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -1975,12 +1975,12 @@
     transform: translate3d(100%, 0, 0);
   }
 }
-.slideToEast {
-  -webkit-animation-name: slideToEast;
-  animation-name: slideToEast;
+.moveRight {
+  -webkit-animation-name: moveRight;
+  animation-name: moveRight;
 }
 
-@-webkit-keyframes slideToNorth {
+@-webkit-keyframes moveUp {
   from {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -1992,7 +1992,7 @@
     transform: translate3d(0, -100%, 0);
   }
 }
-@keyframes slideToNorth {
+@keyframes moveUp {
   from {
     -webkit-transform: translate3d(0, 0, 0);
     transform: translate3d(0, 0, 0);
@@ -2005,9 +2005,232 @@
   }
 }
 
-.slideToNorth {
-  -webkit-animation-name: slideToNorth;
-  animation-name: slideToNorth;
+.moveUp {
+  -webkit-animation-name: moveUp;
+  animation-name: moveUp;
+}
+
+/* Fade In */
+
+@-webkit-keyframes fadeInFromNorth {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInFromNorth {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadeInFromNorth {
+  -webkit-animation-name: fadeInFromNorth;
+  animation-name: fadeInFromNorth;
+}
+
+@-webkit-keyframes fadeInFromEast {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInFromEast {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadeInFromEast {
+  -webkit-animation-name: fadeInFromEast;
+  animation-name: fadeInFromEast;
+}
+
+@-webkit-keyframes fadeInFromWest {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+@keyframes fadeInFromWest {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadeInFromWest {
+  -webkit-animation-name: fadeInFromWest;
+  animation-name: fadeInFromWest;
+}
+
+@keyframes fadeInFromSouth {
+  from {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+
+  to {
+    opacity: 1;
+    -webkit-transform: translate3d(0, 0, 0);
+    transform: translate3d(0, 0, 0);
+  }
+}
+.fadeInFromSouth {
+  -webkit-animation-name: fadeInFromSouth;
+  animation-name: fadeInFromSouth;
+}
+
+/* Fading exits */
+@-webkit-keyframes fadeOutToSouth {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+@keyframes fadeOutToSouth {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, 100%, 0);
+    transform: translate3d(0, 100%, 0);
+  }
+}
+.fadeOutToSouth {
+  -webkit-animation-name: fadeOutToSouth;
+  animation-name: fadeOutToSouth;
+}
+
+@-webkit-keyframes fadeOutToWest {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+@keyframes fadeOutToWest {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(-100%, 0, 0);
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+.fadeOutToWest {
+  -webkit-animation-name: fadeOutToWest;
+  animation-name: fadeOutToWest;
+}
+
+@-webkit-keyframes fadeOutToEast {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+
+@keyframes fadeOutToEast {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(100%, 0, 0);
+    transform: translate3d(100%, 0, 0);
+  }
+}
+.fadeOutToEast {
+  -webkit-animation-name: fadeOutToEast;
+  animation-name: fadeOutToEast;
+}
+
+@-webkit-keyframes fadeOutToNorth {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+@keyframes fadeOutToNorth {
+  from {
+    opacity: 1;
+  }
+
+  to {
+    opacity: 0;
+    -webkit-transform: translate3d(0, -100%, 0);
+    transform: translate3d(0, -100%, 0);
+  }
+}
+.fadeOutToNorth {
+  -webkit-animation-name: fadeOutToNorth;
+  animation-name: fadeOutToNorth;
 }
 /* ********************************************* VARIANTS OF UNSTABLE ******************************* */
 
