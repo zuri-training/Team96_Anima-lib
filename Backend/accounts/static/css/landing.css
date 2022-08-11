@@ -24,11 +24,12 @@ nav {
   flex-direction: row;
   color: #fff;
   box-shadow: 3px 3px 10px #e5e5e5;
-  z-index: 2;
+  z-index: 188;
   background-color: rgb(255, 255, 255, 1);
   position: sticky;
   top: 0;
   opacity: 1;
+
 }
 nav ul li {
   list-style: none;

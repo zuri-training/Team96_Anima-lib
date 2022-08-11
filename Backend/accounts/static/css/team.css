@@ -87,6 +87,10 @@ small img{
         width: 85%;
         margin: 0 auto;
     }
+    .lower_picture{
+        display: none;
+        width: 100%;
+    }
 }
 
 @media (max-width:460px) {

@@ -1,95 +1,106 @@
 <!DOCTYPE html>
 <html lang="en">
-    {% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-  <link rel="stylesheet" type="text/css" href="{% static '/css/style2.css'%}">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Profile</title>
+    	<link rel="stylesheet" href="{% static '/css/profile.css.css'%}">
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<img src="{% static '/imagesctn/profilepage/Rectangle 2.png'%}" alt="Rectangle">
+		<div class="boxcontainer">
+			<div class="leftbox">
+				<section class="profile">
+					<img src="{% static '/imagesctn/profilepage/profile-circle.png'%}" />
+		
+					<div class="profile2">
+						<h2>Harriet Olanrewaju</h2>
+						<div class="location">
+							<img src="{% static '/imagesctn/profilepage/location.png'%}" />
+							<div class="head">Lagos, Nigeria</div>
+						</div>
+						<div class="icons">
+							<a href="#github"><img src="{% static '/imagesctn/profilepage/akar-icons_github-fill.png'%}" /></a>
+							<a href="#behance"
+								><img src="./ant-design_behance-circle-filled.png {% static '/imagesctn/profilepage/akar-icons_github-fill.png'%}"
+							/></a>
+							<a href="#linkedIn"
+								><img src="./entypo-social_linkedin-with-circle.png {% static '/imagesctn/profilepage/akar-icons_github-fill.png'%}"
+							/></a>
+						</div>
+						<button><a href="./editprofile.html"> Edit your Profile</a></button>
+						<div class="texts">
+							<h3>About</h3>
+							<p
+								>I am here to collaborate and get more inspiration for my web design
+								and animations</p>
+						</div>
+					</div>
+				</section>
+			</div>
+			<div class="rightbox">
+				<section class="animations">
+					<div class="anima-list">
+						<a href="#">Public Animation</a> <span class="publicanimationcount">0</span>
+						<a href="#">Private Animation</a> <span class="privateanmationcount">0</span>
+						<a href="#">Downloads</a> <span class="downloadscount">0</span>
+					</div>
+				</section>
+		
+				<section class="anima-boxes">
+					<div class="anima-1">
+						<div class="info">
+							<div class="infocard1">
+								<img class="image1" src="{% static '/imagesctn/profilepage/profile-acircle.png'%}" />
+								<p>Harriet Olanrewaju</p>
+							</div>
+							<div class="infocard2">
+								<img class="image2" src="{% static '/imagesctn/profilepage/document-download.png'%}" />
+								<span>23</span>
+							</div>
+						</div>
+					</div>
+					<div class="anima-2">
+						<div class="info">
+							<div class="infocard1">
+								<img class="image1" src="{% static '/imagesctn/profilepage/profile-acircle.png'%}" />
+								<p>Harriet Olanrewaju</p>
+							</div>
+							<div class="infocard2">
+								<img class="image2" src="{% static '/imagesctn/profilepage/document-download.png'%}" />
+								<span>23</span>
+							</div>
+						</div>
+					</div>
+					<div class="anima-3">
+						<div class="info">
+							<div class="infocard1">
+								<img class="image1" src="{% static '/imagesctn/profilepage/profile-acircle.png'%}" />
+								<p>Harriet Olanrewaju</p>
+							</div>
+							<div class="infocard2">
+								<img class="image2" src="{% static '/imagesctn/profilepage/document-download.png'%}" />
+								<span>23</span>
+							</div>
+						</div>
+					</div>
+					<div class="anima-4">
+						<div class="info">
+							<div class="infocard1">
+								<img class="image1" src="{% static '/imagesctn/profilepage/profile-acircle.png'%}" />
+								<p>Harriet Olanrewaju</p>
+							</div>
+							<div class="infocard2">
+								<img class="image2" src="{% static '/imagesctn/profilepage/document-download.png'%}" />
+								<span>23</span>
+							</div>
+						</div>
+					</div>
+				</section>
+			</div>
+		</div>
 
-<body>
-    <header>
-        <nav class="nav-bar">
-            <img src="img/Logo-purple.png" alt="">
-            <ul>
-                <li><a href="">Library</a></li>
-                <li><a href="./Frontend/documentation.html">Documentation</a></li>
-                <li><a href="">Community</a></li>
-                <li><a href="">Portfolio</a></li>
-                <li><a href="">Team</a></li>
-                <li><a href="./Frontend/Contact/contact.html">Contact</a></li>
-                <li><a href=""><img src="img/" alt=""></a></li>
-            </ul>
-        </nav>
-        <div class="header"></div>
-    </header>
-    <main>
-        <div class="content">
-        <!-- the left-side -->
-        <div class="left">
-            <div class="left-side">
-                <h2>Primary Information</h2>
-                <p><a href="#">About</a></p>
-                <p><a href="#">Link</a></p>
-                <p><a href="#">Change Password</a></p>
-            </div>
-            <p><a href="#" class="delete-txt">Delete My Account</a></p>
-        </div>
-    </div>
-
-        <!-- ---------------the main information-------- -->
-        <div class="content">
-            <!-- Avartar -->
-            <div class="img-setup"><img src="#" alt="">
-                <button><input type="image" src="" alt="" placeholder="Change Photo">Change Photo</button>
-                <h6>max file size:5mb</h6>
-            </div>
-            <div class="info">
-                <h6>Primary Information</h6>
-                <p>Fullname</p>
-                <input type="text" name="Fullname" id="" placeholder="Harriet Olarenwaju">
-                <p>Email Address</p>
-                <input type="email" name="Email" id="" placeholder="harrietolarenwaju17@gmail.com">
-                <p>Company</p>
-                <input type="text" name="Company" id="" placeholder="Anibry">
-                <p>Location</p>
-                <input type="text" placeholder="State">
-                <div class="drop-content">
-                    <div class="drop-content"><button class="dropbtn">
-                            Country </button>
-
-                        <div class="dropdown-content">
-                            <a href="#">Nigeria</a>
-                            <a href="#">United states</a>
-                            <a href="#">Ohio</a>
-                            <a href="#">Norway</a>
-                            <a href="#">United Kingdom</a>
-                            <a href="#">Other</a>
-                        </div>
-                    </div>
-
-                </div>
-                <div class="about">
-                    <h5>About Me</h5>
-                    <input type="text" name="" id="" placeholder="Tell us about yourself">
-                </div>
-                <div class="links">
-                    <div class="github"><img src="./img/Vector (10).png">Github</img> <input type="url" name="" id=""
-                            placeholder="@harrietola"></div>
-                    <div class="behance"><img src="./img/Vector (11).png">Behance</img> <input type="url" name="" id=""
-                            placeholder="@harrietola"></div>
-                    <div class="linkedin"><img src="./img/Vector (12).png">Linkedin</img> <input type="url" name=""
-                            id="" placeholder="@harrietola"></div>
-                    <div class="add"><img src="./img/Vector (10) (copy).png">Add new Links</img></div>
-                    <div class="save">
-                        <button type="submit"><a href="#">Save changes</a></button>
-                    </div>
-                </div>
-                
-    </main>
-</body>
-
+	</body>
 </html>
