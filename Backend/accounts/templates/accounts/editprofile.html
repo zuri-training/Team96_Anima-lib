@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+{% load static %}
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profile</title>
+    <link rel="stylesheet" href="{% static '/css/style2.css'%}">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+</head>
+
+<body>
+    <header>
+        <nav class="nav-bar">
+            <img src="img/Logo-purple.png" alt="">
+            <ul>
+                <li><a href="./Frontend/Library Page/library.html">Library</a></li>
+                <li><a href="./Frontend/documentation.html">Documentation</a></li>
+                <li><a href="./Frontend/community.html">Community</a></li>
+                <li><a href="./Frontend/portfolio.html">Portfolio</a></li>
+                <li><a href="./Frontend/Team page/Teampage.html">Team</a></li>
+                <li><a href="./Frontend/Contact/contact.html">Contact</a></li>
+                <li><a href=""><img src="img/" alt=""></a></li>
+            </ul>
+        </nav>
+        <div class="header"></div>
+    </header>
+    <main>
+        <div class="content">
+        <!-- the left-side -->
+        <div class="left">
+            <div class="left-side">
+                <h2>Primary Information</h2>
+                <p><a href="#">About</a></p>
+                <p><a href="#">Link</a></p>
+                <p><a href="#">Change Password</a></p>
+            </div>
+            <p><a href="#" class="delete-txt">Delete My Account</a></p>
+        </div>
+    </div>
+
+        <!-- ---------------the main information-------- -->
+        <div class="content">
+            <!-- Avartar -->
+            <div class="img-setup"><img src="#" alt="">
+                <button><input type="image" src="" alt="" placeholder="Change Photo">Change Photo</button>
+                <h6>max file size:5mb</h6>
+            </div>
+            <div class="info">
+                <h6>Primary Information</h6>
+                <p>Fullname</p>
+                <input type="text" name="Fullname" id="" placeholder="Harriet Olarenwaju">
+                <p>Email Address</p>
+                <input type="email" name="Email" id="" placeholder="harrietolarenwaju17@gmail.com">
+                <p>Company</p>
+                <input type="text" name="Company" id="" placeholder="Anibry">
+                <p>Location</p>
+                <input type="text" placeholder="State">
+                <div class="drop-content">
+                    <div class="drop-content"><button class="dropbtn">
+                            Country </button>
+
+                        <div class="dropdown-content">
+                            <a href="#">Nigeria</a>
+                            <a href="#">United states</a>
+                            <a href="#">Ohio</a>
+                            <a href="#">Norway</a>
+                            <a href="#">United Kingdom</a>
+                            <a href="#">Other</a>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="about">
+                    <h5>About Me</h5>
+                    <input type="text" name="" id="" placeholder="Tell us about yourself">
+                </div>
+                <div class="links">
+                    <div class="github"><img src="./img/Vector (10).png">Github</img> <input type="url" name="" id=""
+                            placeholder="@harrietola"></div>
+                    <div class="behance"><img src="./img/Vector (11).png">Behance</img> <input type="url" name="" id=""
+                            placeholder="@harrietola"></div>
+                    <div class="linkedin"><img src="./img/Vector (12).png">Linkedin</img> <input type="url" name=""
+                            id="" placeholder="@harrietola"></div>
+                    <div class="add"><img src="./img/Vector (10) (copy).png">Add new Links</img></div>
+                    <div class="save">
+                        <button type="submit"><a href="#">Save changes</a></button>
+                    </div>
+                </div>
+                
+    </main>
+</body>
+
+</html>

@@ -25,21 +25,21 @@
              <h1>Get in Touch.</h1>
              <p id="p1">Let us know how we can support your success.</p>
              <p>
-                <img src="/images/Check.svg" alt="mark"> Consult a professional to learn how Anibry can increase your efficiency and productivity.
+                <img src="{% static '/imagesctn/contact/Check.svg'%}" alt="mark"> Consult a professional to learn how Anibry can increase your efficiency and productivity.
               </p>
               <p> 
-               <img src="/images/Check.svg" alt="mark">Set and attain your goals.
+               <img src="{% static '/imagesctn/contact/Check.svg'%}" alt="mark">Set and attain your goals.
              </p>
               <p> 
-               <img src="/images/Check.svg" alt="mark">Integrate our animations to add value to your project.
+               <img src="{% static '/imagesctn/contact/Check.svg'%}" alt="mark">Integrate our animations to add value to your project.
              </p>
               <p>For FAQs? <a href="#"><strong>Click Here</strong></a></p>
           </div>
         </div>
         <div class="right-col col-6">
           
-          <form id="form" method="post" action="/" >
-
+          <form id="form" method="POST" action="" >
+            {% csrf_token %}
             <div class="box1">
                 <p id="p1">Contact our Incredible Team</p>
               </div>
@@ -48,7 +48,8 @@
 
               <div class="col-75">
                 <label for="name">Fullname</label>
-                <input type="text" id="fullname" title="Full Name" name="fullname" placeholder="Harlet Olarewaju">
+                <!-- <input type="text" id="fullname" title="Full Name" name="fullname" placeholder="Harlet Olarewaju"> -->
+                {{form.yourname}}
               </div>
             </div>
             
@@ -56,14 +57,16 @@
 
               <div class="col-75">
                 <label for="email">Email</label>
-                <input type="email" id="email" title="Email Address" name="email" placeholder="Harletolarewaju17@gmail.com">
+                <!-- <input type="email" id="email" title="Email Address" name="email" placeholder="Harletolarewaju17@gmail.com"> -->
+                {{form.email}}
               </div>
             </div>
             <div class="row">
 
               <div class="col-75">
                 <label for="text">How can our team help you?</label>
-                <textarea id="textarea" cols="60" rows="10" placeholder="Tell us more about what information you are looking to recieve."></textarea>
+                <!-- <textarea id="textarea" cols="60" rows="10" placeholder="Tell us more about what information you are looking to recieve."></textarea> -->
+                {{form.message}}
             </div>
             </div>
             <div class="row">

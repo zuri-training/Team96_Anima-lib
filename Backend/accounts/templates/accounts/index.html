@@ -1,20 +1,21 @@
 <!DOCTYPE html>
 <html lang="en">
+    {% load static %}
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Landing Page</title>
     <link rel="shortcut icon" href="img/Logo-purple.png" type="image/x-icon">
-    <link rel="stylesheet" href="landing.css">
-    <link rel="stylesheet" href="./Frontend/anibry.css">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/landing.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/anibry.css'%}">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
         <!-- FOR MOBILE MENU -->
     <div class="mobilemenulist">
         <div class="menuimgdiv">
-            <img class="closemenu" src="./img/Vector.png" alt="exiticon">
+            <img class="closemenu" src="{% static '/imagesctn/img/Vector.png'%}" alt="exiticon">
         </div>
         <li class="mobilemenuitem"><a href="./Frontend/documentation.html">Documentation</a></li>
         <li class="mobilemenuitem"><a href="./Frontend/Team page/Teampage.html">About</a></li>
@@ -24,7 +25,7 @@
     <!-- MOBILE MENU ENDS -->
     <!-- The navbar i.e the logo and other pages -->
         <nav class="nav-bar">
-            <img src="img/Logo-purple.png" alt="logo">
+            <img src=" {% static '/imagesctn/img/Logo-purple.png'%}" alt="logo">
             <ul class="desktopmenu">
                 <li><a href="./Frontend/documentation.html">Documentation</a></li>
                 <li><a href="./Frontend/Team page/Teampage.html">About</a></li>
@@ -33,7 +34,7 @@
             </ul>
             <ul class="mobilemenu">
                 <li><a href="./Frontend/registration.html" class="register">Register</a></li>
-                <img class="menu" src="./Frontend/images/menuhamburger.svg" alt="hamburger"> 
+                <img class="menu" src="{% static '/imagesctn/images/menuhamburger.svg'%}" alt="hamburger"> 
             </ul>
         </nav>
     <!-- The header  -->
@@ -45,7 +46,7 @@
                 <button class="button"><a href="./Frontend/Library Page/library.html"> Start Animating </a></button>
             </div>
             <div class="image">
-                <img class="illustration" src="img/rafiki.svg" alt="hero-image">
+                <img class="illustration" src=" {% static '/imagesctn/img/rafiki.svg'%}" alt="hero-image">
             </div>
         </div>
         
@@ -177,28 +178,28 @@
 
             <div class="grid-two">
                 <div class="grid-two-box">
-                    <img class="img-features" src="img/arcticons_tinybit.png" alt="">
+                    <img class="img-features" src=" {% static '/imagesctn/img/arcticons_tinybit.png'%}" alt="">
                     <h3>Tiny</h3>
                     <p>The animations are less than 10kb and every value function is importable</p></div>
                 <div class="grid-two-box">
-                    <img class="img-features" src="img/healthicons_low-level.png" alt="">
+                    <img class="img-features" src=" {% static '/imagesctn/img/healthicons_low-level.png'%}" alt="">
                     <h3>Low Level</h3>
                     <p>Easy integration, composable functions, portable to any framework environment </p>
                 </div>
                 <div class="grid-two-box">
-                    <img class="img-features" src="img/emojione_atom-symbol.png" alt="">
+                    <img class="img-features" src="" alt="">
                     <h3>Fast</h3>
                     <p>Silky smooth animations and effects for staggering user's experience</p></div>
                 <div class="grid-two-box">
-                    <img class="img-features" src="img/ri_open-source-fill.png" alt="">
+                    <img class="img-features" src="{% static '/imagesctn/img/ri_open-source-fill.png'%}" alt="">
                     <h3>Open Sourced</h3>
                     <p>Fast growing community refines Anibry and ships frequently</p></div>
                 <div class="grid-two-box">
-                    <img class="img-features" src="img/iconoir_magnet-energy (1).png" alt="">
+                    <img class="img-features" src="{% static '/imagesctn/img/iconoir_magnet-energy (1).png'%}" alt="">
                     <h3>Powerful</h3>
                     <p>Supports keyframes, spring and inertia animations on numbers, colors, and complex strings</p></div>
                 <div class="grid-two-box">
-                    <img class="img-features" src="img/carbon_desk-adjustable.png" alt="">
+                    <img class="img-features" src="{% static '/imagesctn/img/carbon_desk-adjustable.png'%}" alt="">
                     <h3>Stable</h3>
                     <p>Consistent reviews and community contributions to ensure reliability</p></div>
                     </div>
@@ -214,7 +215,7 @@
                     <p class="sub-heading">"Anibry has made it easy to get animes for my projects and websites. I am glad i came across them. I strongly recommend them"</p>
                     <p class="ceo-zack">Zack orji CEO INNCC</p>
                 </div>
-                <div><img src="img/Frame 2.png" alt=""></div>
+                <div><img src="{% static '/imagesctn/img/Frame 2.png'%}" alt=""></div>
             </div>
         </section>
         <!-- the fourth section -->
@@ -222,14 +223,14 @@
             <div class="Animation">
                 <ul class="circular">
                     <div class="anibry toggle target">
-                        <img class="logoball" src="img/Group 13875.png" alt="anibrylogo">
+                        <img class="logoball" src="{% static '/imagesctn/img/Group 13875.png'%}" alt="anibrylogo">
                     
-                   <li class="top rotateball" ><img src="img/figma 1.png" alt="figmalogo"></li>
-                   <li class="right rotateball"><img  src="img/vscode-icons_file-type-xcode (1).png" alt="xcodelogo"></li>
-                   <li class="top-right rotateball" ><img src="img/emojione_atom-symbol.png" alt="atomlogo"></li>
-                   <li class="bottom rotateball" ><img src="img/xd 1.png" alt="xdlogo"></li>
-                   <li class="left rotateball"><img src="img/vscode 1.png" alt="vscodelogo"></li>
-                   <li class="bottom-left rotateball"><img src="img/AE 1.png" alt="AElogo"></li>
+                   <li class="top rotateball" ><img src="{% static '/imagesctn/img/figma 1.png'%}" alt="figmalogo"></li>
+                   <li class="right rotateball"><img  src="{% static '/imagesctn/img/vscode-icons_file-type-xcode (1).png'%}" alt="xcodelogo"></li>
+                   <li class="top-right rotateball" ><img src="{% static '/imagesctn/img/emojione_atom-symbol.png'%}" alt="atomlogo"></li>
+                   <li class="bottom rotateball" ><img src="{% static '/imagesctn/img/xd 1.png'%}" alt="xdlogo"></li>
+                   <li class="left rotateball"><img src="{% static '/imagesctn/img/vscode 1.png'%}" alt="vscodelogo"></li>
+                   <li class="bottom-left rotateball"><img src="{% static '/imagesctn/img/AE 1.png'%}" alt="AElogo"></li>
                     </div>
                 </ul>
                 <div class="animate-text">
@@ -249,7 +250,7 @@
                 <a class="viewcommunity" href="./Frontend/community.html">View community</a>
             </div>
             <div class="community-image">
-                <img src="img/Frame 12.png" alt="">       
+                <img src="{% static '/imagesctn/img/AE 1.pngimg/Frame 12.png'%}" alt="">       
             </div>
         </div>
     </section>
@@ -276,7 +277,7 @@
             <div id="desktopfooter" class="footer-wrapper">
               <div class="footerColumnsContainer">
                 <div class="footerCol footerCol1">
-                  <img src="img/anibry-logo-footer.svg" alt="logo" />
+                  <img src="{% static '/imagesctn/img/anibry-logo-footer.svg'%}" alt="logo" />
                   <p class="build">
                     Build with all the love in the world by the using Anibry library
                     in your projects </br>
@@ -292,6 +293,6 @@
               <div class="copyright"><p>Copyright © 2022 Anibry. All right reserved.</p></div>
             
           </footer>
-          <script src="index.js"></script>
+          <script src="{% static '/js/index.js' %}"></script>
 </body>
 </html>
