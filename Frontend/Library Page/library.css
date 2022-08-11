@@ -20,6 +20,8 @@ main{
 .left-box{
     flex: 2.4;
     flex-shrink: 1;
+    height: 100vh;
+    overflow: scroll;
 }
 
 .right-box{
