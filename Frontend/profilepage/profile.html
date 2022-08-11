@@ -6,115 +6,101 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 		<title>Profile</title>
 		<link rel="stylesheet" href="profile.css" />
+		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 	</head>
 	<body>
-		<nav class="nav">
-			<div class="navbar">
-				<div class="logo"
-					><a href="#"><img src="/Logo-purple.png" /></a>
-				</div>
-				<div class="max-width">
-					<ul class="nav-links">
-						<li><a href="#library" class="menu-btn">Library</a></li>
-						<li><a href="#documentation" class="menu-btn">Documentation</a></li>
-						<li><a href="#community" class="menu-btn">Community</a></li>
-						<li><a href="#porfolio" class="menu-btn">Portfolio</a></li>
-						<li><a href="#teams">Teams</a></li>
-						<li><a href="#contact" class="menu-btn">Contact</a></li>
-					</ul>
-					<div class="user">
-						<img src="/img.png" />
-
-						<p class="username">Harriet</p>
+		<img src="./Rectangle 2.png" alt="Rectangle">
+		<div class="boxcontainer">
+			<div class="leftbox">
+				<section class="profile">
+					<img src="./profile-circle.png" />
+		
+					<div class="profile2">
+						<h2>Harriet Olanrewaju</h2>
+						<div class="location">
+							<img src="./location.png" />
+							<div class="head">Lagos, Nigeria</div>
+						</div>
+						<div class="icons">
+							<a href="#github"><img src="./akar-icons_github-fill.png" /></a>
+							<a href="#behance"
+								><img src="./ant-design_behance-circle-filled.png"
+							/></a>
+							<a href="#linkedIn"
+								><img src="./entypo-social_linkedin-with-circle.png"
+							/></a>
+						</div>
+						<button><a href="./editprofile.html"> Edit your Profile</a></button>
+						<div class="texts">
+							<h3>About</h3>
+							<p
+								>I am here to collaborate and get more inspiration for my web design
+								and animations</p>
+						</div>
 					</div>
-				</div>
+				</section>
 			</div>
-		</nav>
-
-		<div class="banner"> </div>
-
-		<section class="profile">
-			<img src="/profile-circle.png" />
-
-			<div class="profile2">
-				<p>Harriet Olanrewaju</p>
-				<div class="location">
-					<img src="/location.png" />
-					<div class="head">Lagos, Nigeria</div>
-				</div>
-				<div class="icons">
-					<a href="#github"><img src="/akar-icons_github-fill.png" /></a>
-					<a href="#behance"
-						><img src="/ant-design_behance-circle-filled.png"
-					/></a>
-					<a href="#linkedIn"
-						><img src="/entypo-social_linkedin-with-circle.png"
-					/></a>
-				</div>
-				<button>Edit your Profile</button>
-				<div class="texts">
-					<h3>About</h3>
-					<h4
-						>I am here to collaborate and get more inspiration for my web design
-						and animations</h4
-					>
-				</div>
-			</div>
-		</section>
-
-		<section class="animations">
-			<div class="anima-list">
-				<a href="#">Public Animation</a> <span>0</span>
-				<a href="#">Private Animation</a> <span>0</span>
-				<a href="#">Downloads</a> <span>0</span>
-			</div>
-		</section>
-
-		<section class="anima-boxes">
-			<div class="anima-1">
-				<div class="info">
-					<img class="image1" src="/profile-acircle.png" />
-					<p>Harriet Olanrewaju</p>
-					<img class="image2" src="/document-download.png" /><span>23</span>
-				</div>
-			</div>
-			<div class="anima-2">
-				<div class="info">
-					<img class="image1" src="/profile-acircle.png" />
-					<p>Harriet Olanrewaju</p>
-					<img class="image2" src="/document-download.png" /><span>23</span>
-				</div>
-			</div>
-			<div class="anima-3">
-				<div class="info">
-					<img class="image1" src="/profile-acircle.png" />
-					<p>Harriet Olanrewaju</p>
-					<img class="image2" src="/document-download.png" /><span>23</span>
-				</div>
-			</div>
-			<div class="anima-4">
-				<div class="info">
-					<img class="image1" src="/profile-acircle.png" />
-					<p>Harriet Olanrewaju</p>
-					<img class="image2" src="/document-download.png" /><span>23</span>
-				</div>
-			</div>
-		</section>
-
-		<footer>
-			<div class="footer-copywrite">
-				<div class="footer-content">
-					<div class="frame1">
-						<img src="/Group 13875(1).png" />
-						<p
-							>Build with all the love in the world bt using Anibry library in
-							your projects. <br />
-							Currently v1.0</p
-						>
+			<div class="rightbox">
+				<section class="animations">
+					<div class="anima-list">
+						<a href="#">Public Animation</a> <span class="publicanimationcount">0</span>
+						<a href="#">Private Animation</a> <span class="privateanmationcount">0</span>
+						<a href="#">Downloads</a> <span class="downloadscount">0</span>
 					</div>
-				</div>
-				<p> © 2022 Anibry. All right reserved.</p>
+				</section>
+		
+				<section class="anima-boxes">
+					<div class="anima-1">
+						<div class="info">
+							<div class="infocard1">
+								<img class="image1" src="./profile-acircle.png" />
+								<p>Harriet Olanrewaju</p>
+							</div>
+							<div class="infocard2">
+								<img class="image2" src="./document-download.png" />
+								<span>23</span>
+							</div>
+						</div>
+					</div>
+					<div class="anima-2">
+						<div class="info">
+							<div class="infocard1">
+								<img class="image1" src="./profile-acircle.png" />
+								<p>Harriet Olanrewaju</p>
+							</div>
+							<div class="infocard2">
+								<img class="image2" src="./document-download.png" />
+								<span>23</span>
+							</div>
+						</div>
+					</div>
+					<div class="anima-3">
+						<div class="info">
+							<div class="infocard1">
+								<img class="image1" src="./profile-acircle.png" />
+								<p>Harriet Olanrewaju</p>
+							</div>
+							<div class="infocard2">
+								<img class="image2" src="./document-download.png" />
+								<span>23</span>
+							</div>
+						</div>
+					</div>
+					<div class="anima-4">
+						<div class="info">
+							<div class="infocard1">
+								<img class="image1" src="./profile-acircle.png" />
+								<p>Harriet Olanrewaju</p>
+							</div>
+							<div class="infocard2">
+								<img class="image2" src="./document-download.png" />
+								<span>23</span>
+							</div>
+						</div>
+					</div>
+				</section>
 			</div>
-		</footer>
+		</div>
+
 	</body>
 </html>
