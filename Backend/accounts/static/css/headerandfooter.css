@@ -17,6 +17,7 @@ li {
 }
 
 header {
+  position: relative;
   line-height: 24px;
   padding-inline: 2vw;
   padding-block: 15px;
@@ -111,6 +112,48 @@ footer {
 .close{
   display: none;
 }
+
+.headerdropdown{
+  display: none;
+  position: absolute;
+  color: black;
+  background-color: white;
+  flex-direction: column;
+  width: 230px;
+  height: 300px;
+  right: 50px;
+  padding: 20px;
+  border-radius: 5px;
+  justify-content: space-between;
+  box-shadow: 0px 3px 5px black;
+}
+.logout{
+  color: red;
+}
+.gettingstarted{
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-top: 1px solid grey;
+  border-bottom: 1px solid grey;
+}
+.icondown{
+  cursor: pointer;
+}
+.profileindropdown{
+  display: flex;
+  font-weight: 700;
+}
+.profileindropdown img{
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+}
+.profileindropdown a, p{
+  font-size: 14px;
+}
+.profileindropdown a{
+  color: #5A189A;
+}
 @media screen and (max-width:900px) {
   footer{
     padding-left: 20px;
@@ -189,7 +232,7 @@ footer {
     background-color: #5A189A;
     font-weight: 600;
     height: 100%;
-    z-index: 1;
+    z-index: 3;
     color: white;
   }
   .navmenu a{
@@ -202,6 +245,7 @@ footer {
     display: block;
     max-width: 30px;
     height: 20px;
+    margin-right: 20px;
   }
   .headercontainer img{
     margin-right: 0;
