@@ -35,7 +35,7 @@
           {% if messages %}
           <ul class="messages">
             {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
+            <li{% if message.tags %} class="{{ message.tags }}" style="color: red; font-size: 18px"{% endif %}>{{ message }}</li>
           {% endfor %}
           </ul>
           {% endif %}
@@ -65,7 +65,7 @@
                 </div>
                   <button type="submit">Create account</button>
                      <br>
-                  <p id="lol"><small>Already have an Anibry account? <a href="login.html">Log in</a></small></p>              
+                  <p id="lol"><small>Already have an Anibry account? <a href="{% url 'accounts:login' %}">Log in</a></small></p>              
           </form>        
         
         </div>
