@@ -15,7 +15,7 @@ from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_encode
 from django.utils.encoding import force_bytes, force_str 
-from . tokens import generate_token
+# from . tokens import generate_token
 
 
 # Create your views here.
@@ -131,25 +131,25 @@ def login(request):
 
 #Logout page
 def logout(request):
-    logout(request, user)
+    logout(request)
     messages.success(request, "Logged out Successfully")
     return render(request, "accounts/index.html")
 
 #Email activation View
-def activate(request, uidb64, token):
-    try:
-        uid = force_text(urlsafe_base_decode(uidb64))
-        mysuser = User.objects.get(pk=uid)
-    except (TypeError, ValueError, OverflowError, User.DoesNotExist):
-        myuser = None
+# def activate(request, uidb64, token):
+#     try:
+#         uid = force_text(urlsafe_base_decode(uidb64))
+#         mysuser = User.objects.get(pk=uid)
+#     except (TypeError, ValueError, OverflowError, User.DoesNotExist):
+#         myuser = None
         
-    if myuser is not None and generate_token.check_token(myuser,token):
-        myuser.is_active = True
-        myuser.save()
-        login(request, myuser)
-        return redirect('home')
-    else:
-        return render(request, "activation_failed.html")
+#     if myuser is not None and generate_token.check_token(myuser,token):
+#         myuser.is_active = True
+#         myuser.save()
+#         login(request, myuser)
+#         return redirect('home')
+#     else:
+#         return render(request, "activation_failed.html")
 
 #Reset password page
 def reset(request):
@@ -169,21 +169,40 @@ def forgot(request):
 def profilepage(request):
     return render(request, 'accounts/profile.html')
 
+# Library Page
+@login_required
+def library(request):
+    return render(request, 'accounts/library.html')
+
+@login_required
+def portfolio(request):
+    return render(request, 'accounts/portfolio.html')
+
+@login_required
+def team(request):
+    return render(request, 'accounts/teampage.html')
+
+@login_required
+def community(request):
+    return render(request, 'accounts/community.html')
+
+
+
 #Login page view
-def login_user (request):
-    if request.method == 'POST':
-        email = request.POST.get['Email']
-        password = request.POST.get['Password']
-        user = authenticate(request, Email= email, Password = password)
+# def login_user (request):
+#     if request.method == 'POST':
+#         email = request.POST.get['Email']
+#         password = request.POST.get['Password']
+#         user = authenticate(request, Email= email, Password = password)
         
-        if  user is not None:
-            login (request, user)
-            # return redirect
+#         if  user is not None:
+#             login (request, user)
+#             # return redirect
             
-        else:
-            messages.error(request, "Incorrect Email address or Password")
+#         else:
+#             messages.error(request, "Incorrect Email address or Password")
         
-    return render(request,'accounts/login.html' )
+#     return render(request,'accounts/login.html' )
 
 #logout page view
 def logout_user(request):

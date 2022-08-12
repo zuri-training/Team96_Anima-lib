@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Profile</title>
-    	<link rel="stylesheet" href="{% static '/css/profile.css.css'%}">
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-	</head>
+{% extends  'accounts/authheaderandfooter.html' %}
+{% load static %}
+<title>{% block title %} Profile Page {% endblock %}</title>
+
+{% block content %}
+
 	<body>
+		
 		<img src="{% static '/imagesctn/profilepage/Rectangle 2.png'%}" alt="Rectangle">
 		<div class="boxcontainer">
 			<div class="leftbox">
@@ -24,10 +21,10 @@
 						<div class="icons">
 							<a href="#github"><img src="{% static '/imagesctn/profilepage/akar-icons_github-fill.png'%}" /></a>
 							<a href="#behance"
-								><img src="./ant-design_behance-circle-filled.png {% static '/imagesctn/profilepage/akar-icons_github-fill.png'%}"
+								><img src="{% static '/imagesctn/profilepage/akar-icons_github-fill.png'%}"
 							/></a>
 							<a href="#linkedIn"
-								><img src="./entypo-social_linkedin-with-circle.png {% static '/imagesctn/profilepage/akar-icons_github-fill.png'%}"
+								><img src="{% static '/imagesctn/profilepage/entypo-social_linkedin-with-circle.png'%}"
 							/></a>
 						</div>
 						<button><a href="./editprofile.html"> Edit your Profile</a></button>
@@ -103,4 +100,6 @@
 		</div>
 
 	</body>
+
+	{% endblock %}
 </html>
