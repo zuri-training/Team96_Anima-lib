@@ -31,37 +31,47 @@
           <br>
           <br>
           <h2>Create an account </h2>
-       
-            {% comment %} <form action="POST">
+             
+            {% comment %} {% for message in messages%}
+            <div class="alert alert-{{ message.tags}} alert-dismissible fade show" role="alert">
+              <strong>Message:</strong> {{ message }}
+              <button type="button" class="Close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            {% endfor %} {% endcomment %}
+              
+            <form action="/register"  method="post" form method="POST">
+              {% csrf_token %}
               <div class="form-container">
                 
                 <p>Full name</p>
-                <div class="inputs"><input type="text" placeholder="Harriet Olanrewaju" required>     
+                <div class="inputs"><input type="text" placeholder="Full Name" name="fullname" required>     
                 </div>
                 <p>Username</p>
-                <div class="inputs"><input type="text" placeholder="Harrieto" required>     
+                <div class="inputs"><input type="text" placeholder="Username" name="username" required>     
                 </div>
                 <p>Email Address</p>
-                <div class="inputs"><input type="email" placeholder="harrietolanrewaju@gmail.com" required>
+                <div class="inputs"><input type="email" placeholder="@mail.com" name="email" required>
                 </div>
                 <p>Password</p>
                 <div class="inputs">
-                  <input type="password" placeholder="Minimum of 8 Characters" id="myinput" minlength="8" maxlength="15"
-                  required> 
+                  <input type="password" placeholder="Minimum of 8 Characters" id="myinput" minlength="8" maxlength="15" name="password" required> 
                        <!-- <span class="eye" > -->
                   <i id="hideeye" class="fa fa-eye" onclick="myFunction()"></i>
                   <i id ="openeye" class="fa fa-eye-slash" onclick="myFunction()"></i>
                        <!-- </span> -->
                   <p id="joy"><small>By creating an Anibry account, you agree to our <a href="#">Terms of Service,</a> and <a href="#"> Privacy Policy</a></small></p>
                 </div>
-                  <button type="submit">Create account</button>
+                  <button type="submit">Create account</a></button>
                      <br>
-                  <p id="lol"><small>Already have an Anibry account? <a href="login.html">Log in</a></small></p>
+                  <p id="lol"><small>Already have an Anibry account? <a href="/login">Log in</a></small></p>
               </div>
+
             </form> {% endcomment %}
           {% comment %} <form>   {% endcomment %}
            
-            {% if messages %}             
+            {% if messages %} 
             {% for message in messages %}
           <p><li>{% if message.tags %} class="{{ message.tags }}"{% endif %} style="color: red; font-size:18px">{{ message }}</li></p>
           {% endfor %}          
@@ -96,9 +106,10 @@
                   <button type="submit">Create account</button>
                      <br>
                   <p id="lol"><small>Already have an Anibry account? <a href="login.html">Log in</a></small></p>
+
               {% comment %} <button class="btn-info" type="submit">Sign up</button> {% endcomment %}
           </form>  
-        </div>      
+        </div>  
         
         </div>
       </div>
