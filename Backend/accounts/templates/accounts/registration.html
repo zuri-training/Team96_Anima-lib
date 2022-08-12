@@ -67,43 +67,49 @@
                      <br>
                   <p id="lol"><small>Already have an Anibry account? <a href="/login">Log in</a></small></p>
               </div>
-            </form>
 
-
-          {% comment %} {% if messages %}
-          <ul class="messages">
+            </form> {% endcomment %}
+          {% comment %} <form>   {% endcomment %}
+           
+            {% if messages %} 
             {% for message in messages %}
-            <li{% if message.tags %} class="{{ message.tags }}"{% endif %}>{{ message }}</li>
-          {% endfor %}
-          </ul>
-          {% endif %}
+          <p><li>{% if message.tags %} class="{{ message.tags }}"{% endif %} style="color: red; font-size:18px">{{ message }}</li></p>
+          {% endfor %}          
+          {% endif %}                    
 
-            <form action="" method="POST">
-              {% csrf_token %}               
-              {% for field in form %}
+          <form action="" method="POST">
+            <div class="form-container">           
+             
+              {% csrf_token %}                            
+               {% for field in form %}
+               {% for error in field.errors %}
+                 <li style="color: red; font-size: 18px">{{ error }}</li>
+                    {% endfor %}      
                   <div class="inputs">
                     {{ field.label_tag }}   
                     <br>
                     {{ field }}
-                    <br>
+                    <br>                                
                     {% if field.help_text %}
                       <small class="form-text text-muted">
                         {{ field.help_text|safe }}  
                       </small>
                     {% endif %}
                   </div>
-            {% endfor %}
-          <br>
-          <i id="hideeye" class="fa fa-eye" onclick="myFunction()"></i>
+                {% endfor %} 
+              <br>
+          {% comment %} <i id="hideeye" class="fa fa-eye" onclick="myFunction()"></i>
                   <i id ="openeye" class="fa fa-eye-slash" onclick="myFunction()"></i>
-                       <!-- </span> -->
+                       <!-- </span> --> {% endcomment %}
                   <p id="joy"><small>By creating an Anibry account, you agree to our <a href="#">Terms of Service,</a> and <a href="#"> Privacy Policy</a></small></p>
                 </div>
                   <button type="submit">Create account</button>
                      <br>
                   <p id="lol"><small>Already have an Anibry account? <a href="login.html">Log in</a></small></p>
-              <button class="btn-info" type="submit">Sign up</button>
-          </form>         {% endcomment %}
+
+              {% comment %} <button class="btn-info" type="submit">Sign up</button> {% endcomment %}
+          </form>  
+        </div>  
         
         </div>
       </div>
@@ -118,7 +124,7 @@
             
             <br><br>
             <div class="gif">
-              <img src="./registrationgif/Mobile login (1).gif" alt="login-Illustration">
+              <img src="../static/registrationgif/Mobile login (1).gif" alt="login-Illustration">
             </div>
           
       </div>
