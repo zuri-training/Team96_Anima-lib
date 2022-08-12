@@ -186,7 +186,25 @@ def team(request):
 def community(request):
     return render(request, 'accounts/community.html')
 
+@login_required
+def edit(request):
+    return render(request, 'accounts/editprofile.html')
 
+@login_required
+def start(request):
+    return render(request, 'accounts/gettingstarted.html')
+
+@login_required
+def homepage(request):
+    return render(request, 'accounts/homepage.html')
+
+@login_required
+def important(request):
+    return render(request, 'accounts/importantanimationtips.html')
+
+@login_required
+def usingclasses(request):
+    return render(request, 'accounts/usingclasses.html')
 
 #Login page view
 # def login_user (request):
