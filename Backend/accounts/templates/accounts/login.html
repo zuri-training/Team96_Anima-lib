@@ -29,16 +29,16 @@
           </svg></a>
           <h2>Welcome!</h2>
         
-          <form action="GET">
+          <form action="/login" method="POST">
             <div class="form-container">
               <br/>
               <p>Email Address</p>
               <div class="inputs">
-                <input type="email" placeholder="harrietolanrewaju@gmail.com" required />
+                <input type="email" placeholder="Email" required />
               </div>
               <p>Password</p>
               <div class="inputs">
-                <input type="password" placeholder="Minimum of 8 Characters" id="myinput" minlength="8" maxlength="15"
+                <input type="password" placeholder="Password" id="myinput" minlength="8" maxlength="15"
                 required> 
                       <!-- <span class="eye" > -->
                 <i id="hideeye" class="fa fa-eye" onclick="myFunction()"></i>
@@ -46,9 +46,9 @@
                       <!-- </span> -->
                 <p id="purp"><small><a href="forgot.html">Forgot Password?</a></small></p>
               </div>
-              <button type="submit">Log In</button>
+              <button type="submit"><a href="/register">Log In</a></button>
               <br>
-              <p id="lol"><small>Don't have an Anibry account?<a href="registration.html"> Create account</a></small></p>
+              <p id="lol"><small>Don't have an Anibry account?<a href="/register"> Create account</a></small></p>
            </div>
           </form>
         </div>
