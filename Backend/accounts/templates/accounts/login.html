@@ -42,13 +42,13 @@
             {% csrf_token %}
             <div class="form-container">
               <br/>
-              <p>Email Address</p>
+              <p>Username</p>
               <div class="inputs">
-                <input type="email" placeholder="Email" required />
+                <input type="username" placeholder="Username" name="username" required />
               </div>
               <p>Password</p>
               <div class="inputs">
-                <input type="password" placeholder="Password" id="myinput" minlength="8" maxlength="15"
+                <input type="password" placeholder="Password" name="password" id="myinput" minlength="8" maxlength="15"
                 required> 
                       <!-- <span class="eye" > -->
                 <i id="hideeye" class="fa fa-eye" onclick="myFunction()"></i>

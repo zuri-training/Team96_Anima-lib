@@ -113,14 +113,14 @@ def login(request):
 
     # Post user input to the database
     if request.method == "POST":
-        email = request.POST['email']
+        username = request.POST['username']
         password = request.POST['password']
 
         # Authenticate email and password
-        user = authenticate(email = email, password = password)
+        User = authenticate(username = username, password = password)
 
-        if user is not None:
-            login(request, user)
+        if User is not None:
+            login(request, User)
             return redirect(request, "accounts/homepage.html")
 
         else:
