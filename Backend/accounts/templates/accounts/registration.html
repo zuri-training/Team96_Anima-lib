@@ -56,7 +56,7 @@
                 </div>
                   <button type="submit">Create account</button>
                      <br>
-                  <p id="lol"><small>Already have an Anibry account? <a href="login.html">Log in</a></small></p>
+                  <p id="lol"><small>Already have an Anibry account? <a href="/login">Log in</a></small></p>
               </div>
             </form> {% endcomment %}
 
@@ -77,11 +77,11 @@
                     <br>
                     {{ field }}
                     <br>
-                    {% if field.help_text %}
+                    <!-- {% if field.help_text %}
                       <small class="form-text text-muted">
                         {{ field.help_text|safe }}  
                       </small>
-                    {% endif %}
+                    {% endif %} -->
                   </div>
             {% endfor %}
           <br>
