@@ -1,0 +1,10 @@
+https://github.com/zuri-training/Team96_Anima-lib/blob/main/Backend/accounts/views.py
+https://github.com/zuri-training/Team96_Anima-lib/blob/main/Backend/accounts/urls.py
+https://github.com/zuri-training/Team96_Anima-lib/blob/main/Backend/accounts/tokens.py
+https://github.com/zuri-training/Team96_Anima-lib/blob/main/Backend/accounts/templates/accounts/index.html
+https://github.com/zuri-training/Team96_Anima-lib/blob/main/Backend/accounts/templates/accounts/documentation.html
+https://github.com/zuri-training/Team96_Anima-lib/blob/main/Backend/accounts/templates/accounts/activation_failed.html
+https://github.com/zuri-training/Team96_Anima-lib/blob/main/Backend/accounts/templates/accounts/login.html
+https://github.com/zuri-training/Team96_Anima-lib/blob/main/Backend/accounts/templates/accounts/registration.html
+https://github.com/zuri-training/Team96_Anima-lib/blob/main/Backend/Anibry/info.py
+https://github.com/zuri-training/Team96_Anima-lib/blob/main/Backend/Anibry/settings.py
