@@ -53,8 +53,8 @@ def register(request):
                 messages.error(request, f'The email {email} already exists!')
                 return redirect('accounts:register') 
             form.save()                              
-            messages.success(request, f'Welcome {username}, your account is created.')            
-            return redirect('/login')
+            messages.success(request, f'Hi {username}, your account is created!')            
+            return redirect('accounts:login')
     else:
         form = RegisterForm()
     return render(request, 'accounts/registration.html', {'form':form})
