@@ -12,7 +12,7 @@
   <body>
     <header>
       <div class="headercontainer">
-        <img src="images/anibry-logo-header.svg" alt="logo"/>
+        <img src="{% static '/imagesctn/images/anibry-logo-header.svg'%}" alt="logo"/>
         <ul>
           <li><a href="#">Library</a></li>
           <li><a href="documentation.html">Documentation</a></li>
@@ -22,7 +22,7 @@
           <li><a href="Contact/contact.html">Contact</a></li>
         </ul>
         <div class="profile">
-          <img src="images/anibry-logo-header.svg" alt="profile-image" />
+          <img src="{% static '/imagesctn/images/anibry-logo-header.svg'%}" alt="profile-image" />
           <p class="profile-name">Harriet</p>
           <img class="icondown" src="images/icondown.svg" alt="icondown" />
         </div>
@@ -31,15 +31,15 @@
     <div id="container">
       <img
         class="asidehamburger"
-        src="images/menuhamburger.svg"
+        src="{% static '/imagesctn/images/menuhamburger.svg'%}"
         alt="asidehamburger"
       />
       <div class="aside">
         <div class="tableofcontent">
-          <img class="closeasidemenu" src="images/closeicon.svg" alt="closeicon">
+          <img class="closeasidemenu" src="{% static '/imagesctn/images/closeicon.svg'%}" alt="closeicon">
           <a href='documentation.html' target="_self" class="active">Overview</a>
           <a href="gettingstarted.html" target="_self">Getting Started</a>
-          <a href="usingclasses.html" target="_self">Using Animations <img src="images/icondown.svg" alt="icondown"/></a>
+          <a href="usingclasses.html" target="_self">Using Animations <img src="{% static '/imagesctn/images/icondown.svg'%}" alt="icondown"/></a>
           <div id="listContent">
             <a href="usingclasses.html" target="_self">Using Classes</a>
             <a href="#" target="_self">Using Keyframes</a>
@@ -75,7 +75,7 @@
       <div id="desktopfooter" class="footer-wrapper">
         <div class="footerColumnsContainer">
           <div class="footerCol footerCol1">
-            <img src="images/anibry-logo-footer.svg" alt="logo" />
+            <img src="{% static '/imagesctn/images/anibry-logo-footer.svg'%}" alt="logo" />
             <p>
               Build with all the love in the world by the using Anibry library
               in your projects. <br />
@@ -101,14 +101,14 @@
           <div class="footerCol footerCol4">
             <a class="heading" href="#"><strong>Help</strong></a>
             <a href="#">FAQ</a>
-            <a href="#">Documentation</a>
-            <a href="#">Contact Us</a>
+            <a href="documentation.html">Documentation</a>
+            <a href="Contact/contact.html">Contact Us</a>
             <a href="#">Community</a>
           </div>
         </div>
         <div class="copyright" >© 2022 Anibry. All right reserved.</div>
       </div>
     </footer>
-    <script src="documentation.js"></script>
+    <script src="{% static '/js/documentation.js'%}"></script>
   </body>
 </html>
