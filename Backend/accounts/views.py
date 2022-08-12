@@ -39,74 +39,74 @@ def index(request):
 
 
 # Registration view
-# def register(request):
-#     if request.user.is_authenticated:
-#         return redirect("/")
-#     if request.method == 'POST': 
-#         form = RegisterForm(request.POST) 
-#         if form.is_valid():
-#             username = form.cleaned_data.get('username')
-#             email = form.cleaned_data.get('email')
-#             if User.objects.filter(username=username).exists():
-#                 messages.error(request, f'This username {username} already exists!')
-#             if User.objects.filter(email=email).exists():
-#                 messages.error(request, f'The email {email} already exists!')
-#                 return redirect('accounts:register') 
-#             form.save()                              
-#             messages.success(request, f'Welcome {username}, your account is created.')            
-#             return redirect('login')
-#     else:
-#         form = RegisterForm()
-#     return render(request, 'accounts/registration.html', {'form':form})
+def register(request):
+    if request.user.is_authenticated:
+        return redirect("/")
+    if request.method == 'POST': 
+        form = RegisterForm(request.POST) 
+        if form.is_valid():
+            username = form.cleaned_data.get('username')
+            email = form.cleaned_data.get('email')
+            if User.objects.filter(username=username).exists():
+                messages.error(request, f'This username {username} already exists!')
+            if User.objects.filter(email=email).exists():
+                messages.error(request, f'The email {email} already exists!')
+                return redirect('accounts:register') 
+            form.save()                              
+            messages.success(request, f'Welcome {username}, your account is created.')            
+            return redirect('/login')
+    else:
+        form = RegisterForm()
+    return render(request, 'accounts/registration.html', {'form':form})
 
 # Registration view
-def register(request):
-    # Post user input to the database
-    if request.method == "POST":
-        fullname = request.POST['fullname']
-        username = request.POST['username']
-        email = request.POST['email']
-        password = request.POST['password']
+# def register(request):
+#     # Post user input to the database
+#     if request.method == "POST":
+#         fullname = request.POST['fullname']
+#         username = request.POST['username']
+#         email = request.POST['email']
+#         password = request.POST['password']
 
-        # Check email
-        if User.objects.filter(email = email):
-            messages.error(request, "Email already register")
-            return redirect('register')
+#         # Check email
+#         if User.objects.filter(email = email):
+#             messages.error(request, "Email already register")
+#             return redirect('register')
         
-        myuser = User.objects.create_user(fullname, username, email, password)
-        myuser.is_active = False
-        myuser.save()
+#         myuser = User.objects.create_user(fullname, username, email, password)
+#         myuser.is_active = False
+#         myuser.save()
 
-        messages.success(request, "Your Account has been successfully created. We have sent you a confirmation email")
+#         messages.success(request, "Your Account has been successfully created. We have sent you a confirmation email")
 
-        # Welcome Email
-        subject = "Welcome to Anibry"
-        message = "Hello " + username + "!! \n" + "Welcome  to Anibry!! \n Thanks for visiting our Website."
-        from_email = settings.EMAIL_HOST_USER
-        to_list = [myuser.email]
-        send_mail(subject, message, from_email, to_list, fail_silently=True)
+#         # Welcome Email
+#         subject = "Welcome to Anibry"
+#         message = "Hello " + username + "!! \n" + "Welcome  to Anibry!! \n Thanks for visiting our Website."
+#         from_email = settings.EMAIL_HOST_USER
+#         to_list = [myuser.email]
+#         send_mail(subject, message, from_email, to_list, fail_silently=True)
 
-        # Email Address Confirmation Email
-        current_site = get_current_site(request)
-        email_subject = "Confirm your email @ accounts - Django Login!!"
-        message2 = render_to_string("email_confirmation.html"),{
-            'name': username,
-            'domain': current_site.domain,
-            'uid': urlsafe_base64_encode(force_bytes(myuser.pk)),
-            'token': generate_token.make_token(myuser)
-        }
-        email = EmailMessage(
-            email_subject,
-            message2,
-            settings.EMAIL_HOST_USER,
-            [myuser.email],
-        )
-        email.fail_silently = True
-        email.send()
+#         # Email Address Confirmation Email
+#         current_site = get_current_site(request)
+#         email_subject = "Confirm your email @ accounts - Django Login!!"
+#         message2 = render_to_string("email_confirmation.html"),{
+#             'name': username,
+#             'domain': current_site.domain,
+#             'uid': urlsafe_base64_encode(force_bytes(myuser.pk)),
+#             'token': generate_token.make_token(myuser)
+#         }
+#         email = EmailMessage(
+#             email_subject,
+#             message2,
+#             settings.EMAIL_HOST_USER,
+#             [myuser.email],
+#         )
+#         email.fail_silently = True
+#         email.send()
 
-        return redirect('login')
+#         return redirect('login')
 
-    return render(request, "accounts/registration.html")
+#     return render(request, "accounts/registration.html")
 
 #Login page
 def login(request):

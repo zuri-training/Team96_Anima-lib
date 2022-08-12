@@ -89,12 +89,15 @@
                     {{ field.label_tag }}   
                     <br>
                     {{ field }}
+                    <br>
+                    <!-- {% if field.help_text %}
+=======
                     <br>                                
                     {% if field.help_text %}
                       <small class="form-text text-muted">
                         {{ field.help_text|safe }}  
                       </small>
-                    {% endif %}
+                    {% endif %} -->
                   </div>
                 {% endfor %} 
               <br>
