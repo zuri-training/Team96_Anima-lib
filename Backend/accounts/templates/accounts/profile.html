@@ -1,14 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
-	<head>
-		<meta charset="UTF-8" />
-		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Profile</title>
-    	<link rel="stylesheet" href="{% static '/css/profile.css.css'%}">
-		<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-	</head>
+{% extends  'accounts/authheaderandfooter.html' %}
+{% load static %}
+<title>{% block title %} Profile Page {% endblock %}</title>
+<link rel="stylesheet" href="{% static '/css/profile.css.css'%}">
+{% block content %}
+
 	<body>
+		
 		<img src="{% static '/imagesctn/profilepage/Rectangle 2.png'%}" alt="Rectangle">
 		<div class="boxcontainer">
 			<div class="leftbox">
@@ -103,4 +100,6 @@
 		</div>
 
 	</body>
+
+	{% endblock %}
 </html>

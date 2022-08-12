@@ -30,6 +30,7 @@
           <h2>Welcome!</h2>
         
           <form action="/login" method="POST">
+            {% csrf_token %}
             <div class="form-container">
               <br/>
               <p>Email Address</p>
@@ -44,7 +45,7 @@
                 <i id="hideeye" class="fa fa-eye" onclick="myFunction()"></i>
                 <i id ="openeye" class="fa fa-eye-slash" onclick="myFunction()"></i>
                       <!-- </span> -->
-                <p id="purp"><small><a href="forgot.html">Forgot Password?</a></small></p>
+                <p id="purp"><small><a href="/forgot">Forgot Password?</a></small></p>
               </div>
               <button type="submit"><a href="/register">Log In</a></button>
               <br>
