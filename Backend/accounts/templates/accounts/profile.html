@@ -1,7 +1,7 @@
 {% extends  'accounts/authheaderandfooter.html' %}
 {% load static %}
 <title>{% block title %} Profile Page {% endblock %}</title>
-<link rel="stylesheet" href="{% static '/css/profile.css.css'%}">
+
 {% block content %}
 
 	<body>
@@ -21,10 +21,10 @@
 						<div class="icons">
 							<a href="#github"><img src="{% static '/imagesctn/profilepage/akar-icons_github-fill.png'%}" /></a>
 							<a href="#behance"
-								><img src="./ant-design_behance-circle-filled.png {% static '/imagesctn/profilepage/akar-icons_github-fill.png'%}"
+								><img src="{% static '/imagesctn/profilepage/akar-icons_github-fill.png'%}"
 							/></a>
 							<a href="#linkedIn"
-								><img src="./entypo-social_linkedin-with-circle.png {% static '/imagesctn/profilepage/akar-icons_github-fill.png'%}"
+								><img src="{% static '/imagesctn/profilepage/entypo-social_linkedin-with-circle.png'%}"
 							/></a>
 						</div>
 						<button><a href="./editprofile.html"> Edit your Profile</a></button>

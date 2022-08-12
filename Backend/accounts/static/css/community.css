@@ -9,6 +9,9 @@
 body{
     background-color: #F9F9F9;
 }
+a{
+    color: black;
+}
 
 .primary {
     color: var(--primary);
