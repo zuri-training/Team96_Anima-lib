@@ -183,3 +183,6 @@ def contact(request):
 # Documentation page view
 def documentation(request):
     return render(request, 'accounts/documentation.html')
+
+def about(request):
+    return render(request, 'accounts/teampage.html')
