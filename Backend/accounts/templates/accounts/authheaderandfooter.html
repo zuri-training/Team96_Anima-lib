@@ -1,15 +1,23 @@
 <!DOCTYPE html>
-<html lang="en"><head>
+<html lang="en">
+  
+<!-- HEADER -->
+<head>
   <meta charset="UTF-8" />
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>{% block title %} {% endblock %}</title>
   {% load static %}
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<!-- HEADER -->
-<head>
+  <link rel="stylesheet" type="text/css" href="{% static '/css/anibry.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/library.css'%}">
+    <link rel="shortcut icon" href="favicon.icon" type="library/x-icon">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
     <link rel="stylesheet" href="{% static '/css/profile.css'%}">
     <link rel="stylesheet" href="{% static '/css/headerandfooter.css'%}">
+    <link rel="stylesheet" type="text/css" href="{% static '/css/documentation.css'%}">
 </head>
 <header>
       <div class="headercontainer">
@@ -18,19 +26,19 @@
           <div>
             <img class="close" src="{% static '/imagesctn/images/closeicon.svg'%}" alt="closeicon">
           </div>
-          <a href="/library">Library</a>
-          <a href="/ocumentation">Documentation</a>
-          <a href="/community">Community</a>
-          <a href="/portfolio">Portfolio</a>
-          <a href="/teampage">Team</a>
-          <a href="/contact">Contact</a>
+          <a href="{% url 'library' user.id %}">Library</a>
+          <a href="{% url 'documentation' user.id %}">Documentation</a>
+          <a href="{% url 'community' user.id %}">Community</a>
+          <a href="{% url 'portfolio' user.id %}">Portfolio</a>
+          <a href="{% url 'teampage' user.id %}">Team</a>
+          <a href="{% url 'contact' user.id %}">Contact</a>
 
           
         </div>
         <div class="profile">
             <!-- THIS USER-IMAGE CLASS SHOULD BE THE USER'S PICTURE -->
           <img class="user-image" src="{% static '/imagesctn/profilepage/profile-circle.png'%}" alt="profile-image" />
-          <p class="profile-name"> Harriet </p>
+          <p class="profile-name"> {{user.username}} </p>
           <img class="icondown" src="{% static '/imagesctn/images/icondown.svg'%}" alt="icondown"/>
           <div class="hamburger">
           <img src="{% static '/imagesctn/images/menuhamburger.svg'%}" alt="hamburgericon">
@@ -45,14 +53,14 @@
                 <img class="user-image" src="{% static '/imagesctn/profilepage/profile-acircle.png'%}" alt="">
                 <div class="details">
                     <!-- THIS NAME BELOW SHOULD BE THE USER'S FULL NAME -->
-                    <p>Harriet Olanrewaju</p>
-                    <a href="/library">View Library</a>
+                    <p>{{user}}</p>
+                    <a href="{% url 'library' user.id %}">View Library</a>
                 </div>
             </div>
           </div>
-          <a class="gettingstarted" href="/gettingstarted">Getting Started</av>
+          <a class="gettingstarted" href="{% url 'start' user.id %}">Getting Started</av>
           <a href="#">Account Settings</a>
-          <a class="logout" href="/login">Log out</a>
+          <a class="logout" href="{% url 'login' %}">Log out</a>
     </div>
 </header>
 {% block content %}
@@ -71,15 +79,15 @@
           </div>
           <div class="footerCol footerCol2">
             <a class="heading" href="#"><strong> Quick Link</strong></a>
-            <a href="/library">Library</a>
-            <a href="/portfolio">Anibry Portfolio</a>
-            <a href="/profile">Profile</a>
+            <a href="{% url 'library' user.id %}/library">Library</a>
+            <a href="{% url 'lportfolio' user.id %}">Anibry Portfolio</a>
+            <a href="{% url 'profile' user.id %}">Profile</a>
           </div>
           <div class="footerCol footerCol3">
             <a class="heading" href="#"><strong>Company</strong></a>
-            <a href="/index">Home</a>
-            <a href="/documentation">About Anibry</a>
-            <a href="/team">Team</a>
+            <a href="{% url 'index' %}">Home</a>
+            <a href="{% url 'documentation' %}">About Anibry</a>
+            <a href="{% url 'team' user.id %}">Team</a>
             <a href="#">Terms of Service</a>
             <a href="#">Policy Privacy</a>
             <a href="#">Cookies Policy</a>
@@ -87,9 +95,9 @@
           <div class="footerCol footerCol4">
             <a class="heading" href="#"><strong>Help</strong></a>
             <a href="#">FAQ</a>
-            <a href="/documentation">Documentation</a>
-            <a href="/contact">Contact Us</a>
-            <a href="/community">Community</a>
+            <a href="{% url 'documentation' %}">Documentation</a>
+            <a href="{% url 'contact' user.id %}">Contact Us</a>
+            <a href="{% url 'community' user.id %}">Community</a>
           </div>
         </div>
         <div class="copyright">© 2022 Anibry. All right reserved.</div>
