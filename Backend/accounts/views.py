@@ -59,54 +59,6 @@ def register(request):
         form = RegisterForm()
     return render(request, 'accounts/registration.html', {'form':form})
 
-# Registration view
-# def register(request):
-#     # Post user input to the database
-#     if request.method == "POST":
-#         fullname = request.POST['fullname']
-#         username = request.POST['username']
-#         email = request.POST['email']
-#         password = request.POST['password']
-
-#         # Check email
-#         if User.objects.filter(email = email):
-#             messages.error(request, "Email already register")
-#             return redirect('register')
-        
-#         myuser = User.objects.create_user(fullname, username, email, password)
-#         myuser.is_active = False
-#         myuser.save()
-
-#         messages.success(request, "Your Account has been successfully created. We have sent you a confirmation email")
-
-#         # Welcome Email
-#         subject = "Welcome to Anibry"
-#         message = "Hello " + username + "!! \n" + "Welcome  to Anibry!! \n Thanks for visiting our Website."
-#         from_email = settings.EMAIL_HOST_USER
-#         to_list = [myuser.email]
-#         send_mail(subject, message, from_email, to_list, fail_silently=True)
-
-#         # Email Address Confirmation Email
-#         current_site = get_current_site(request)
-#         email_subject = "Confirm your email @ accounts - Django Login!!"
-#         message2 = render_to_string("email_confirmation.html"),{
-#             'name': username,
-#             'domain': current_site.domain,
-#             'uid': urlsafe_base64_encode(force_bytes(myuser.pk)),
-#             'token': generate_token.make_token(myuser)
-#         }
-#         email = EmailMessage(
-#             email_subject,
-#             message2,
-#             settings.EMAIL_HOST_USER,
-#             [myuser.email],
-#         )
-#         email.fail_silently = True
-#         email.send()
-
-#         return redirect('login')
-
-#     return render(request, "accounts/registration.html")
 
 #Login page
 def login(request):
@@ -135,76 +87,60 @@ def logout(request):
     messages.success(request, "Logged out Successfully")
     return render(request, "accounts/index.html")
 
-#Email activation View
-# def activate(request, uidb64, token):
-#     try:
-#         uid = force_text(urlsafe_base_decode(uidb64))
-#         mysuser = User.objects.get(pk=uid)
-#     except (TypeError, ValueError, OverflowError, User.DoesNotExist):
-#         myuser = None
-        
-#     if myuser is not None and generate_token.check_token(myuser,token):
-#         myuser.is_active = True
-#         myuser.save()
-#         login(request, myuser)
-#         return redirect('home')
-#     else:
-#         return render(request, "activation_failed.html")
-
-#Reset password page
-def reset(request):
-    return render(request, "accounts/resetpassword.html")
-
-#Forgot password page
-def forgot(request):
-    return render(request, "accounts/forgotpassword.html")
-
-#Login page
-# def login(request):
-#     return render(request, "accounts/login.html")
 
 
 # Profile page view
-@login_required
-def profilepage(request):
-    return render(request, 'accounts/profile.html')
+@login_required(login_url='login/')
+def profilepage(request, pk):
+    user = User.objects.get(id=pk)
+
+    return render(request, 'accounts/profile.html', {'user':user})
 
 # Library Page
-@login_required
-def library(request):
-    return render(request, 'accounts/library.html')
+@login_required(login_url='login/')
+def library(request, pk):
+    user = User.objects.get(id=pk)
+    return render(request, 'accounts/library.html', {'user':user})
 
-@login_required
-def portfolio(request):
-    return render(request, 'accounts/portfolio.html')
+@login_required(login_url='login/')
+def portfolio(request, pk):
+    user = User.objects.get(id=pk)
+    return render(request, 'accounts/portfolio.html', {'user':user})
 
-@login_required
-def team(request):
-    return render(request, 'accounts/teampage.html')
+@login_required(login_url='login/')
+def team(request, pk):
+    user = User.objects.get(id=pk)
+    return render(request, 'accounts/teampage.html', {'user':user})
 
-@login_required
-def community(request):
-    return render(request, 'accounts/community.html')
+@login_required(login_url='login/')
+def community(request, pk):
+    user = User.objects.get(id=pk)
+    return render(request, 'accounts/community.html', {'user':user})
 
-@login_required
-def edit(request):
-    return render(request, 'accounts/editprofile.html')
+@login_required(login_url='login/')
+def edit(request, pk):
+    user = User.objects.get(id=pk)
+    return render(request, 'accounts/editprofile.html', {'user':user})
 
-@login_required
-def start(request):
-    return render(request, 'accounts/gettingstarted.html')
+@login_required(login_url='login/')
+def start(request, pk):
+    user = User.objects.get(id=pk)
+    return render(request, 'accounts/gettingstarted.html', {'user':user})
 
-@login_required
-def homepage(request):
-    return render(request, 'accounts/homepage.html')
+@login_required(login_url='login/')
+def homepage(request, pk):
+    user = User.objects.get(id=pk)
+    return render(request, 'accounts/homepage.html', {'user':user})
 
-@login_required
-def important(request):
-    return render(request, 'accounts/importantanimationtips.html')
+@login_required(login_url='login/')
+def important(request, pk):
+    user = User.objects.get(id=pk)
+    return render(request, 'accounts/importantanimationtips.html', {'user':user})
 
-@login_required
-def usingclasses(request):
-    return render(request, 'accounts/usingclasses.html')
+@login_required(login_url='login/')
+def usingclasses(request, pk):
+    user = User.objects.get(id=pk)
+    return render(request, 'accounts/usingclasses.html', {'user':user})
 
 #Login page view
 # def login_user (request):

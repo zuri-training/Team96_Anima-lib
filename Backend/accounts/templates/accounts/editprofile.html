@@ -1,19 +1,12 @@
-<!DOCTYPE html>
-<html lang="en">
-{% load static %}
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Profile</title>
-    <link rel="stylesheet" href="{% static '/css/style2.css'%}">
-    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
-</head>
+{% extends  'accounts/authheaderandfooter.html' %}
+<title>{% block title %} Profile Page {% endblock %}</title>
+<link rel="stylesheet" href="{% static '/css/style2.css'%}">
+{% block content %}
 
 
 <body>
     <header>
-        <nav class="nav-bar">
+        <!-- <nav class="nav-bar">
             <img src=" {% static '/imagesctn/img/Logo-purple.png'%}" alt=""> 
             
             <ul>
@@ -25,7 +18,7 @@
                 <li><a href="./Frontend/Contact/contact.html">Contact</a></li>
                 <li><a href=""><img src="img/" alt=""></a></li>
             </ul>
-        </nav>
+        </nav> -->
         <div class="header"></div>
     </header>
     <main>
@@ -79,13 +72,13 @@
                     <input type="text" name="" id="" placeholder="Tell us about yourself">
                 </div>
                 <div class="links">
-                    <div class="github"><img src="img/Vector (10).png">Github</img> <input type="url" name="" id=""
+                    <div class="github"><img src="{% static '/imagesctn/img/Vector (10).png'%}">Github</img> <input type="url" name="" id=""
                             placeholder="@harrietola"></div>
-                    <div class="behance"><img src="img/Vector (11).png">Behance</img> <input type="url" name="" id=""
+                    <div class="behance"><img src="{% static '/imagesctn/img/Vector (11).png'%}">Behance</img> <input type="url" name="" id=""
                             placeholder="@harrietola"></div>
-                    <div class="linkedin"><img src="img/Vector (12).png">Linkedin</img> <input type="url" name=""
+                    <div class="linkedin"><img src="{% static '/imagesctn/img/Vector (12).png'%}">Linkedin</img> <input type="url" name=""
                             id="" placeholder="@harrietola"></div>
-                    <div class="add"><img src="img/Vector (10) (copy).png">Add new Links</img></div>
+                    <div class="add"><img src="{% static '/imagesctn/img/Vector (10) (copy).png'%}">Add new Links</img></div>
                     <div class="save">
                         <button type="submit"><a href="#">Save changes</a></button>
                     </div>
@@ -93,5 +86,5 @@
                 
     </main>
 </body>
-
+{% endblock %}
 </html>

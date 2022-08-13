@@ -1,11 +1,7 @@
-<!DOCTYPE html>
-<html lang="en">
-  {% load static %}
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Team</title>
+{% extends  'accounts/authheaderandfooter.html' %}
+<title>{% block title %} Community Page {% endblock %}</title>
+
+{% block content %}
   <link rel="stylesheet" type="text/css" href="{% static '/css/team.css'%}">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;700;800&display=swap" rel="stylesheet">
 </head>
@@ -68,7 +64,7 @@
         <h5>Daniel Ndubuisi</h5>
         <p class="team_job">Designer</p>
       </div>
-  
+      
       <div class="team_picture">
         <img src="{% static '/imagesctn/team/Rectangle7.png'%}" alt="a.o">
         <h5>Abiola O.</h5>
@@ -186,5 +182,5 @@
 
   </div>
 </body>
-
+{% endblock %}
 </html>
