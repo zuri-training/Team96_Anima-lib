@@ -6,6 +6,20 @@
 - #### [Figma](https://www.figma.com/file/gFDREjDvch3LiCT3x1jmRN/Team-96_Anima-lib?node-id=1734%3A7634)
 - #### [First Presentation](https://drive.google.com/file/d/17mP2BijevHPgeVjKOV6op29VJttYO148/view?usp=sharing)
 
+## **_Working with the Django project_**
+
+### You'll have to install your own virtual environment and install the dependencies. Follow these steps.
+
+1. Step 1: Navigate into the Backend folder of the cloned repo. From the Team96_Anima-lib folder type --> `cd Backend`
+2. Step 2: Create your own virtual environment --> virtualenv "whatever name you choose for your virtual environment"   e.g `virtualenv env`
+3. Step 3: Activate your virtual environment --> (name of virtual environment from step 2)\scripts\activate   e.g `env\scripts\activate`
+4. Step 4: Install dependencies --> `pip install -r requirements.txt`
+5. Step 5: `python manage.py makemigrations`
+7. Step 7: `python manage.py migrate`
+8. Step 8: You can now runserver --> `python manage.py runserver`
+
+
+
 ### **_Fork and Clone Repository_**
 
 1. Visit the Repository to the Project on Github Website: https://github.com/zuri-training/Team96_Anima-lib
@@ -62,18 +76,3 @@
 12. Click the button and make your request. Leave a comment in your request.
 13. Click Create pull request to open a new pull request.
 
-
-## **_Working with the Django project_**
-
-### You'll have to install your own virtual environment and install the dependencies. Follow these steps.
-
-1. Step 1: Go to your terminal and type --> pip install virtualenv
-2. Step 2: Create your own virtual environment --> virtualenv "whatever name you choose for your virtual environment"
-3. Step 3: Activate your virtual environment --> cd (name of virtual environment from step 2)
-4. Step 4: Write this (scripts/activate) into the terminal
-5. Step 5: Install dependencies --> pip install -r requirements.txt (This might not be necessary though)
-6. Step 6: Write (python manage.py createsuperuser) into the terminal
-7. Step 7: python manage.py makemigrations
-8. Step 8: python manage.py migrate
-9. Step 7: Write (python manage.py runserver) into the terminal
-10. Step 8: Do your thing.
