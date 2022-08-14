@@ -281,10 +281,9 @@
     line-height: 24px;
     size: 16px;
     padding: 15px;
-    
+    cursor: text;
     border: 1px solid #5a189a;
     border-color: #5A189A;
-    cursor: pointer;
     color: #3C3C3C;
   }
   form input:active{

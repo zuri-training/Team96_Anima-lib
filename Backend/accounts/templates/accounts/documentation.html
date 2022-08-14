@@ -1,3 +1,4 @@
+{% extends  'accounts/authheaderandfooter.html' %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,25 +6,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% load static %}
-    <link rel="stylesheet" type="text/css" href="{% static '/css/headerandfooter.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static '/css/documentation.css'%}">
-    <title>Documentation | Anibry</title>
+
+    <title>{% block title %} Documentation | Anibry {% endblock %}</title>
+    {% block content %}
+     <link rel="stylesheet" type="text/css" href="{% static '/css/documentation.css'%}">
   </head>
   <body>
-
+    <link rel="stylesheet" type="text/css" href="{% static '/css/documentation.css'%}">
     <div id="container">
       <img class="asidehamburger" src="{% static 'imagesctn\images\menuhamburger.svg' %}" alt="asidehamburger">
       <div class="aside">
         <div class="tableofcontent">
           <img class="closeasidemenu" src="{% static 'imagesctn\images\closeicon.svg' %}" alt="closeicon">
-          <a href="documentation.html" class="active">Overview</a>
-          <a href="<str:documentation_name>/">Getting Started</a>
-          <a href="usingclasses.html">Using Animations <img src="{% static 'imagesctn\images\icondown.svg' %}" alt="icondown"></a>
+          <a href="{% url 'accounts:documentation'%}" class="active">Overview</a>
+          <a href="{% url 'accounts:documentation'%}">Getting Started</a>
+          <a href="{% url 'accounts:usingclasses'%}">Using Animations <img src="{% static 'imagesctn\images\icondown.svg' %}" alt="icondown"></a>
           <div id="listContent">
-            <a href="usingclasses.html">Using Classes</a>
-            <a href="usingclasses.html">Using Keyframes</a>
+            <a href="{% url 'accounts:usingclasses'%}">Using Classes</a>
+            <a href="{% url 'accounts:usingclasses'%}">Using Keyframes</a>
           </div>
-          <a href="#">Best Practices</a>
+          <a href="{% url 'accounts:important'%}">Best Practices</a>
         </div>
       </div>
       <div id="content">    
@@ -37,6 +39,7 @@
       </div>
     </div>
 
-    <script src="documentation.js"></script>
+    <script src="{%static '/js/documentation.js'%}"></script>
   </body>
+  {% endblock %}
 </html>

@@ -1,3 +1,4 @@
+{% extends  'accounts/authheaderandfooter.html' %}
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -5,29 +6,14 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" type="text/css" href="{% static '/css/headerandfooter.css'%}">
-    <link rel="stylesheet" type="text/css" href="{% static '/css/documentation.css'%}">
-    <title>Documentation | Anibry</title>
+    {% load static %}
+
+    <title>{% block title %} Using Classes {% endblock %}</title>
+    {% block content %}
+     <link rel="stylesheet" type="text/css" href="{% static '/css/documentation.css'%}">
   </head>
   <body>
-    <header>
-      <div class="headercontainer">
-        <img src="{% static '/imagesctn/images/anibry-logo-header.svg'%}" alt="logo"/>
-        <ul>
-          <li><a href="#">Library</a></li>
-          <li><a href="documentation.html">Documentation</a></li>
-          <li><a href="#">Community</a></li>
-          <li><a href="#">Portfolio</a></li>
-          <li><a href="#">Team</a></li>
-          <li><a href="Contact/contact.html">Contact</a></li>
-        </ul>
-        <div class="profile">
-          <img src="{% static '/imagesctn/images/anibry-logo-header.svg'%}" alt="profile-image" />
-          <p class="profile-name">Harriet</p>
-          <img class="icondown" src="images/icondown.svg" alt="icondown" />
-        </div>
-      </div>
-    </header>
+    
     <div id="container">
       <img
         class="asidehamburger"
@@ -111,4 +97,5 @@
     </footer>
     <script src="{% static '/js/documentation.js'%}"></script>
   </body>
+  {% endblock %}
 </html>

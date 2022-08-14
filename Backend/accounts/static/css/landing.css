@@ -13,6 +13,7 @@ body {
   background: #fff;
   min-width: 100%;
 }
+
 /* -----------------------Style for the navbar--------------------- */
 nav {
   display: flex;
@@ -24,7 +25,7 @@ nav {
   flex-direction: row;
   color: #fff;
   box-shadow: 3px 3px 10px #e5e5e5;
-  z-index: 188;
+  z-index: 1;
   background-color: rgb(255, 255, 255, 1);
   position: sticky;
   top: 0;
@@ -874,7 +875,6 @@ footer {
     display: none;
   }
   .mobilemenu {
-    display: block;
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -887,7 +887,7 @@ footer {
     right: 0;
     top: 0px;
     background-color: white;
-    z-index: 4;
+    z-index: 100;
     height: 50vw;
     width: 63vw;
     border-radius: 3px 3px 8px 8px;
@@ -922,6 +922,7 @@ footer {
   .mobilemenulist li a {
     margin-left: 20px;
     font-weight: 800;
+    color: #5a189a;
   }
 }
 

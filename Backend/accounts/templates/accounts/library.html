@@ -1,7 +1,16 @@
 {% extends  'accounts/authheaderandfooter.html' %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  {% load static %}
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
 <title>{% block title %} Library Page {% endblock %}</title>
 
 {% block content %}
+  <link rel="stylesheet" href="{%static '/css/library.css'%}">
   <body>
     <main>
       <div class="animationsmenu">
@@ -152,7 +161,7 @@
         <div class="rowscontainer">
           <div class="row1">
             <input class="search" type="search" placeholder="Search" name="search">
-            <button class="download">Download Library
+            <button class="download"> <a href="../../../anibry.zip" download="anibry.zip"> Download Library</a>
               <img src="{% static '/imagesctn/library/download.png'%}" alt="downloadicon">
             </button>
           </div>
