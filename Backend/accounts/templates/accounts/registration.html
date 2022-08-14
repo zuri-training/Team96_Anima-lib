@@ -65,7 +65,8 @@
                 </div>
                   <button type="submit">Create account</button>
                      <br>
-                  <p id="lol"><small>Already have an Anibry account? <a href="{% url 'accounts:login' %}">Log in</a></small></p>              
+                  {% comment %} <p id="lol"><small>Already have an Anibry account? <a href="{% url 'accounts:signin' %}">Log in</a></small></p> {% endcomment %}
+                  <p id="lol"><small>Already have an Anibry account? <a href="/signin">Log in</a></small></p>              
           </form>        
         
         </div>

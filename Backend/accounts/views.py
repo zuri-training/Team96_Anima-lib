@@ -1,6 +1,6 @@
 from django.http import HttpResponse
 from django.http import HttpResponseRedirect
-from django.shortcuts import render, redirect
+from django.shortcuts import render, redirect, reverse
 from .models import Lib
 from django.contrib.auth.models import User
 from django.core.paginator import Paginator
@@ -14,7 +14,8 @@ from django.contrib.auth import authenticate, login, logout
 from django.contrib.sites.shortcuts import get_current_site
 from django.template.loader import render_to_string
 from django.utils.http import urlsafe_base64_encode
-from django.utils.encoding import force_bytes, force_str 
+from django.utils.encoding import force_bytes, force_str
+from django.urls import reverse
 # from . tokens import generate_token
 
 
@@ -61,7 +62,7 @@ def register(request):
 
 
 #Login page
-def login(request):
+def signin(request):
 
     # Post user input to the database
     if request.method == "POST":
@@ -73,19 +74,25 @@ def login(request):
 
         if User is not None:
             login(request, User)
-            return redirect(request, "accounts/homepage.html")
+            return redirect(reverse('accounts:home'))
 
         else:
             messages.error(request, "Incorrect email or password.")
-            return redirect(request, "accounts/login.html")
+            return redirect(reverse('accounts:signin'))
 
     return render(request, "accounts/login.html")
 
-#Logout page
+# Logout page View
 def logout(request):
     logout(request)
     messages.success(request, "Logged out Successfully")
     return render(request, "accounts/index.html")
+
+# Forget Password Page View
+def forgot(request):
+    return render(request, "accounts/forgotpassword.html")
+
+
 
 
 
@@ -127,10 +134,14 @@ def start(request, pk):
     user = User.objects.get(id=pk)
     return render(request, 'accounts/gettingstarted.html', {'user':user})
 
+# @login_required(login_url='login/')
+# def homepage(request, pk):
+#     user = User.objects.get(id=pk)
+#     return render(request, 'accounts/homepage.html', {'user':user})
+
 @login_required(login_url='login/')
-def homepage(request, pk):
-    user = User.objects.get(id=pk)
-    return render(request, 'accounts/homepage.html', {'user':user})
+def homepage(request):
+    return render(request, 'accounts/homepage.html')
 
 @login_required(login_url='login/')
 def important(request, pk):
@@ -159,10 +170,10 @@ def usingclasses(request, pk):
 #     return render(request,'accounts/login.html' )
 
 #logout page view
-def logout_user(request):
+# def logout_user(request):
     
-    logout(request)
-    return redirect (request, 'index.html')
+#     logout(request)
+#     return redirect (request, 'index.html')
 
 #ContactUs Page View
 
@@ -184,5 +195,3 @@ def contact(request):
 def documentation(request):
     return render(request, 'accounts/documentation.html')
 
-def about(request):
-    return render(request, 'accounts/teampage.html')
