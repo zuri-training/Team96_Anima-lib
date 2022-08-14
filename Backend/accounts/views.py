@@ -42,7 +42,7 @@ def index(request):
 # Registration view
 def register(request):
     if request.user.is_authenticated:
-        return redirect("/")
+        return redirect("/homepage")
     if request.method == 'POST': 
         form = RegisterForm(request.POST) 
         if form.is_valid():
@@ -55,7 +55,7 @@ def register(request):
                 return redirect('accounts:register') 
             form.save()                              
             messages.success(request, f'Hi {username}, your account is created!')            
-            return redirect('accounts:login')
+            return redirect('/login')
     else:
         form = RegisterForm()
     return render(request, 'accounts/registration.html', {'form':form})
@@ -114,10 +114,9 @@ def portfolio(request, pk):
     user = User.objects.get(id=pk)
     return render(request, 'accounts/portfolio.html', {'user':user})
 
-@login_required(login_url='login/')
-def team(request, pk):
-    user = User.objects.get(id=pk)
-    return render(request, 'accounts/teampage.html', {'user':user})
+
+def team(request):
+    return render(request, 'accounts/teampage.html')
 
 @login_required(login_url='login/')
 def community(request, pk):
@@ -129,10 +128,9 @@ def edit(request, pk):
     user = User.objects.get(id=pk)
     return render(request, 'accounts/editprofile.html', {'user':user})
 
-@login_required(login_url='login/')
-def start(request, pk):
-    user = User.objects.get(id=pk)
-    return render(request, 'accounts/gettingstarted.html', {'user':user})
+
+def start(request):
+    return render(request, 'accounts/gettingstarted.html')
 
 # @login_required(login_url='login/')
 # def homepage(request, pk):
@@ -143,15 +141,13 @@ def start(request, pk):
 def homepage(request):
     return render(request, 'accounts/homepage.html')
 
-@login_required(login_url='login/')
-def important(request, pk):
-    user = User.objects.get(id=pk)
-    return render(request, 'accounts/importantanimationtips.html', {'user':user})
 
-@login_required(login_url='login/')
-def usingclasses(request, pk):
-    user = User.objects.get(id=pk)
-    return render(request, 'accounts/usingclasses.html', {'user':user})
+def important(request):
+    return render(request, 'accounts/importantanimationtips.html')
+
+
+def usingclasses(request):
+    return render(request, 'accounts/usingclasses.html')
 
 #Login page view
 # def login_user (request):

@@ -25,9 +25,9 @@ urlpatterns = [
     path('portfolio/<str:pk>/', views.portfolio, name='portfolio'),
     path('community/<str:pk>/', views.community, name='community'),
     path('edit/<str:pk>/', views.edit, name='edit'),
-    path('team/<str:pk>/', views.team, name='team'),
-    path('start/<str:pk>/', views.start, name='start'),
-    path('important/<str:pk>/', views.important, name='important'),
-    path('usingclasses/<str:pk>/', views.usingclasses, name='usingclasses'),
+    path('team/', views.team, name='team'),
+    path('start/', views.start, name='start'),
+    path('important/', views.important, name='important'),
+    path('usingclasses/', views.usingclasses, name='usingclasses'),
 
 ] 
