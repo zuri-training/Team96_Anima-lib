@@ -1,37 +1,36 @@
+{% extends  'accounts/authheaderandfooter.html' %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+     {% load static %}
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="homepage.css">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="../../static/css/homepage.css">
-    <title>Document</title>
+    
+
+    <title>{% block title %} Homepage {% endblock %}</title>
+    {% block content %}
+    <link rel="stylesheet" href="{% static '/css/homepage.css'%}">
 </head>
 <body>
     <main>
-
-
     <section class="section1">
         <div class="box1">
             <div class="innerbox">
-
                 <div>
                     <h1>Welcome To <br> Anibry Library</h1>
                     <p>Anibry is a library of cross-browser animations ready to use in your web projects. Excellent for focus, webpages, transition effects, and organising indications.</p>
                 
-                    <button><a href="#">Go to library</a></button>
-                </div>
-                
+                    <button><a href="{% url 'accounts:library' user.id %}">Go to library</a></button>
+                </div>             
             </div>
-            </div>
+        </div>
         <div class="box2">
-            <img src="{% static 'imagesctn\homepage\Programming blue_purple on Lottiefiles 2 (1).svg' %}" alt="">
+            <img src="{% static 'imagesctn/homepage/Programming blue_purple on Lottiefiles 2 (1).svg'%} " alt="">
         </div>
     </section>
     <div class="complogos" >
-        <img src="{% static 'imagesctn\homepage\Group 65.svg' %}" alt="company logos">
+        <img src="{% static 'imagesctn/homepage/Group 65.svg' %}" alt="company logos">
     </div>
     <h2>Make use of preset Interactions</h2>
     <p>Need to add something simple? Choose from a collection of prebuilt interactions and animations and add them to your site with a just a few clicks.</p>
@@ -39,46 +38,46 @@
         <div class="items1">
             <div>
 
-                <img src="{% static 'imagesctn\homepage\Pulse 1.svg' %}" alt="pulse">
+                <img src="{% static 'imagesctn/homepage/Pulse 1.svg' %}" alt="pulse">
             </div>
             <div class="slide">
                 
-                <img  src="{% static 'imagesctn\homepage\Slide 1.svg' %}" alt="slide">
+                <img  src="{% static 'imagesctn/homepage/Slide 1.svg' %}" alt="slide">
             </div>
             <div>
-                <img src="{% static 'imagesctn\homepage\Jello 1.svg' %}" alt="">
+                <img src="{% static 'imagesctn/homepage/Jello 1.svg' %}" alt="">
 
             </div>
             <div>
-                <img src="{% static 'imagesctn\homepage\Bounce 1.svg' %}" alt="">
+                <img src="{% static 'imagesctn/homepage/Bounce 1.svg' %}" alt="">
 
             </div>
         </div>
         <div class="items2">
             <div>
                 
-                <img src="{% static 'imagesctn\homepage\Grow1 1.svg' %}" alt="">
+                <img src="{% static 'imagesctn/homepage/Grow1 1.svg' %}" alt="">
             </div>
             <div>
 
-                <img src="{% static 'imagesctn\homepage\Rotate 1.svg' %}" alt="">
+                <img src="{% static 'imagesctn/homepage/Rotate 1.svg' %}" alt="">
             </div>
             <div>
 
-                <img src="{% static 'imagesctn\homepage\Pop 1.svg' %}" alt="">
+                <img src="{% static 'imagesctn/homepage/Pop 1.svg' %}" alt="">
             </div>
             <div>
-                <img src="{% static 'imagesctn\homepage\Wobble 1.svg' %}" alt="Wobble">
+                <img src="{% static 'imagesctn/homepage/Wobble 1.svg' %}" alt="Wobble">
 
             </div>
         </div>
     </div>
     <div class="viewlibrary">
         
-        <a href="#">View more in Library </a>
+        <a href="{% url 'accounts:library' user.id %}">View more in Library </a>
     </div>
     <div class="bigImge">
-        <img src="{% static 'imagesctn\homepage\Frame 427319517.svg' %}" alt="image">
+        <img src="{% static 'imagesctn/homepage/Frame 427319517.svg' %}" alt="image">
     </div>
     <h2>FAQ</h2>
     <h1>You have inquiries. We have the answers.</h1>
@@ -104,6 +103,7 @@ with our newsletter. </label>
 
     </form>
 </main>
-<script src="../../static/js/homepage.js"></script>
+<script src="{% static './js/homepage.js'%}"></script>
 </body>
+{% endblock %}
 </html>

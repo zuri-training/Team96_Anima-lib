@@ -126,6 +126,7 @@ footer {
   border-radius: 5px;
   justify-content: space-between;
   box-shadow: 0px 3px 5px black;
+  z-index: 2;
 }
 .logout{
   color: red;

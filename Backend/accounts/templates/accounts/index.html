@@ -17,9 +17,9 @@
         <div class="menuimgdiv">
             <img class="closemenu" src="{% static 'imagesctn\img\Vector.png' %}" alt="exiticon">
         </div>
-        <li class="mobilemenuitem"><a href="/documentation">Documentation</a></li>
-        <li class="mobilemenuitem"><a href="/about">About</a></li>
-        <li class="mobilemenuitem"><a href="/login" class="login">Log in</a></li>
+        <li class="mobilemenuitem"><a href="{% url 'accounts:documentation'%}">Documentation</a></li>
+        <li class="mobilemenuitem"><a href="{% url 'accounts:team' user.id %}">About</a></li>
+        <li class="mobilemenuitem"><a href="{% url 'accounts:login' %}" class="login">Log in</a></li>
     </div>
 
     <!-- MOBILE MENU ENDS -->
@@ -27,16 +27,14 @@
         <nav class="nav-bar">
             <img src=" {% static '/imagesctn/img/Logo-purple.png'%}" alt="logo">
             <ul class="desktopmenu">
-                <li><a href="/documentation">Documentation</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/login" class="login">Log in</a></li>
-                <li><a href="/register" class="register">Register</a></li>
+                <li><a href="{% url 'accounts:documentation' %}">Documentation</a></li>
+                <li><a href="{% url 'accounts:team' user.id %}">About</a></li>
+                <li><a href="{% url 'accounts:login' %}" class="login">Log in</a></li>
+                <li><a href="{% url 'accounts:register' %}" class="register">Register</a></li>
+            </ul>
                 
             <ul class="mobilemenu">
-                <li><a href="/documentation">Documentation</a></li>
-                <li><a href="/about">About</a></li>
-                <li><a href="/login" class="login">Log in</a></li>
-                <li><a href="/register" class="register">Register</a></li>
+                <li><a href="{% url 'accounts:register' %}" class="register">Register</a></li>
                 <img class="menu" src="{% static '/imagesctn/images/menuhamburger.svg'%}" alt="hamburger"> 
             </ul>
         </nav>
@@ -46,7 +44,7 @@
             <div class="intro">
                 <h1><span>Beginner-friendly library,</span> with<br> tiny powerful animations<br> for your web projects</h1>
                 <p>Anibry offers cross tools integration and works great with CSS properties, SVG, DOM attributes and JavaScript Objects</p>
-                <button class="button"><a href="/library"> Start Animating </a></button>
+                <button class="button"><a href="{% url 'accounts:library' user.id %}"> Start Animating </a></button>
             </div>
             <div class="image">
                 <img class="illustration" src=" {% static '/imagesctn/img/rafiki.svg'%}" alt="hero-image">

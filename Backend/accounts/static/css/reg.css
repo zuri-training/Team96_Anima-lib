@@ -244,7 +244,7 @@ form input {
 
   border: 1px solid #5a189a;
   border-color: #5a189a;
-  cursor: pointer;
+  cursor: text;
   color: #3c3c3c;
 }
 form input:active {
@@ -365,6 +365,7 @@ form button:disabled {
   .left-box h2{
     font-size: 40px;
     margin-left: 0;
+    margin-top: 20px;
   }
   .left-box svg{
   margin: 3px 3px;
@@ -382,7 +383,7 @@ form button:disabled {
   }
   .right-box p{ text-align: center;}
 }
-@media screen and (max-width:450px) {
+@media screen and (max-width:500px) {
   .left-box h2{
     font-size: 35px;
    

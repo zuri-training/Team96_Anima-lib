@@ -60,9 +60,7 @@
     left: 16pc;
     margin: 14px 0px;
   }
-  #hideeye {
-    display: none;
-  }
+ 
   #purp{color: #8c3adb;}
   
   .right-box {
@@ -108,14 +106,16 @@
     flex-grow: 0;
   }
 
-
+form button a{
+  color: white;
+}
   form button,
   form input,
   .zuri {
     border-radius: 10px;
     font-weight: 600;
     width: 100%;
-    color: #5A189A;
+    color: white;
   }
   .left-box svg {
     position: absolute;
@@ -229,18 +229,16 @@
 
   a:visited {
     color: #5a189a;
-    background-color: transparent;
     text-decoration: none;
   }
   a:hover {
-    color: #80558c;
-    background-color: transparent;
+    color: #5A189A;
     text-decoration: none;
   }
   a:active {
     color: #5A189A;
-    background-color: transparent;
-    text-decoration: none;}
+    text-decoration: none;
+  }
 
 
   .zuri {
@@ -281,16 +279,20 @@
     line-height: 24px;
     size: 16px;
     padding: 15px;
-    
     border: 1px solid #5a189a;
     border-color: #5A189A;
-    cursor: pointer;
     color: #3C3C3C;
   }
   form input:active{
     border: 1px solid #5a189a;
-    
-  
+  }
+
+ 
+  h2{
+    margin-top: 30px;
+  }
+  form button a{
+    color: white;
   }
   form input:placeholder-shown{
     color: #BBBBBB;
@@ -371,6 +373,9 @@
   }
   form button:hover {
     background-color: #DBBAFC;
+    color: #5a189a;
+  }
+  form button:hover a{
     color: #5a189a;
   }
   
