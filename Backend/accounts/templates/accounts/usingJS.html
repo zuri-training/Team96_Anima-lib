@@ -8,7 +8,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     {% load static %}
 
-    <title>{% block title %} Using Classes {% endblock %}</title>
+    <title>{% block title %} Using JS {% endblock %}</title>
     {% block content %}
      <link rel="stylesheet" type="text/css" href="{% static '/css/documentation.css'%}">
   </head>
@@ -33,13 +33,29 @@
         </div>
       </div>
       <div id="content">
-        <h1>Using Classes</h1>
+        <h1>Using JavaScript</h1>
         <p>
-          Now that the files are set, let's start adding animations! <br> All you
-          have to do find the animation you are interested in and add the class name of that animation to the element.
+          Alternatively, you can make your animations even more dynamic by using JavaScript.<br> Create a Javascript file and link it to your html file appropriately. To make the process easy, you can just copy the code below and paste is inside the Javascript file you just created. <br> Next up is to change the "targetelement" in the JavaScript code to the ones you want to animate and the "animationname" to your desired animation classname. <br>
+          That's it!
         </p>
         <div class="codearea">
-          <p style="padding-left: 20px;"><span class="grey"><</span><span class="blue">button </span> <span class="cloud">class</span>=<span class="brown">"jiggle"</span><span class="grey">></span> Submit <span class="grey"> < /</span><span class="blue">button</span><span class="grey">></span></p>
+          <pre>
+                <code class="language-JS">
+  const targetClass = document.querySelector("targetelement");
+
+  let targetClassName = targetClass.innerHTML;
+
+    targetClass.addEventListener("click", function () {
+
+      targetelement.className = "anibry";
+
+      targetelement.classList.add(`${animationname}`);
+
+    }
+  });
+}
+                </code>
+            </pre>
         </div>
         <p>Your animation is all set! <br>Alternatively, you can use keyframes.</p>
         <div id="interaction">

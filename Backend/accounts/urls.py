@@ -29,5 +29,6 @@ urlpatterns = [
     path('start/', views.start, name='start'),
     path('important/', views.important, name='important'),
     path('usingclasses/', views.usingclasses, name='usingclasses'),
+    path('usingJS/', views.usingJS, name='usingJS'),
 
 ] 

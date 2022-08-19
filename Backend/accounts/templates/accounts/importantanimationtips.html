@@ -1,27 +1,34 @@
+{% extends  'accounts/authheaderandfooter.html' %}
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    {% load static %}
 
+    <title>{% block title %} Important Tips | Anibry {% endblock %}</title>
+    {% block content %}
+     <link rel="stylesheet" type="text/css" href="{% static '/css/documentation.css'%}">
+  </head>
   <body>
     
     <div id="container">
       <img
         class="asidehamburger"
-        src="{% static 'imagesctn\images\menuhamburger.svg' %}"
+        src="{% static '/imagesctn/images/menuhamburger.svg' %}"
         alt="asidehamburger"
       />
       <div class="aside">
         <div class="tableofcontent">
-            <img class="closeasidemenu" src="{% static 'imagesctn\images\closeicon.svg' %}" alt="closeicon">
-          <a href='documentation.html' target="_self" class="active"
-            >Overview</a
-          >
-          <a href="gettingstarted.html" target="">Getting Started</a>
-          <a href="usingclasses.html" target="_self"
-            >Using Animations <img src="{% static 'imagesctn\images\icondown.svg' %}" alt="icondown"
-          /></a>
+            <img class="closeasidemenu" src="{% static '/imagesctn\images\closeicon.svg' %}" alt="closeicon">
+          <a href="{% url 'accounts:documentation'%}" class="active">Overview</a>
+          <a href="{% url 'accounts:start'%}">Getting Started</a>
           <div id="listContent">
-            <a href="usingclasses.html" target="_self">Using Classes</a>
-            <a href="#" target="_self">Using Keyframes</a>
+            <a href="{% url 'accounts:usingclasses'%}">Using Classes</a>
+            <a href="{% url 'accounts:usingJS'%}">Using JavaScript</a>
           </div>
-          <a href="importantanimationtips.html" target="_self">Best Practices</a>
+          <a href="{% url 'accounts:important'%}">Best Practices</a>
         </div>
       </div>
       <div id="content">
@@ -29,7 +36,7 @@
         <p>
             As much as using animations add flavor your website and can greatly improve user experience, there are a few tips to always take note of that would help guide usage of animations.
         </p>
-        <h2>Animated with purpose</h2>
+        <h2>Have a clear reason to animate</h2>
         <p>
             It's best to refrain from animating a component purely for show. The objective of using animations should be obvious, so keep that in mind. Bounce, flash, pulse, and other attention-grabbing animations should be utilized to draw the user's attention to something unique in your interface rather than just to make it more "flashy."
         </p>
@@ -39,7 +46,7 @@
         <p>
             It doesn't mean you shouldn't add some excitement to the interface; just make sure your user isn't hindered by animations, and that such usage of animations won't slow down the page's performance.
         </p>
-        <h2>Don't animate large elements</h2>
+        <h2>The smaller the element you animate, the better</h2>
         <p>Animating large elements won't be very useful to the user and probably won't do anything but confuse them. In addition, there is a good likelihood that the animations will be subpar, leading to a poor user experience.</p>
         <h2>Don't animate root elements</h2>
         <p>
@@ -57,7 +64,8 @@
             Although Anibry provides classes for generic and unique animations and the flexibility to make them run infinitely, you should generally reduce and, if possible, avoid using endless run animations. There are chances it might irritate your users.
         </p>
           <div>
-            <div>
+            <div id="interaction">
+              <p> Is this information above useful for you? <img class="likeit" src="{% static '/imagesctn/images/like.svg' %}" alt="thumbsup"> <img class="dislikeit" src="{% static '/imagesctn/images/dislike.svg' %}" alt="thumbsdown"> </p>
               <textarea name="documentationInteraction" id="documentationInteraction" cols="20" rows="30" placeholder="Tell us why in this comment section"></textarea>
             </div>
             <div class="submitandcancel">
@@ -68,44 +76,7 @@
         </div>
       </div>
     </div>
-    <footer>
-      <div id="desktopfooter" class="footer-wrapper">
-        <div class="footerColumnsContainer">
-          <div class="footerCol footerCol1">
-            <img src="{% static 'imagesctn\images\icondown.svg' %}" alt="logo" />
-            <p>
-              Build with all the love in the world by the using Anibry library
-              in your projects. <br />
-              Currently v1.0
-            </p>
-          </div>
-          <div class="footerCol footerCol2">
-            <a class="heading" href="#"><strong> Quick Link</strong></a>
-            <a href="#">Library</a>
-            <a href="#">My Library</a>
-            <a href="#">Anibry Portfolio</a>
-            <a href="#">Profile</a>
-          </div>
-          <div class="footerCol footerCol3">
-            <a class="heading" href="#"><strong>Company</strong></a>
-            <a href="#">Home</a>
-            <a href="#">About Anibry</a>
-            <a href="#">Team</a>
-            <a href="#">Terms of Service</a>
-            <a href="#">Policy Privacy</a>
-            <a href="#">Cookies Policy</a>
-          </div>
-          <div class="footerCol footerCol4">
-            <a class="heading" href="#"><strong>Help</strong></a>
-            <a href="#">FAQ</a>
-            <a href="#">Documentation</a>
-            <a href="#">Contact Us</a>
-            <a href="#">Community</a>
-          </div>
-        </div>
-        <div class="copyright">© 2022 Anibry. All right reserved.</div>
-      </div>
-    </footer>
-    <script src="documentation.js"></script>
+    <script src="{%static '/js/documentation.js'%}"></script>
   </body>
+  {% endblock %}
 </html>

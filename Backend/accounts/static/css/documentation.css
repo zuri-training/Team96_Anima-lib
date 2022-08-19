@@ -10,6 +10,7 @@
   position: relative;
 }
 
+
 .active {
   background-color: var(--background);
   color: white;
@@ -172,6 +173,13 @@ textarea::placeholder {
   display: flex;
   justify-content: space-between;
   margin-bottom: 20px;
+}
+
+
+#contentcontainer{
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
 }
 
 @media screen and (max-width: 900px) {

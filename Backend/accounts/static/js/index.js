@@ -18,6 +18,7 @@ const quake = document.querySelector(".quake")
 const rebound = document.querySelector(".rebound")
 const jiggle = document.querySelector(".jiggle")
 const invert = document.querySelector(".invert")
+const turn = document.querySelector(".turn");
 const dropbtn = document.querySelectorAll(".dropbtn")
 const w = window.innerWidth;
 
