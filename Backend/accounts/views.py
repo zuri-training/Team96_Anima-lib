@@ -149,6 +149,8 @@ def important(request):
 def usingclasses(request):
     return render(request, 'accounts/usingclasses.html')
 
+def usingJS(request):
+    return render(request, 'accounts/usingJS.html')
 #Login page view
 # def login_user (request):
 #     if request.method == 'POST':

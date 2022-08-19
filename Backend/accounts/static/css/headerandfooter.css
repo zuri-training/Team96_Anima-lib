@@ -155,6 +155,7 @@ footer {
 .profileindropdown a{
   color: #5A189A;
 }
+
 @media screen and (max-width:900px) {
   footer{
     padding-left: 20px;
