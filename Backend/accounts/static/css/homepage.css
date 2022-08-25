@@ -7,6 +7,10 @@
 button{
     cursor: pointer;
 }
+button:hover, button:active{
+    background-color: #DBBAFC;
+    color: #5a189a;
+}
 
 main{
     display: flex;
@@ -20,25 +24,35 @@ main{
 }
 
 .box1{
-    flex: 1;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding-left: 50px;
+    width: 50%;
     justify-content: space-evenly;
     
 
 }
 .innerbox{
         width: 80%;
-
 }
 h1{
-    font-size: 56px;
+    font-size: max(min(5vw, 56px), 32px);
     font-weight: 700;
+    line-height: 60px;
+    margin-bottom: 30px;
+}
+.box1 p{
+    margin-top: 10px;
+    font-size: max(18px, 2vw);
 }
 .box2{
-    flex: 1;
+    width: 50%;
+    height: 100%;
+}
+.box2 img{
+    width: 100%;
+    height: 100%;
 }
 button {
   width: 294px;
@@ -62,8 +76,13 @@ button a {
 
 .complogos{
     width: 80%;
-    height: 80%;
+    height: 40px;
     align-self: center;
+}
+
+.complogos img{
+    width: 100%;
+    height: 100%;
 }
 main> img{
     width: 100%;
@@ -72,10 +91,10 @@ main> img{
 }
 
 main>p{
+    margin-bottom: 15px;
     font-size: 20px;
     width: 60%;
     text-align: center;
-    margin-top: 20px;
 }
 h2{
     font-size: 32px;
@@ -86,49 +105,46 @@ h2{
     margin-top: 20px;
 }
 .items{
-    display: flex;
-    flex-direction: column;
     gap: 10px;
     margin-top: 30px;
+    margin-bottom: 30px;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    width: 90%;
+    margin: auto;
 }
-.items1, .items2{
-    display: flex;
-
-    
-}
-.items1 div, .items2 div{
-    width: 200px;
+.items div{
     height: 150px;
-    margin: 0 10px;
+    margin: 0 0 10px 0;
     box-shadow: 2px 2px 5px rgb(0, 0, 0, 0.5);
     display: flex;
     align-items: center;
     justify-content: center;
 }
-.items1 img, .items2 img{
+.items img{
     width: 70px;
     height: 70px;
     background-color: white;
 }
 
-.slide img{
-    width: 150px;
+.slidee img{
+    width: 95%;
 }
 
 main .viewlibrary{
+    width: 100%;
     margin-bottom: 50px;
-margin-right: 280px;
 margin-top: 30px;
+display: flex;
+justify-content: flex-end;
 }
 .viewlibrary a{
     color: #5a189a;
     font-size: 20px;
-    align-self: flex-end;
-    
     font-weight: 700;
-    
-    
     text-decoration: none;
+    margin-right: 5vw;
+    border-bottom: 2px #5a189a solid;
 }
 .bigImge{
     width: 100%;
@@ -139,29 +155,36 @@ margin-top: 30px;
 }
 
 main>h2{
-    margin: 20px 0;
+    margin: 25px 0 10px 0;
 }
 main > h1{
-    font-size: 45px;
+    font-size: 37px;
 }
 
 main .faq{
     width: 60%;
     display: flex;
     flex-direction: column;
-    margin-top: 20px;
+    margin-top: 10px;
 }
 .faq a{
-    font-size: 16px;
-    padding: 17px;
+    display: flex;
+    align-items: center;
     box-shadow: 0px 3.5px 8px rgb(0, 0, 0, 0.5);
     border-radius: 5px;
     position: relative;
     cursor: pointer;
     margin-bottom: 15px;
-    font-weight: 700;
+    font-weight: 500;
+    text-align: left;
+    padding-left: 10px;
+    padding-right: 5px;
+    height: 47px;
 }
-.faq p{
+.faq a p{
+    font-size: 16px;
+}
+.faq > p{
     margin-bottom: 10px;
     padding: 0 18px;
     max-height: 0;
@@ -175,7 +198,7 @@ main .faq{
     font-size: 28px;
     position: absolute;
     right: 20px;
-    top: 10px;
+    top: 5px;
 }
 .newsletter{
     width: 80%;
@@ -223,4 +246,152 @@ label{
   border-radius: 5px;
   outline: none;
   border: none;
+}
+
+@media only screen and (max-width:900px){
+    main > h1{
+    font-size: 24px;
+    line-height: normal;
+}
+    .box1 h1{
+        line-height: normal;
+    }
+    .innerbox{
+        width: 100%;
+    }
+}
+
+@media screen and (max-width:768px) {
+    h1{
+        margin-top: 12px;
+        font-size:56px;
+    }
+    main>h2{
+        font-size: 28px;
+    }
+    main>p{
+        font-size: 18px;
+    }
+    
+    main>h1{
+        font-size: 20px;
+        margin-bottom: 5px;
+        text-align: center;
+    }
+    .section1{
+        flex-direction: column;
+    }
+    .box1, .box2{
+        width: 95%;
+        text-align: center;
+        margin: auto;
+    }
+    .box1{
+        padding: 0;
+    }
+    .box1 p{
+        width: 85%;
+        margin: auto;
+        margin-top: 10px;
+    }
+    .complogos{
+        width: 100%;
+    }
+    main>p{
+        width: 90%;
+    }
+    .pulse{
+        grid-area: pulse;
+    }
+    .bounced{
+        grid-area: bounce;
+    }
+    .rotated{
+        grid-area: rotate;
+    }
+    .jelloo{
+        grid-area: jello;
+    }
+    .wobb{
+        grid-area: wobble;
+    }
+    .slidee{
+        grid-area: slide;
+    }
+    .grow{
+        grid-area: grow;
+    }
+    .pop{
+        grid-area: pop;
+    }
+    .items {
+        display: grid;
+        gap: 10px;
+        grid-template-columns: repeat(6, 1fr);
+        grid-template-areas: 
+        'pulse pulse bounce bounce jello jello'
+        'slide slide slide grow grow grow'
+        'rotate rotate pop pop wobble wobble'
+        ;
+    }
+    .items div{
+        border-radius: 8px;
+    }
+
+    .faq a{
+        max-width: 418px;
+    }
+    .faq a p{
+        font-size: 14px;
+        margin: 0;
+        width: 90%;
+    }
+}
+@media screen and (max-width:550px) {
+    .items{
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-areas: 
+        'pulse bounce'
+        'jello slide'
+        'grow rotate'
+        'pop wobble'
+        ;
+    }
+}
+@media screen and (max-width:450px) {
+    h1{
+        font-size: 40px;
+    }
+    button{
+        width: 90%;
+    }
+        main .faq {
+        width: 90%;
+
+    }
+    main>h2{
+        font-size: 20px;
+    }
+    main>p{
+        font-size: 16px;
+    }
+    .input{
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+    }
+    #user-email, .input .submit{
+        width: 100%;
+    }
+    label{
+        font-size: min(30px, 7vw);
+    }
+    main .viewlibrary{
+        text-align: center;
+        margin-block: 20px;
+    }
+    .viewlibrary a{
+        margin: auto;
+        
+    }
 }

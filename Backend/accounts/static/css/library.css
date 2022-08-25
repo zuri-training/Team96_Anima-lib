@@ -82,7 +82,10 @@ border-radius: 8px;
   border-radius: 8px;
   cursor: pointer;
 }
-
+.download:visited{
+    background-color: #DBBAFC;
+    color: #5a189a;
+}
 .download img{
     margin-left: 10px;
 }

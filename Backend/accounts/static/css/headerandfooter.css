@@ -62,8 +62,6 @@ header {
 }
  .navmenu a:focus, .navmenu a:active{
   color: #5A189A;
-  outline-offset: 5px;
-  outline: 2px black solid;
 }
 .innernav{
   display: flex;
@@ -294,8 +292,14 @@ footer {
     height: 40px;
   }
   .headercontainer .profile{
-    max-width: 160px;
     align-items: center;
+}
+
+@media screen and (max-width:450px) {
+  .headercontainer .profile img{
+    max-width: 45px;
+    max-height: 45px;
+  }
 }
 }
 .displayflex{

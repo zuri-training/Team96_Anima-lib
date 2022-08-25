@@ -77,7 +77,7 @@ def signin(request):
             return redirect(reverse('accounts:home'))
 
         else:
-            messages.error(request, "Incorrect email or password.")
+            messages.error(request, "Incorrect Username or password.")
             return redirect(reverse('accounts:signin'))
 
     return render(request, "accounts/login.html")
